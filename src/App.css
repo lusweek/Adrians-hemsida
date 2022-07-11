@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mukta:wght@200;300&family=Patrick+Hand&display=swap');/* GLOBAL */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+/* GLOBAL */
+
+body{
+  margin: 0;
+}
+
+.dark{
+background-color: black;
+}
+
+.qvote{
+font-style: italic;
+color: white;
+text-align: center;
+font-weight: 300;
+/* PROVA DENNA FONTEN, DEN ÄR GRYM 
+font-family: 'Bebas Neue', cursive; */
+font-family: 'Mukta', sans-serif;
+margin: 25px 10px;
+}
+
+.black{
+  color: black;
+}
+
+.light{
+  color: white ;
+}
+
+.large{
+font-size: 50px;
+letter-spacing: 2.5px;
+}
+
+.tiny{
+font-size: 16px;
+font-weight: 300;
+}
+
+.mini{
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.to-qvote{
+  text-align: end;
+  margin-top: 10px;
+}
+
+.bold-title{
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 900;
+  text-align: center;
+}
+
+.small-title{
+ font-size: 18px;
+ font-weight: 500;
+ font-family: 'Noto Sans JP', sans-serif;
+ letter-spacing: 1.3px;
+ text-align: center;
+}
+
+p{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.p20{
+font-size: 20px;
+}
+
+.p18{
+font-size: 18px;
+}
+
+.button{
+  color: white;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 16px;
+  background-color: #F11508 ;
+  width: 190px;
+  height: 51px;
+  border-radius: 4px ;
+  font-family: 'Noto Sans JP', sans-serif;
+  border: none ;
+  margin: 30px;
+}
+
+.dark-theme{
+  background-color: black;
+  color: white;
+  padding: 100px 0;
+}
+
+.thin-paragraf{
+  font-size: 17px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 100;
+  letter-spacing: .5px;
+}
+
+.paragraf{
+  font-size: 17px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: .5px;
+  text-align: center;
+  margin: 40px;
+  width: 50vw;
+}
+
+.section-padding{
+  padding: 100px 0;
+}
+
+.line{
+  width: 90vw;
+  height: 1px;
+  background-color: #626262;
+  margin: 100px;
+}
+
+/* NAV */
+
+nav{
+  background-color: black;
+  margin: 0;
+  position: fixed;
+  height: 40px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#company-name{
+color: white;
+margin-left: 35px ;
+font-family: 'Mukta', sans-serif;
+font-weight: 300;
+letter-spacing: 2px;
+}
+
+#hamburger-meny{
+margin-right: 25px ;
+
+}
+
+
+/* FIRST SECTION */
+
+
+#first-section{
+height: 100vh;
+display: flex;
+align-items: center;
+flex-direction: column;
+
+}
+
+#big-logo{
+  width: 300px;
+  height: 200px;
+  max-width: 70vw;
+  max-height: 30vh;
+  background-color: aliceblue;
+  margin: 20vh 0 50px 0;
+  }
+
+.arrow-down{
+
+}
+
+
+/* OFFER SECTION */
+
+#offer-section{
+  background: rgb(255,255,255);
+  background: linear-gradient(132deg, rgba(255,255,255,1) 0%, rgba(153,163,24,1) 99%);}
+
+#offer-text-div{
+  width: 70vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+
+/* PRINCIPLES SECTION */
+
+.p-next-each-other-div{
+display: flex;
+width: 60vw;
+justify-content: space-between;
+flex-wrap: wrap;
+align-items: center;
+margin: 70px;
+}
+
+.more-margin{
+margin: 70px;
+}
+
+.section-center{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.principle-p{
+  max-width: 60%;
+  text-align: center;
+  letter-spacing: 1.5px;
+  line-height: 35px;
+}
+
+
+/* BOXES SECTION */
+
+.box-wrapper{
+display: flex;
+flex-wrap: wrap;
+width: 70vw;
+justify-content: center;
+}
+
+.box{
+display: flex;
+color: black;
+flex-direction: column;
+background-color: #D9D9D9;
+text-align: center;
+width: 25vw;
+min-width: 285px ;
+min-height: 265px;
+padding: 40px 30px 40px 30px ;
+margin: 50px;
+}
+
+
+/* ERBJUDANDEN */
+
+.offer-box{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #D9D9D9;
+  border-radius: 2px;
+  padding: 5px 70px;
+  margin: 40px;
+}
+
+.more-space{
+  width: 90vw; 
+}
+
+.offer-text-article{
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+.offer-text-div{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 50px;
+
+}
+
+.offer-text-p{
+  font-size: 17px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300;
+  letter-spacing: .5px;
+  line-height: 30px;
+  text-align: center;
+  margin: 40px;
+}
+
+.more-h-div{
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+
+/* @MEDIA SCREEN */
+
+@media screen and (max-width: 1200px) {
+  .large{
+    font-size: 30px;
+  }
+
+  .to-qvote{
+    text-align: center;
+    font-size: 14px;
+    margin-top: 15px ;
+  }
+
+  #company-name{
+    margin-left: 15px;
+  }
+  #hamburger-meny{
+    margin-right: 15px ;
+    
+    }
+
+    #offer-text-div{
+      width: 90vw;
+      margin: 0 5vw;
+    }
+
+    .more-margin{
+      margin: 30px 0;
+    }
+
+    .p-next-each-other-div{
+      justify-content: center;
+      width: 70vw;
+    }
+
+    .principle-p {
+    max-width: 100%;
+    }
+
+    .paragraf{
+      width: 90%;
+    }
+
+    .offer-text-div{
+      width: 80%;
+    }
+
+}

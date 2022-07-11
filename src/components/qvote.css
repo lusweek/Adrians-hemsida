@@ -1,0 +1,9 @@
+.qvote-section{
+height: 40vh;
+min-height: 200px ;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
