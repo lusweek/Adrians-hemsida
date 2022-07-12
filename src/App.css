@@ -3,12 +3,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
 /* GLOBAL */
 
+*{
+  scroll-behavior: smooth;
+
+}
+
 body{
   margin: 0;
 }
 
 .dark{
 background-color: black;
+}
+
+.light-background{
+  background-color: #D9D9D9;
 }
 
 .qvote{
@@ -53,7 +62,13 @@ font-weight: 300;
 .bold-title{
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 900;
+  margin-left: 5px ;
+  margin-right: 5px;
   text-align: center;
+}
+
+.letter-spacing{
+  letter-spacing: 1px;
 }
 
 .small-title{
@@ -82,12 +97,13 @@ font-size: 18px;
   letter-spacing: 1px;
   font-size: 16px;
   background-color: #F11508 ;
-  width: 190px;
+  width: 230px;
   height: 51px;
   border-radius: 4px ;
   font-family: 'Noto Sans JP', sans-serif;
   border: none ;
-  margin: 30px;
+  margin: 50px;
+  cursor: pointer;
 }
 
 .dark-theme{
@@ -125,7 +141,11 @@ font-size: 18px;
   margin: 100px;
 }
 
-/* NAV */
+.none{
+  display: none;
+}
+
+/* ----------------------------------- NAV ------------------------------ */
 
 nav{
   background-color: black;
@@ -173,7 +193,6 @@ flex-direction: column;
   }
 
 .arrow-down{
-
 }
 
 
@@ -229,7 +248,6 @@ margin: 70px;
 .box-wrapper{
 display: flex;
 flex-wrap: wrap;
-width: 70vw;
 justify-content: center;
 }
 
@@ -244,6 +262,7 @@ min-width: 285px ;
 min-height: 265px;
 padding: 40px 30px 40px 30px ;
 margin: 50px;
+border-radius: 4px;
 }
 
 
@@ -253,10 +272,10 @@ margin: 50px;
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: #D9D9D9;
-  border-radius: 2px;
+  background-color: #bfbfbf;
+  border-radius: 4px;
   padding: 5px 70px;
-  margin: 40px;
+  margin: 70px 30px;
 }
 
 .more-space{
@@ -292,10 +311,284 @@ flex-wrap: wrap;
   display: flex;
   align-items: center;
   height: 50px;
+  cursor: pointer;
 }
 
 
-/* @MEDIA SCREEN */
+/* MORE HOWERS */
+
+#extra-h{
+  height: 0px;
+  overflow: hidden;
+  padding: 0px 0;
+  transition-duration: .6s;
+}
+
+
+/* Contact section */
+
+#contact-section{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.checkbox-list-wrapper,
+.inputs input,
+#form-article textarea{
+  font-size: 20px;
+  font-family: 'Noto Sans JP', sans-serif;
+  letter-spacing: 1px;
+}
+
+#form-article input, 
+#form-article textarea, 
+.checkbox{
+  margin: 10px ;
+  border-radius: 4px;
+}
+
+#form-article input, 
+.checkbox{
+ height: 49px;
+}
+
+.inputs input,
+#form-article textarea{
+  padding-left: 13px ;
+  font-weight: 300;
+  background-color: #D9D9D9;
+
+}
+
+.checkbox-list{
+  display: flex;
+  flex-direction: column;
+}
+
+#form-article form{
+  display: flex;
+  flex-direction: column;
+}
+
+#form-article{
+  width: 45vw;
+  min-width: 357px ;
+}
+
+.checkbox-list-wrapper{
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkbox{
+  display: flex;
+  align-items: center;
+  font-weight: 100;
+}
+
+
+.inputs{
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputs input{
+  width: 45% ;
+}
+
+.second-checklist-column{
+  align-items: flex-end;
+}
+
+
+
+#form-article textarea{
+  padding-top: 10px ;
+}
+
+
+.form-btn{
+  margin: 10px 10px 140px 10px;
+  width: calc(100% - 19px);
+}
+
+
+#contact-info-article{
+  margin-top: 140px;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+#contact-info-article a{
+  color: white;
+}
+
+.info-with-space{
+display: flex;
+align-items: center;
+justify-content: space-between;
+width: 20vw;
+max-width: 400px;
+min-width: 326px ;
+margin: 15px 0;
+
+}
+
+.icons{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 45px 0;
+}
+
+.icon{
+  font-size: 32px;
+  cursor: pointer;
+}
+
+
+/* ---------------------------- LOADER ANIMATION ------------------------------ */
+
+
+/* Till message sent */
+
+.loader-modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  transition-duration: 0.4s ;
+  display: none;
+}
+
+.modal-loader-wrapper{
+  display: block;
+  height: 45px;
+  width: 45px;
+  background-color: rgb(245, 245, 245);
+  position: relative;
+  border: solid 2px gray;
+  border-radius: 10px;
+  border-radius: 50%;
+  border-top: solid 2px black;
+}
+
+.modal-loader-wrapper-animation{
+  animation: spinner 2s linear infinite;
+}
+
+.done-text-div{
+  opacity: 0;
+transition-duration: 0.4s;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+
+.done-text{
+  opacity: 0;
+margin: 0;
+color: green;
+transition-duration: 0.4s;
+}
+
+
+.modal-loader-new-animation{
+  animation: done 0.4s ease-in-out ;
+  animation-fill-mode: both;
+}
+
+
+/* Till icon */
+
+.check-icon{
+  font-size: 31px;
+  color: green;
+}
+
+.fail{
+  color: red !important;
+}
+
+
+@keyframes messageFail {
+  10%{
+    border: solid 2px gray;
+    }
+    100%{
+      border: solid 2px red;
+      border-radius: 20px;
+      width: 700px;
+      
+    }
+}
+
+@keyframes done {
+  10%{
+  border: solid 2px gray;
+  }
+  100%{
+    border: solid 2px green;
+    border-radius: 20px;
+    width: 360px;
+    
+  }
+
+}
+
+
+@keyframes spinner {
+  to { transform: rotate(360deg); }
+}
+
+.loader-wrapper{
+  height: 45px;
+  width: 275px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-wrapper-done{
+  height: 90px;
+  width: 275px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.done-modal-div{
+  display: flex;
+  align-items: center;
+}
+
+.modal-wrapper-done h1{
+  margin: 5px;
+}
+
+.check-icon{
+  font-size: 31px;
+  color: green;
+}
+
+.fail{
+  color: red !important;
+}
+
+
+/* -------------------------- @MEDIA SCREEN ----------------------------------- */
 
 @media screen and (max-width: 1200px) {
   .large{
@@ -341,5 +634,26 @@ flex-wrap: wrap;
     .offer-text-div{
       width: 80%;
     }
+
+    .checkbox{
+      font-size: 13px;
+      margin: 3px;
+    }
+
+    .inputs input, 
+    #form-article textarea{
+      font-size: 18px;
+    }
+    
+    .offer-text-p{
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    .margin-sides{
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
 
 }
