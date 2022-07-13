@@ -168,7 +168,7 @@ letter-spacing: 2px;
 
 #hamburger-meny{
   position: absolute;
-  right: 10px;
+  right: 20px;
   z-index: 10;
 }
 
@@ -180,6 +180,7 @@ letter-spacing: 2px;
   top: 0;
   right: 0;
   width: 0px;
+  max-width: 70vw;
   background-color: #1c1c1c;
   opacity: .8;
   height: 100vh;
@@ -639,10 +640,6 @@ transition-duration: 0.4s;
   #company-name{
     margin-left: 15px;
   }
-  #hamburger-meny{
-    margin-right: 15px ;
-    
-    }
 
     #offer-text-div{
       width: 90vw;
@@ -693,6 +690,5 @@ transition-duration: 0.4s;
       margin-left: 20px;
       margin-right: 20px;
     }
-
 
 }

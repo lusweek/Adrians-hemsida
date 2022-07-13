@@ -294,49 +294,63 @@ varieradTräning
 
   // ---------------------- HAMBURGAREN ---------------------- //
   
+  
+
   const [svgD, setSvgD] = useState('M1 7H19M1 1H19M1 13H19')
   const [menuOpen, setMenuOpen] = useState(false)
 
-
-  function handleMenu() {
-    if (svgD === 'M1 7H19M1 1H19M1 13H19') {
-      setSvgD('M1.42894 14L15.4289 1M1.42894 1.00002L15.4289 14')
-      setMenuOpen(true)
-      handleMenuWidth()
-    } else if (svgD === 'M1.42894 14L15.4289 1M1.42894 1.00002L15.4289 14') {
-      setSvgD('M1 7H19M1 1H19M1 13H19')
-      setMenuOpen(false)
-      handleMenuWidth()
-    }
-  }
-
-  function handleMenuWidth() {
-    const menu = document.querySelector("#burger-menu")
-
+  const handleMenu = () =>{
     if (menuOpen === false) {
-      menu.style.width="380px"
+      openMenu()
     } else if (menuOpen === true) {
-      menu.style.width="0px"
+      closeMenu()
     }
   }
 
-  // useEffect(() => {
-  //   document.addEventListener('click', (e) => {
-  //     console.log(menuOpen);
-      
-  //     if (e.target.id !== 'burger-menu' && e.target.id !== 'hamburger-meny') {
-  //         handleMenu()
-  //       }
-  //   })
-  // }, [])
+  function openMenu() {
+    setMenuOpen(true)
+    setSvgD('M1.5 13L14.5 1M1.5 1L14.5 13')
+    const menu = document.querySelector("#burger-menu")
+    menu.style.width="380px"
+  }
 
-  document.addEventListener('click', (e) => {
-    console.log(menuOpen);
+  function closeMenu() {
+    setMenuOpen(false)
+    setSvgD('M1 7H19M1 1H19M1 13H19')
+    const menu = document.querySelector("#burger-menu")
+    menu.style.width="0px"
+  }
+
+  const burgerRef = useRef();
+  const anotherBurgerRef = useRef();
+  const menu = useRef()
+
+
+  useEffect(() => {
     
-    if (e.target.id !== 'burger-menu' && e.target.id !== 'hamburger-meny') {
-        handleMenu()
+    const check = (e) => {
+      console.log(e);
+
+      if (e.path[0] !== burgerRef.current &&
+          e.path[0] !== anotherBurgerRef.current &&
+          e.path[0] !== menu.current &&
+          e.path[1] !== menu.current &&
+          e.path[2] !== menu.current &&
+          e.path[3] !== menu.current &&
+          e.path[4] !== menu.current &&
+          e.path[5] !== menu.current &&
+          e.path[6] !== menu.current &&
+          e.path[7] !== menu.current &&
+          e.path[8] !== menu.current ) {
+      closeMenu()
       }
-  })
+    }
+
+    document.body.addEventListener('click', check)
+
+    return () => document.body.removeEventListener('click', check)
+
+  }, [])
 
  
 
@@ -356,11 +370,11 @@ varieradTräning
 
 
 
-      <svg onClick={handleMenu} id='hamburger-meny' width="30" height="30" viewBox="0 0 20 14" fill="none" cursor="pointer" xmlns="http://www.w3.org/2000/svg">
-        <path d={svgD} stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <svg ref={burgerRef} onClick={handleMenu} id='hamburger-meny' width="30" height="30" viewBox="0 0 20 14" fill="none" cursor="pointer" xmlns="http://www.w3.org/2000/svg">
+        <path ref={anotherBurgerRef} d={svgD} stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
       </svg>
 
-      <section id='burger-menu'>
+      <section ref={menu} id='burger-menu'>
     <div id='menu-logo'></div>
         <a onClick={handleMenu} href="#principer"> <h1 className='small-title light burger-title'>Principer</h1></a>
         <a onClick={handleMenu} href="#box-section"><h1 className='small-title light burger-title'>Kroppsviktsträning</h1></a>
