@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.98fe0db0.css",
-    "main.js": "/static/js/main.f4914809.js",
-    "static/js/787.bac1152b.chunk.js": "/static/js/787.bac1152b.chunk.js",
-    "index.html": "/index.html",
-    "main.98fe0db0.css.map": "/static/css/main.98fe0db0.css.map",
-    "main.f4914809.js.map": "/static/js/main.f4914809.js.map",
-    "787.bac1152b.chunk.js.map": "/static/js/787.bac1152b.chunk.js.map"
+    "main.css": "/Adrians-hemsida/static/css/main.8f02896f.css",
+    "main.js": "/Adrians-hemsida/static/js/main.dc425412.js",
+    "static/js/787.bac1152b.chunk.js": "/Adrians-hemsida/static/js/787.bac1152b.chunk.js",
+    "index.html": "/Adrians-hemsida/index.html",
+    "main.8f02896f.css.map": "/Adrians-hemsida/static/css/main.8f02896f.css.map",
+    "main.dc425412.js.map": "/Adrians-hemsida/static/js/main.dc425412.js.map",
+    "787.bac1152b.chunk.js.map": "/Adrians-hemsida/static/js/787.bac1152b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.98fe0db0.css",
-    "static/js/main.f4914809.js"
+    "static/css/main.8f02896f.css",
+    "static/js/main.dc425412.js"
   ]
 }
