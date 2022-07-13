@@ -320,15 +320,23 @@ varieradTräning
     }
   }
 
-  useEffect(() => {
-    document.addEventListener('click', (e) => {
-      console.log(menuOpen);
+  // useEffect(() => {
+  //   document.addEventListener('click', (e) => {
+  //     console.log(menuOpen);
       
-      if (e.target.id !== 'burger-menu' && e.target.id !== 'hamburger-meny') {
-          handleMenu()
-        }
-    })
-  }, [])
+  //     if (e.target.id !== 'burger-menu' && e.target.id !== 'hamburger-meny') {
+  //         handleMenu()
+  //       }
+  //   })
+  // }, [])
+
+  document.addEventListener('click', (e) => {
+    console.log(menuOpen);
+    
+    if (e.target.id !== 'burger-menu' && e.target.id !== 'hamburger-meny') {
+        handleMenu()
+      }
+  })
 
  
 
