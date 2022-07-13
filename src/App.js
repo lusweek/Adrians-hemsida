@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import './App.css';
 import Button from './components/Button';
 import Qvote from './components/Qvote';
@@ -290,8 +290,47 @@ varieradTräning
       setAkrobatik('')
     }
   }
-  
 
+
+  // ---------------------- HAMBURGAREN ---------------------- //
+  
+  const [svgD, setSvgD] = useState('M1 7H19M1 1H19M1 13H19')
+  const [menuOpen, setMenuOpen] = useState(false)
+
+
+  function handleMenu() {
+    if (svgD === 'M1 7H19M1 1H19M1 13H19') {
+      setSvgD('M1.42894 14L15.4289 1M1.42894 1.00002L15.4289 14')
+      setMenuOpen(true)
+      handleMenuWidth()
+    } else if (svgD === 'M1.42894 14L15.4289 1M1.42894 1.00002L15.4289 14') {
+      setSvgD('M1 7H19M1 1H19M1 13H19')
+      setMenuOpen(false)
+      handleMenuWidth()
+    }
+  }
+
+  function handleMenuWidth() {
+    const menu = document.querySelector("#burger-menu")
+
+    if (menuOpen === false) {
+      menu.style.width="380px"
+    } else if (menuOpen === true) {
+      menu.style.width="0px"
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener('click', (e) => {
+      console.log(menuOpen);
+      
+      if (e.target.id !== 'burger-menu' && e.target.id !== 'hamburger-meny') {
+          handleMenu()
+        }
+    })
+  }, [])
+
+ 
 
   // ----------------------------------------------------------------------------------------------------------//
 
@@ -300,17 +339,31 @@ varieradTräning
 
 {/* NAVBAREN */}
 
+
+
     <nav>
       <h1 id='company-name'>Adrians företag</h1>
 
   {/* HAMBURGAREN  */}
-      <svg id='hamburger-meny' width="30" height="17" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 7H19M1 1H19M1 13H19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
 
-{/* KRYSSET */}
-{/* d="M1.42894 14L15.4289 1M1.42894 1.00002L15.4289 14"  */}
+
+
+      <svg onClick={handleMenu} id='hamburger-meny' width="30" height="30" viewBox="0 0 20 14" fill="none" cursor="pointer" xmlns="http://www.w3.org/2000/svg">
+        <path d={svgD} stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+
+      <section id='burger-menu'>
+    <div id='menu-logo'></div>
+        <a onClick={handleMenu} href="#principer"> <h1 className='small-title light burger-title'>Principer</h1></a>
+        <a onClick={handleMenu} href="#box-section"><h1 className='small-title light burger-title'>Kroppsviktsträning</h1></a>
+        <a onClick={handleMenu} href="#offer"><h1 className='small-title light burger-title'>Erbjudanden</h1></a>
+        <a onClick={handleMenu} href="#contact-section"><h1 className='small-title light burger-title'>Kontakt</h1></a>
+       
+      </section>
+
     </nav>
+
+    
 
 
 {/* FÖRSTA SECTIONEN  */}
@@ -351,7 +404,10 @@ varieradTräning
 
 <Qvote text={`"Don't limit the motion, move the limit"`} />
 
-<section className='dark-theme section-center'>
+
+{/* TRE VIKTIGA PRINCIPER */}
+
+<section id='principer' className='dark-theme section-center'>
 
   <h1 className='bold-title more-margin'>Tre viktiga principer</h1>
 
@@ -382,7 +438,7 @@ varieradTräning
 
 {/* BOXES SECTION */}
 
-<section className='dark-theme section-center'>
+<section id='box-section' className='dark-theme section-center'>
 
 <h1 className='bold-title more-margin'>Bemästra konsten att träna kroppsvikt</h1>
 
@@ -418,7 +474,7 @@ varieradTräning
 
 {/* ERBJUDANDEN */}
 
-<section className='section-center section-padding light-background'>
+<section id='offer' className='section-center section-padding light-background'>
 
 <h1 className='bold-title'>Erbjudanden</h1>
 
@@ -544,38 +600,50 @@ Eller så lär dig jag parkourens tekniker.
         <div className='checkbox-list'>
 
           <div className='checkbox'>
-            <label>Kroppsviktsträning</label>
-            <input onClick={handleKroppsvikt} type="checkbox" name='Kroppsviktsträning' />
+            <label className='checkbox'>Kroppsviktsträning
+            <input className="form-checkbox" onClick={handleKroppsvikt} type="checkbox" name='Kroppsviktsträning' />
+            </label>
+            
           </div>
 
           <div className='checkbox'>
-            <label>Movnat</label>
-            <input onClick={handleMovenat} type="checkbox" name='Movenat' />
+            <label className='checkbox'>Movnat
+            <input className="form-checkbox" onClick={handleMovenat} type="checkbox" name='Movenat' />
+          </label>
           </div>
 
           <div className='checkbox'>
-            <label>Mucsle up</label>
-            <input onClick={handleMucsleUp} type="checkbox" name='MucsleUp' />
+            <label className='checkbox'>Mucsle up
+              <input className="form-checkbox" onClick={handleMucsleUp} type="checkbox" name='MucsleUp' />
+            </label>
           </div>
 
           <div className='checkbox'>
-            <label>Helsosamma varnor</label>
-            <input onClick={handleHelsosammaVarnor} type="checkbox" name='HelsosammaVarnor' />
+            <label className='checkbox'>Helsosamma varnor
+            <input className="form-checkbox" onClick={handleHelsosammaVarnor} type="checkbox" name='HelsosammaVarnor' />
+            
+            </label>
           </div>
 
           <div className='checkbox'>
-            <label>Smidighet</label>
-            <input onClick={handleSmidighet} type="checkbox" name='Smidighet' />
+            <label className='checkbox'>Smidighet
+            <input className="form-checkbox" onClick={handleSmidighet} type="checkbox" name='Smidighet' />
+            
+            </label>
           </div>
 
           <div className='checkbox'>
-            <label>Akrobatik</label>
-            <input onClick={handleAkrobatik} type="checkbox" name='Akrobatik' />
+            <label className='checkbox'>Akrobatik
+            <input className="form-checkbox" onClick={handleAkrobatik} type="checkbox" name='Akrobatik' />
+            
+            </label>
           </div>
 
           <div className='checkbox'>
-            <label>Funktionell träning</label>
-            <input onClick={handleFunktionellTräning} type="checkbox" name='FunktionellTräning' />
+            <label className='checkbox'>Funktionell träning
+            <input className="form-checkbox" onClick={handleFunktionellTräning} type="checkbox" name='FunktionellTräning' />
+            
+            </label>
           </div>
 
         </div>
@@ -584,38 +652,52 @@ Eller så lär dig jag parkourens tekniker.
         <div className='checkbox-list second-checklist-column'>
 
           <div className='checkbox'>
-            <label>Parkour</label>
-            <input onClick={handleParkour} type="checkbox" name='Parkour' />
+            <label className='checkbox'>Parkour
+            <input className="form-checkbox" onClick={handleParkour} type="checkbox" name='Parkour' />
+            
+            </label>
           </div>
 
           <div className='checkbox'>
-            <label>Handstående</label>
-            <input onClick={handleHandstående} type="checkbox" name='Handstående' />
+            <label className='checkbox'>Handstående
+            <input className="form-checkbox" onClick={handleHandstående} type="checkbox" name='Handstående' />
+            
+            </label>
           </div>
 
           <div className='checkbox'>
-            <label>Roligare träning</label>
-            <input onClick={handleRoligareTräning} type="checkbox" name='RoligareTräning' />
+            <label className='checkbox'>Roligare träning
+            <input className="form-checkbox" onClick={handleRoligareTräning} type="checkbox" name='RoligareTräning' />
+            
+            </label>
           </div>
 
           <div className='checkbox'>
-            <label>OCR / hinderbarna</label>
-            <input onClick={handleOCR} type="checkbox" name='OCR' />
+            <label className='checkbox'>OCR / hinderbarna
+            <input className="form-checkbox" onClick={handleOCR} type="checkbox" name='OCR' />
+            
+            </label>
           </div>
 
           <div className='checkbox'>
-            <label>Planche</label>
-            <input onClick={handlePlanche} type="checkbox" name='Planche' />
+            <label className='checkbox'>Planche
+            <input className="form-checkbox" onClick={handlePlanche} type="checkbox" name='Planche' />
+            
+            </label>
           </div>
 
           <div className='checkbox'>
-            <label>Träna utomhus</label>
-            <input onClick={handleTränaUtomhus} type="checkbox" name='TränaUtomhus' />
+            <label className='checkbox'>Träna utomhus
+            <input className="form-checkbox" onClick={handleTränaUtomhus} type="checkbox" name='TränaUtomhus' />
+            
+            </label>
           </div>
 
           <div className='checkbox'>
-            <label>Varierad träning</label>
-            <input onClick={handleVarieradTräning} type="checkbox" name='VarieradTräning' />
+            <label className='checkbox'>Varierad träning
+            <input className="form-checkbox" onClick={handleVarieradTräning} type="checkbox" name='VarieradTräning' />
+            
+            </label>
           </div>
 
         </div>
