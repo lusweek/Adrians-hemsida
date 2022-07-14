@@ -166,12 +166,6 @@ font-weight: 300;
 letter-spacing: 2px;
 }
 
-#hamburger-meny{
-  position: absolute;
-  right: 20px;
-  z-index: 10;
-}
-
 #burger-menu{
   position: fixed;
   display: flex;
@@ -182,7 +176,7 @@ letter-spacing: 2px;
   width: 0px;
   max-width: 70vw;
   background-color: #1c1c1c;
-  opacity: .8;
+  opacity: .9;
   height: 100vh;
   transition-duration: .7s;
   padding-top: 60px ;
@@ -192,6 +186,12 @@ letter-spacing: 2px;
 .burger-title{
   font-size: 26px;
   margin: 40px 0;
+}
+
+#burger-div-wrapper{
+  position: absolute;
+  right: 38px;
+  z-index: 10;
 }
 
 #menu-logo{
@@ -398,6 +398,10 @@ flex-wrap: wrap;
 .checkbox-list{
   display: flex;
   flex-direction: column;
+}
+
+.form-checkbox{
+  width: 17px;
 }
 
 #form-article form{
@@ -673,10 +677,6 @@ transition-duration: 0.4s;
       margin: 3px;
     }
 
-    .form-checkbox{
-      width: 16px;
-    }
-
     .inputs input, 
     #form-article textarea{
       font-size: 18px;
@@ -696,5 +696,7 @@ transition-duration: 0.4s;
       margin-left: 0;
       margin-right: 0;
     }
+
+   
 
 }

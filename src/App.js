@@ -6,6 +6,7 @@ import { BsFacebook } from 'react-icons/bs';
 import { GrInstagram } from 'react-icons/gr'
 import emailjs from '@emailjs/browser';
 import MessageSent from './components/message sent/MessageSent';
+import Burger from './components/burger/Burger';
 
 
 function App() {
@@ -24,7 +25,19 @@ function App() {
   const extraH = document.querySelector('#extra-h')
 
     if (isClosed === true) {
-      extraH.style.height='500px'
+
+      const wWidth = window.innerWidth
+      console.log(wWidth);
+
+      if (wWidth >= 1400) {
+        extraH.style.height='500px'
+      } else if (wWidth < 1400 && wWidth > 894) {
+        extraH.style.height='852px'
+      } else if ( wWidth < 894 ) {
+        extraH.style.height='1362px'
+      }
+
+      
       handleHrrow()
       setIsClosed(false)
     } else if(!isClosed) {
@@ -296,7 +309,6 @@ varieradTräning
   
   
 
-  const [svgD, setSvgD] = useState('M1 7H19M1 1H19M1 13H19')
   const [menuOpen, setMenuOpen] = useState(false)
 
   const handleMenu = () =>{
@@ -309,30 +321,30 @@ varieradTräning
 
   function openMenu() {
     setMenuOpen(true)
-    setSvgD('M1.5 13L14.5 1M1.5 1L14.5 13')
     const menu = document.querySelector("#burger-menu")
     menu.style.width="380px"
   }
 
   function closeMenu() {
     setMenuOpen(false)
-    setSvgD('M1 7H19M1 1H19M1 13H19')
     const menu = document.querySelector("#burger-menu")
     menu.style.width="0px"
   }
 
   const burgerRef = useRef();
-  const anotherBurgerRef = useRef();
   const menu = useRef()
+  const anotherBurgerRef = useRef();
 
 
-  useEffect(() => {
+
+   useEffect(() => {
     
     const check = (e) => {
       console.log(e);
 
-      if (e.path[0] !== burgerRef.current &&
-          e.path[0] !== anotherBurgerRef.current &&
+      if (
+          e.path[0] !== burgerRef.current &&
+          e.path[0].id !== 'toggle' &&
           e.path[0] !== menu.current &&
           e.path[1] !== menu.current &&
           e.path[2] !== menu.current &&
@@ -341,8 +353,10 @@ varieradTräning
           e.path[5] !== menu.current &&
           e.path[6] !== menu.current &&
           e.path[7] !== menu.current &&
-          e.path[8] !== menu.current ) {
-      closeMenu()
+          e.path[8] !== menu.current 
+          ){
+            closeMenu()
+
       }
     }
 
@@ -363,16 +377,15 @@ varieradTräning
 
 
 
-    <nav>
+    <nav >
       <h1 id='company-name'>Adrians företag</h1>
 
   {/* HAMBURGAREN  */}
 
+      <div id='burger-div-wrapper' ref={burgerRef} onClick={handleMenu}>
+      <Burger menuOpen={menuOpen} />
+      </div>
 
-
-      <svg ref={burgerRef} onClick={handleMenu} id='hamburger-meny' width="30" height="30" viewBox="0 0 20 14" fill="none" cursor="pointer" xmlns="http://www.w3.org/2000/svg">
-        <path ref={anotherBurgerRef} d={svgD} stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
 
       <section ref={menu} id='burger-menu'>
     <div id='menu-logo'></div>
@@ -385,7 +398,6 @@ varieradTräning
 
     </nav>
 
-    
 
 
 {/* FÖRSTA SECTIONEN  */}
@@ -467,11 +479,6 @@ varieradTräning
 <article className='box-wrapper'>
 
 <div className='box'>
-  <h1 className='small-title'>Erfarenhet</h1>
-  <p className='thin-paragraf'>Med sammanlagt 10 års coaching-erfarenhet inom parkour, calisthenics, movnat och individuell träning kan jag hjälpa dig bemästra konsten att träna kroppsviktsträning. </p>
-</div>
-
-<div className='box'>
   <h1 className='small-title'>Kroppsviktsträning</h1>
   <p className='thin-paragraf'>De senaste 6 åren har jag haft ett brett fokus på träning inom calisthenics. <br /><br />Jag kan hjälpa dig bygga simpla eller avancerade träningspass med fokus på kroppsviktsträning samt lära dig både simpla och avancerade kroppsvikts-träningsformer.</p>
 </div>
@@ -482,7 +489,12 @@ varieradTräning
 </div>
 
 <div className='box'>
-  <h1 className='small-title'>Övrigt</h1>
+  <h1 className='small-title'>Min erfarenhet</h1>
+  <p className='thin-paragraf'>Med sammanlagt 10 års coaching-erfarenhet inom parkour, calisthenics, movnat och individuell träning kan jag hjälpa dig bemästra konsten att träna kroppsviktsträning. </p>
+</div>
+
+<div className='box'>
+  <h1 className='small-title'>Annat om mig</h1>
   <p className='thin-paragraf'>I övrigt har jag 13 års erfarenhet inom parkour, SM silver i calisthenics samt en sjätte placering i nordiska mästerskapen i calisthenics.</p>
 </div>
 
