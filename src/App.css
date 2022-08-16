@@ -16,6 +16,8 @@ body{
 background-color: black;
 }
 
+
+
 .light-background{
   background-color: #D9D9D9;
 }
@@ -29,6 +31,7 @@ font-weight: 300;
 font-family: 'Bebas Neue', cursive; */
 font-family: 'Mukta', sans-serif;
 margin: 25px 10px;
+z-index: 2;
 }
 
 .black{
@@ -58,6 +61,17 @@ font-weight: 300;
   text-align: end;
   margin-top: 10px;
 }
+
+.title{
+color: white;
+font-size: 30px;
+text-align: center;
+font-weight: 300;
+font-family: 'Mukta', sans-serif;
+margin: 25px 10px;
+z-index: 2;
+}
+
 
 .bold-title{
   font-family: 'Noto Sans JP', sans-serif;
@@ -91,6 +105,10 @@ font-size: 20px;
 font-size: 18px;
 }
 
+.bold300{
+  font-weight: 300 !important;
+}
+
 .button{
   color: white;
   font-weight: 500;
@@ -104,6 +122,11 @@ font-size: 18px;
   border: none ;
   margin: 50px;
   cursor: pointer;
+}
+
+.a-button{
+  z-index: 2;
+
 }
 
 .dark-theme{
@@ -127,7 +150,20 @@ font-size: 18px;
   letter-spacing: .5px;
   text-align: center;
   margin: 40px;
-  width: 50vw;
+  width: 50%;
+}
+
+.hero-paragraf{
+  font-size: 17px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 100;
+  line-height: 38px;
+  letter-spacing: 1.4px;
+  text-align: center;
+  margin: 40px;
+  width: 90%;
+  color: rgb(253, 253, 253);
+  z-index: 2;
 }
 
 .section-padding{
@@ -145,6 +181,37 @@ font-size: 18px;
   display: none;
 }
 
+.dark-text{
+  color: black;
+}
+
+.a-center{
+  display: flex;
+  align-items: center;
+}
+
+.i2{
+  z-index: 2;
+}
+
+.cusive{
+  font-style: italic;
+}
+
+.box-none{
+  display: none;
+}
+
+.block{
+  display: flex;
+}
+
+.m30{
+  margin: 30px !important;
+}
+
+/* ----------------------------------- GLOBAL END ------------------------------ */
+
 /* ----------------------------------- NAV ------------------------------ */
 
 nav{
@@ -156,6 +223,7 @@ nav{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 10;
 }
 
 #company-name{
@@ -213,52 +281,104 @@ letter-spacing: 2px;
 
 #first-section{
 height: 100vh;
+padding-top: 40px;
 display: flex;
 align-items: center;
 flex-direction: column;
+justify-content: center;
+
+background-image: url(../src/media/Handstand.jpg);
+background-size: cover;
+background-position: center;
 
 }
 
-#big-logo{
-  width: 300px;
-  height: 200px;
-  max-width: 70vw;
-  max-height: 30vh;
-  background-color: aliceblue;
-  margin: 20vh 0 50px 0;
-  }
-
-.arrow-down{
+.dark-bg{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
 }
 
 
 /* OFFER SECTION */
 
 #offer-section{
-  background: rgb(255,255,255);
-  background: linear-gradient(132deg, rgba(255,255,255,1) 0%, rgba(153,163,24,1) 99%);}
+  background-image: url(../src/media/movnat.JPG);
+  background-size: cover;
+  background-position: center;
 
-#offer-text-div{
-  width: 70vw;
+}
+
+.offer-check-wrapper{
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  flex-wrap: wrap;
+}
+
+#offer-text-wrapper{
+  width: 48vw;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  background-color: rgba(255,255,255, 0.5);
+  padding: 100px 0;
 
+}
+
+.offer-check-icon{
+  margin-right: 10px;
+  font-size: 22px;
+}
+
+
+
+/* ABOUT SECTION */
+
+#about-section{
+padding: 100px 0px;
+background-color: #282828;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+
+#profile-img{
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin: 20px;
 }
 
 
 
 /* PRINCIPLES SECTION */
 
+#principer{
+  background-image: url(./media/outdoor-gym.jpg);
+  color: white;
+  position: relative;
+  background-position-x: center;
+}
+
 .p-next-each-other-div{
 display: flex;
-width: 60vw;
-justify-content: space-between;
+flex-direction: column;
+width: 450px;
 flex-wrap: wrap;
 align-items: center;
-margin: 70px;
+margin: 30px;
+z-index: 2;
+}
+
+#principles-text-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .more-margin{
@@ -302,7 +422,7 @@ border-radius: 4px;
 }
 
 
-/* ERBJUDANDEN */
+/* PRISER */
 
 .offer-box{
   display: flex;
@@ -363,9 +483,79 @@ flex-wrap: wrap;
 
 /* Contact section */
 
+#meta-contact-wrapper{
+  height: 800px;
+  background-image: url(./media/woods.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 #contact-section{
   font-family: 'Noto Sans JP', sans-serif;
+  display: none;
 }
+
+.form-box{
+  width: 760px ;
+  height: 620px;
+  max-width: 90vw;
+  background-color: rgba(0,0,0, .7);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center ;
+  position: relative;
+}
+
+.all-boxes{
+  width: 100%;
+  height: 100%;
+  transition-duration: .3s;
+
+}
+
+.first-box{
+  opacity: 1;
+}
+
+#second-box{
+  opacity: 0;
+  transition-duration: .3s;
+  align-items: center;  
+  flex-direction: column;
+}
+
+.contact-box-title{
+  color: white;
+font-size: 30px;
+text-align: center;
+font-weight: 100;
+font-family: 'Mukta', sans-serif;
+margin: 100px 10px;
+z-index: 2;
+}
+
+.form-button{
+  width: 80%;
+  bottom: 20px;
+}
+
+.contact-btn-wrapper{
+  width: 88%;
+  display: flex;
+  position: absolute;
+  bottom: 15px;
+  justify-content: space-between;
+}
+
+.box-form-first-button{
+  position: absolute;
+}
+
 
 .checkbox-list-wrapper,
 .inputs input,
@@ -424,6 +614,9 @@ flex-wrap: wrap;
   display: flex;
   align-items: center;
   font-weight: 100;
+  font-size: 20px;
+  font-family: 'Noto Sans JP', sans-serif;
+  letter-spacing: 1px;
 }
 
 
@@ -629,6 +822,14 @@ transition-duration: 0.4s;
 }
 
 
+/* -------------------------- FORM ----------------------------------- */
+
+
+
+
+
+
+
 /* -------------------------- @MEDIA SCREEN ----------------------------------- */
 
 @media screen and (max-width: 1200px) {
@@ -664,10 +865,6 @@ transition-duration: 0.4s;
     max-width: 100%;
     }
 
-    .paragraf{
-      width: 90%;
-    }
-
     .offer-text-div{
       width: 80%;
     }
@@ -675,6 +872,7 @@ transition-duration: 0.4s;
     .checkbox{
       font-size: 13px;
       margin: 3px;
+      
     }
 
     .inputs input, 
@@ -697,6 +895,24 @@ transition-duration: 0.4s;
       margin-right: 0;
     }
 
-   
+    #offer-text-wrapper{
+      width: 100vw;
+    }
 
 }
+
+@media screen and (max-width: 810px) {
+
+#offer-section{
+  background-position-x: 920px;
+ }
+
+}
+
+@media screen and (min-width: 1500px) {
+
+  #offer-section{
+    height: 93vh ;
+   }
+  
+  }

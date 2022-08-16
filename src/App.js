@@ -2,11 +2,17 @@ import { useState, useRef, useEffect } from 'react';
 import './App.css';
 import Button from './components/Button';
 import Qvote from './components/Qvote';
-import { BsFacebook } from 'react-icons/bs';
+import { BsFacebook, BsCheck2Square } from 'react-icons/bs';
 import { GrInstagram } from 'react-icons/gr'
+import { VscCheck } from 'react-icons/vsc'
 import emailjs from '@emailjs/browser';
 import MessageSent from './components/message sent/MessageSent';
 import Burger from './components/burger/Burger';
+import Form from './components/Form/Form';
+import Checkbox from './components/Form/Checkbox';
+import PROFILE_PIC from './media/PT.jpg'
+import ContactFirst from './components/contact/ContactFirst';
+import ContactSecond from './components/contact/ContactSecond';
 
 
 function App() {
@@ -160,150 +166,6 @@ function handleMessage(result) {
     setTimeout(() => addTextFail(), 250)
   }
 
-  /*
-
-parkour
-movnat
-handstående
-mucsleUp
-roligareTräning
-helsosammaVarnor
-OCR
-smidighet
-tränaUtomhus
-funktionellTräning
-varieradTräning
-  
-  */
-
-  const [kroppsvikt, setKroppsvikt] = useState('')
-  const [parkour, setParkour] = useState('')
-  const [movnat, setMovnat] = useState('')
-  const [handstående, setHandstående] = useState('')
-  const [mucsleUp, setMucsleUp] = useState('')
-  const [roligareTräning, setRoligareTräning] = useState('')
-  const [helsosammaVarnor, setHelsosammaVarnor] = useState('')
-  const [OCR, setOCR] = useState('')
-  const [smidighet, setSmidighet] = useState('')
-  const [tränaUtomhus, setTränaUtomhus] = useState('')
-  const [funktionellTräning, setFunktionellTräning] = useState('')
-  const [varieradTräning, setVarieradTräning] = useState('')
-  const [akrobatik, setAkrobatik] = useState('')
-  const [planche, setPlanche] = useState('')
-
-  
-  function handleVarieradTräning() {
-    if(!varieradTräning){
-      setVarieradTräning('- Varierad träning')
-    } else if (varieradTräning === '- Varierad träning') {
-      setVarieradTräning('')
-    }
-  }
-
-  function handleFunktionellTräning() {
-    if(!funktionellTräning){
-      setFunktionellTräning('- Funktionell träning')
-    } else if (funktionellTräning === '- Funktionell träning') {
-      setFunktionellTräning('')
-    }
-  }
-  
-  function handleTränaUtomhus() {
-    if(!tränaUtomhus){
-      setTränaUtomhus('- Träna utomhus')
-    } else if (tränaUtomhus === '- Träna utomhus') {
-      setTränaUtomhus('')
-    }
-  }
-  
-  function handleSmidighet() {
-    if(!smidighet){
-      setSmidighet('- Smidighet')
-    } else if (smidighet === '- Smidighet') {
-      setSmidighet('')
-    }
-  }
-
-  function handleOCR() {
-    if(!OCR){
-      setOCR('- OCR / Hinderbarna')
-    } else if (OCR === '- OCR / Hinderbarna') {
-      setOCR('')
-    }
-  }
-
-  function handleHelsosammaVarnor() {
-    if(!helsosammaVarnor){
-      setHelsosammaVarnor('- Helsosamma varnor')
-    } else if (helsosammaVarnor === '- Helsosamma varnor') {
-      setHelsosammaVarnor('')
-    }
-  }
-
-  function handleRoligareTräning() {
-    if(!roligareTräning){
-      setRoligareTräning('- Roligare träning')
-    } else if (roligareTräning === '- Roligare träning') {
-      setRoligareTräning('')
-    }
-  }
-
-  function handleMucsleUp() {
-    if(!mucsleUp){
-      setMucsleUp('- MucsleUp')
-    } else if (mucsleUp === '- MucsleUp') {
-      setMucsleUp('')
-    }
-  }
-
-  function handleHandstående() {
-    if(!handstående){
-      setHandstående('- Handstående')
-    } else if (handstående === '- Handstående') {
-      setHandstående('')
-    }
-  }
-
-  function handleMovenat() {
-    if(!movnat){
-      setMovnat('- Movnat')
-    } else if (movnat === '- Movnat') {
-      setMovnat('')
-    }
-  }
-
-  function handleParkour() {
-    if(!parkour){
-      setParkour('- Parkour')
-    } else if (parkour === '- Parkour') {
-      setParkour('')
-    }
-  }
-
-  function handleKroppsvikt() {
-    if(!kroppsvikt){
-      setKroppsvikt('- Kroppsviktsträning')
-    } else if (kroppsvikt === '- Kroppsviktsträning') {
-      setKroppsvikt('')
-    }
-  }
-
-  function handlePlanche() {
-    if(!planche){
-      setPlanche('- Planche')
-    } else if (planche === '- Planche') {
-      setPlanche('')
-    }
-  }
-
-  function handleAkrobatik() {
-    if(!akrobatik){
-      setAkrobatik('- Akrobatik')
-    } else if (akrobatik === '- Akrobatik') {
-      setAkrobatik('')
-    }
-  }
-
 
   // ---------------------- HAMBURGAREN ---------------------- //
   
@@ -340,7 +202,6 @@ varieradTräning
    useEffect(() => {
     
     const check = (e) => {
-      console.log(e);
 
       if (
           e.path[0] !== burgerRef.current &&
@@ -402,18 +263,18 @@ varieradTräning
 
 {/* FÖRSTA SECTIONEN  */}
    <section id='first-section' className='dark'>
+    <div className='dark-bg'></div>
 
-    <div id='big-logo'></div>
+    <h1 className='title more-margin'>Personlig träning med brett fokus på rörelsemöster<br />Adrian Skog</h1>
 
-    <h1 className='qvote large'>“We don't stop playing because we grow old,<br />we grow old because we stop playing”
-    <h1 className='qvote tiny to-qvote'>//George Bernard Shaw</h1>
-    </h1>
+    <p className='hero-paragraf'>
+      Har du alltid drömt om att göra akrobatiska rörelser som handstående eller pullups?<br />
+      Eller ännu mer avancerade rörelser?<br />
+      Eller kanske bli smidig nog för att kunna leka med dina vänner, barn eller barnbarn?<br />
+    </p>
     
-    <a href="#offer-section">
-      <svg className='arrow-down' width="20" viewBox="0 0 82 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M0.918087 0.918084C1.20837 0.627064 1.55322 0.39617 1.93288 0.23863C2.31253 0.0810899 2.71954 0 3.13059 0C3.54163 0 3.94864 0.0810899 4.3283 0.23863C4.70795 0.39617 5.0528 0.627064 5.34309 0.918084L40.6306 36.2118L75.9181 0.918084C76.2086 0.627535 76.5536 0.397058 76.9332 0.239813C77.3128 0.082569 77.7197 0.00163615 78.1306 0.00163615C78.5415 0.00163615 78.9484 0.082569 79.328 0.239813C79.7076 0.397058 80.0525 0.627535 80.3431 0.918084C80.6336 1.20863 80.8641 1.55357 81.0214 1.93319C81.1786 2.31281 81.2595 2.71969 81.2595 3.13058C81.2595 3.54148 81.1786 3.94836 81.0214 4.32798C80.8641 4.7076 80.6336 5.05254 80.3431 5.34309L42.8431 42.8431C42.5528 43.1341 42.2079 43.365 41.8283 43.5225C41.4486 43.6801 41.0416 43.7612 40.6306 43.7612C40.2195 43.7612 39.8125 43.6801 39.4329 43.5225C39.0532 43.365 38.7084 43.1341 38.4181 42.8431L0.918087 5.34309C0.627066 5.0528 0.396173 4.70795 0.238633 4.3283C0.0810928 3.94864 0 3.54163 0 3.13058C0 2.71954 0.0810928 2.31253 0.238633 1.93287C0.396173 1.55322 0.627066 1.20837 0.918087 0.918084Z" fill="white"/>
-      </svg>
-    </a>
+   
+   <Button />
    
 
 
@@ -421,46 +282,93 @@ varieradTräning
 
 {/* OFFER SECTION */}
 
-<section id='offer-section' className='section-padding'>
+<section id='offer-section'>
 
-<div id='offer-text-div'>
-  <h1 className='bold-title'>Första träningen gratis!</h1>
 
-  <p className='p20'>20 min samtal</p>
-  <p className='p20'>30 min träning</p>
+<div id='offer-text-wrapper'>
+  <h1 className='title dark-text'>Första träningen gratis<br />Du har allt att vinna</h1>
+  
+  <div className='offer-check-wrapper'>
+    <p className='p20 a-center title dark-text'> <VscCheck className='offer-check-icon' /> 20 min samtal</p>
+    <p className='p20 a-center title dark-text' ><VscCheck className='offer-check-icon' />30 min träning</p>
+  </div>
+ 
 
-  <p className='paragraf'>Träning måste vara roligt för att den ska bli effektiv. Jag kan hjälpa dig skapa en träningsrutin som gör träningen roligare och mer effektiv. Vi tar ett 20 min samtal innan kör vi ett 30 min pt pass.  </p>
+  <p className='hero-paragraf dark-text bold300'>
+
+  Vill du bemästra konsten att träna calisthenics / kroppsviktsträning ?  
+Vill du kunna träna vart som helst? 
+<br /><br />
+Först har vi ett samtal så jag kan förstå dina mål och behov, sedan kör vi ett träningspass där jag lär dig något som du vill lära dig. 
+<br /><br />
+Träningen kör vi vid utegymmet Plikta vid slottskogen
+<br /><br />
+Det finns mycket spännande man kan lära sig, ta en titt på alternativen som finns!  
+    
+  </p>
 
   <Button />
 </div>
 
 </section>
 
+
+{/* ABOUT SECTION */}
+
+<section id='about-section'>
+
+    <h1 className='title'>Jag är Adrian, kallas även “Bra att hadrian”</h1>
+   
+    <img id='profile-img' src={PROFILE_PIC} alt="Image of Adrian smiling, blurry trees in the background" />
+
+    <p className='hero-paragraf bold300'>
+    Jag brinner för det här ______________________________ (patos) 
+    <br /><br />
+    är utbildat till det här ________________________ (logos)
+    <br /><br />
+    Jag har hållit på med dethär____ dehär____ och dehär_______ (etos?)
+    <br /><br />
+    min filisofi lyder såhör_______ och det påverkar din träning såhär_______
+    hoppas vi hörs, ha de gött hej!!! 
+
+
+    </p>
+
+</section>
+
+
+
 <Qvote text={`"Don't limit the motion, move the limit"`} />
 
 
 {/* TRE VIKTIGA PRINCIPER */}
 
-<section id='principer' className='dark-theme section-center'>
+<section id='principer' className='section-center'>
 
-  <h1 className='bold-title more-margin'>Tre viktiga principer</h1>
+<div className='dark-bg'></div>
 
-<div className='p-next-each-other-div'>
-  <h1 className='small-title'>LEK = EFFEKTIV TRÄNING</h1>
-  <p className='thin-paragraf principle-p'>Har man kul när man tränar kommer man vilja fortsätta träna, vill man fortsätta träna blir träningen effektiv.</p>
+  <h1 className='title more-margin i2'>Tre viktiga principer</h1>
+
+<div id='principles-text-wrapper'>
+
+    <div className='p-next-each-other-div'>
+      <h1 className='small-title cusive'>VANOR AVGÖR RESULTATET </h1>
+      <p className='thin-paragraf principle-p'>Dina vanor är det som avgör om du uppnår dina träningsmål eller ej. Mitt mål är att hjälpa dig få in den form av rörelse du vill ha i vardagen på ett naturligt vis, träning ska inte kännas påtvingat.</p>
+    </div>
+
+    <div className='p-next-each-other-div'>
+      <h1 className='small-title cusive'>LEK = EFFEKTIV TRÄNING</h1>
+      <p className='thin-paragraf principle-p'>Har man kul när man tränar kommer man vilja fortsätta träna, vill man fortsätta träna blir träningen effektiv.</p>
+    </div>
+
+    <div className='p-next-each-other-div'>
+      <h1 className='small-title cusive'>VARIERAD RÖRELSE</h1>
+      <p className='thin-paragraf principle-p'>Förbättrar man rörelsen på ett område förbättras det på andra områden också; tränar man pullups blir man även bättre på att göra armhävningar. Därför tror jag på att en bred variation av rörelse är den bästa träningsformen.</p>
+    </div>
+
 </div>
 
 
-<div className='p-next-each-other-div'>
-  <h1 className='small-title'>VANOR AVGÖR RESULTATET </h1>
-  <p className='thin-paragraf principle-p'>Dina vanor är det som avgör om du uppnår dina träningsmål eller ej. Mitt mål är att hjälpa dig få in den form av rörelse du vill ha i vardagen på ett naturligt vis, träning ska inte kännas påtvingat.</p>
-</div>
-
-
-<div className='p-next-each-other-div'>
-  <h1 className='small-title'>VARIERAD RÖRELSE</h1>
-  <p className='thin-paragraf principle-p'>Förbättrar man rörelsen på ett område förbättras det på andra områden också; tränar man pullups blir man även bättre på att göra armhävningar. Därför tror jag på att en bred variation av rörelse är den bästa träningsformen.</p>
-</div>
 
 <Button />
 
@@ -470,8 +378,107 @@ varieradTräning
 <Qvote text={`“Change happens through movement”`} toText={`//Joseph Pilates`} />
 
 
-{/* BOXES SECTION */}
+{/* CONTACT SECTION */}
 
+<MessageSent text={text} success={success} />
+
+<section id='meta-contact-wrapper'>
+
+  <article className='form-box'>
+
+    <ContactFirst />
+    <ContactSecond />
+
+  </article>
+
+
+
+  <section id='contact-section' className='contact-section section-center dark-theme section-padding'>
+
+    <h1 className='bold-title letter-spacing'>Kom igång med roligare träning</h1>
+
+    <article id='form-article'>
+
+      <h1 className='small-title'>Vad intresserar dig?</h1>
+
+      <form ref={form} onSubmit={sendEmail}>
+
+        
+      <Form />
+
+        {/* MEDDELANDE FORM  */}
+        
+
+        <div className='inputs'>
+          <input 
+        id='input-name'
+        type="text"   
+          required
+          placeholder='Name*'
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          name="user_name"
+          />
+          <input 
+        id='input-email'
+        type="email"   
+          required
+          placeholder='Email*'
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          name="user_email"
+          />
+        </div>
+      
+        <textarea
+        id='input-message'
+        required
+        cols="30" 
+        rows="10"
+        placeholder='Skriv meddelande'
+        value={textArea}
+        onChange={(e) => setTextArea(e.target.value)}
+        name="message"
+        >
+        </textarea>
+
+
+        <input 
+        className='button form-btn' 
+        value="Skicka"
+        type="submit"
+        />
+
+      </form>
+
+    </article>
+
+
+    <article id='contact-info-article'>
+
+      <div className='info-with-space'>
+      <p>Telefon:</p>
+      <a href="tel:0707898707">0707 89 87 07</a>
+      </div>
+
+      <div className='info-with-space'>
+      <p>Email:</p>
+      <a href="mailto:soderberg.skog@gmail.com">soderberg.skog@gmail.com</a>
+      </div>
+    
+      <div className='icons'>
+        <a href="" target={'_blank'}><BsFacebook className='icon'/></a>
+        <a href="" target={'_blank'}><GrInstagram className='icon'/></a> 
+      </div>
+
+    </article>
+
+  </section>
+
+</section>
+
+{/* BOXES SECTION */}
+{/* 
 <section id='box-section' className='dark-theme section-center'>
 
 <h1 className='bold-title more-margin'>Bemästra konsten att träna kroppsvikt</h1>
@@ -503,10 +510,13 @@ varieradTräning
 <Button />
 
 
-</section>
+</section> */}
 
 
-{/* ERBJUDANDEN */}
+
+
+
+{/* PRISER */}
 
 <section id='offer' className='section-center section-padding light-background'>
 
@@ -614,213 +624,7 @@ Eller så lär dig jag parkourens tekniker.
 </section>
 
 
-{/* CONTACT SECTION */}
 
-<MessageSent text={text} success={success} />
-
-<section id='contact-section' className='contact-section section-center dark-theme section-padding'>
-
-  <h1 className='bold-title letter-spacing'>Kom igång med roligare träning</h1>
-
-  <article id='form-article'>
-
-    <h1 className='small-title'>Vad intresserar dig?</h1>
-
-    <form ref={form} onSubmit={sendEmail}>
-
-      <article className='checkbox-list-wrapper'>
-
-{/* FÖRSTA SPALTEN */}
-        <div className='checkbox-list'>
-
-          <div className='checkbox'>
-            <label className='checkbox'>Kroppsviktsträning
-            <input className="form-checkbox" onClick={handleKroppsvikt} type="checkbox" name='Kroppsviktsträning' />
-            </label>
-            
-          </div>
-
-          <div className='checkbox'>
-            <label className='checkbox'>Movnat
-            <input className="form-checkbox" onClick={handleMovenat} type="checkbox" name='Movenat' />
-          </label>
-          </div>
-
-          <div className='checkbox'>
-            <label className='checkbox'>Mucsle up
-              <input className="form-checkbox" onClick={handleMucsleUp} type="checkbox" name='MucsleUp' />
-            </label>
-          </div>
-
-          <div className='checkbox'>
-            <label className='checkbox'>Helsosamma varnor
-            <input className="form-checkbox" onClick={handleHelsosammaVarnor} type="checkbox" name='HelsosammaVarnor' />
-            
-            </label>
-          </div>
-
-          <div className='checkbox'>
-            <label className='checkbox'>Smidighet
-            <input className="form-checkbox" onClick={handleSmidighet} type="checkbox" name='Smidighet' />
-            
-            </label>
-          </div>
-
-          <div className='checkbox'>
-            <label className='checkbox'>Akrobatik
-            <input className="form-checkbox" onClick={handleAkrobatik} type="checkbox" name='Akrobatik' />
-            
-            </label>
-          </div>
-
-          <div className='checkbox'>
-            <label className='checkbox'>Funktionell träning
-            <input className="form-checkbox" onClick={handleFunktionellTräning} type="checkbox" name='FunktionellTräning' />
-            
-            </label>
-          </div>
-
-        </div>
-
-{/* ANDRA SPALTEN */}
-        <div className='checkbox-list second-checklist-column'>
-
-          <div className='checkbox'>
-            <label className='checkbox'>Parkour
-            <input className="form-checkbox" onClick={handleParkour} type="checkbox" name='Parkour' />
-            
-            </label>
-          </div>
-
-          <div className='checkbox'>
-            <label className='checkbox'>Handstående
-            <input className="form-checkbox" onClick={handleHandstående} type="checkbox" name='Handstående' />
-            
-            </label>
-          </div>
-
-          <div className='checkbox'>
-            <label className='checkbox'>Roligare träning
-            <input className="form-checkbox" onClick={handleRoligareTräning} type="checkbox" name='RoligareTräning' />
-            
-            </label>
-          </div>
-
-          <div className='checkbox'>
-            <label className='checkbox'>OCR / hinderbarna
-            <input className="form-checkbox" onClick={handleOCR} type="checkbox" name='OCR' />
-            
-            </label>
-          </div>
-
-          <div className='checkbox'>
-            <label className='checkbox'>Planche
-            <input className="form-checkbox" onClick={handlePlanche} type="checkbox" name='Planche' />
-            
-            </label>
-          </div>
-
-          <div className='checkbox'>
-            <label className='checkbox'>Träna utomhus
-            <input className="form-checkbox" onClick={handleTränaUtomhus} type="checkbox" name='TränaUtomhus' />
-            
-            </label>
-          </div>
-
-          <div className='checkbox'>
-            <label className='checkbox'>Varierad träning
-            <input className="form-checkbox" onClick={handleVarieradTräning} type="checkbox" name='VarieradTräning' />
-            
-            </label>
-          </div>
-
-        </div>
-
-      </article>
-
-      
-
-      <div className='inputs'>
-        <input 
-      id='input-name'
-      type="text"   
-        required
-        placeholder='Name*'
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-        name="user_name"
-        />
-        <input 
-      id='input-email'
-      type="email"   
-        required
-        placeholder='Email*'
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        name="user_email"
-        />
-      </div>
-    
-      <textarea
-      id='input-message'
-      required
-      cols="30" 
-      rows="10"
-      placeholder='Skriv meddelande'
-      value={textArea}
-      onChange={(e) => setTextArea(e.target.value)}
-      name="message"
-      >
-      </textarea>
-
-      <input className='none' name='kroppsvikt' type="text" value={kroppsvikt} />
-      <input className='none' name='parkour' type="text" value={parkour} />
-      <input className='none' name='movnat' type="text" value={movnat} />
-      <input className='none' name='handstaende' type="text" value={handstående} />
-      <input className='none' name='mucsleUp' type="text" value={mucsleUp} />
-      <input className='none' name='roligareTraning' type="text" value={roligareTräning} />
-      <input className='none' name='helsosammaVarnor' type="text" value={helsosammaVarnor} />
-      <input className='none' name='hinderbarna' type="text" value={OCR} />
-      <input className='none' name='smidighet' type="text" value={smidighet} />
-      <input className='none' name='akrobatik' type="text" value={akrobatik} />
-      <input className='none' name='tranaUtomhus' type="text" value={tränaUtomhus} />
-      <input className='none' name='funktionelltraning' type="text" value={funktionellTräning} />
-      <input className='none' name='varieradTraning' type="text" value={varieradTräning} />
-      <input className='none' name='planche' type="text" value={planche} />
-
-
-      
-      <input 
-      className='button form-btn' 
-      value="Skicka"
-      type="submit"
-      />
-
-    </form>
-
-  </article>
-
-
-  <article id='contact-info-article'>
-
-    <div className='info-with-space'>
-    <p>Telefon:</p>
-    <a href="tel:0707898707">0707 89 87 07</a>
-    </div>
-
-    <div className='info-with-space'>
-    <p>Email:</p>
-    <a href="mailto:soderberg.skog@gmail.com">soderberg.skog@gmail.com</a>
-    </div>
-  
-    <div className='icons'>
-      <a href="" target={'_blank'}><BsFacebook className='icon'/></a>
-      <a href="" target={'_blank'}><GrInstagram className='icon'/></a> 
-    </div>
-
-  </article>
-
-</section>
 
    </>
   );

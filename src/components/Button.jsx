@@ -3,7 +3,7 @@ import React from 'react'
 function Button() {
   return (
     <>
-    <a href="#contact-section"><button className='button'>Börja träna roligare</button></a>
+    <a className='a-button' href="#contact-section"><button className='button'>Se alternativ</button></a>
     </>
   )
 }
