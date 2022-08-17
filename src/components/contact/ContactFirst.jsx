@@ -29,7 +29,6 @@ function ContactFirst() {
         Du har allt att vinna
         </h1>
 
-        <div className='contact-btn-wrapper'>
 
           <FormButton 
               Text={'Se alternativ'} 
@@ -38,7 +37,7 @@ function ContactFirst() {
               next={next}
               position={'absolute'}
           />
-        </div>
+          
     </article>
   )
 }

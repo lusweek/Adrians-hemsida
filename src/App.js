@@ -382,12 +382,14 @@ Det finns mycket spännande man kan lära sig, ta en titt på alternativen som f
 
 <MessageSent text={text} success={success} />
 
+
 <section id='meta-contact-wrapper'>
 
   <article className='form-box'>
 
     <ContactFirst />
     <ContactSecond />
+
 
   </article>
 
@@ -455,6 +457,8 @@ Det finns mycket spännande man kan lära sig, ta en titt på alternativen som f
 
 
     <article id='contact-info-article'>
+
+
 
       <div className='info-with-space'>
       <p>Telefon:</p>

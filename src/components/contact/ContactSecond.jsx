@@ -1,5 +1,9 @@
 import React from 'react'
+import Checkbox from '../Form/Checkbox'
 import FormButton from '../FormButton'
+import CALISTHENICS_IMG from '../../media/calisthenics.jpg'
+import SMIDIGHET_IMG from '../../media/Smidighet.jpg'
+
 
 function ContactSecond() {
   return (
@@ -10,7 +14,26 @@ function ContactSecond() {
       Vad vill du utväcklas i?
     </h1>
 
-    <div className=''>
+    <div className='checkbox-wrapper'>
+        <Checkbox 
+        lable={'Calisthenics'} 
+        Lname={'chalisthenics'} 
+        
+        paragraf={'Text Calisthenics'}
+
+        img={CALISTHENICS_IMG}
+        id={'modal-1'}
+        />
+
+        <Checkbox 
+        lable={'Smidighet'} 
+        Lname={'smidighet'} 
+        
+        paragraf={'text för Smidighet'}
+
+        img={SMIDIGHET_IMG}
+        id={'modal-2'}
+        />
 
     </div>
 

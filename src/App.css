@@ -199,15 +199,19 @@ font-size: 18px;
 }
 
 .box-none{
-  display: none;
+  display: none !important;
 }
 
 .block{
-  display: flex;
+  display: flex !important;
 }
 
 .m30{
   margin: 30px !important;
+}
+
+.m70{
+  margin: 70px !important;
 }
 
 /* ----------------------------------- GLOBAL END ------------------------------ */
@@ -520,6 +524,8 @@ flex-wrap: wrap;
 
 .first-box{
   opacity: 1;
+  display: flex;
+  justify-content: center;
 }
 
 #second-box{
@@ -537,11 +543,33 @@ font-weight: 100;
 font-family: 'Mukta', sans-serif;
 margin: 100px 10px;
 z-index: 2;
+height: 80px;
+letter-spacing: 1px;
 }
 
 .form-button{
   width: 80%;
   bottom: 20px;
+}
+
+.close-icon{
+  color: white;
+  position: absolute;
+  top: 20px;
+  right: 27px;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.checkbox-icon{
+  margin-top: 1px;
+  margin-right: 3px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.checkbox-wrapper{
+  margin-top: 40px;
 }
 
 .contact-btn-wrapper{
@@ -591,7 +619,11 @@ z-index: 2;
 }
 
 .form-checkbox{
-  width: 17px;
+  width: 16px;
+  height: 16px;
+  margin-top: 8px;
+  margin-left: 30px;
+  cursor: pointer;
 }
 
 #form-article form{
@@ -617,6 +649,8 @@ z-index: 2;
   font-size: 20px;
   font-family: 'Noto Sans JP', sans-serif;
   letter-spacing: 1px;
+  color: white;
+  cursor: pointer;
 }
 
 
@@ -679,6 +713,40 @@ margin: 15px 0;
   cursor: pointer;
 }
 
+/* ---------------------------- SKILL MODAL ------------------------------ */
+
+
+.skill-modal{
+height: 80vh;
+width: 90vw;
+margin: 10vh 5vw;
+position: fixed;
+top: 0px;
+left: 0px;
+background-color: #252525;
+z-index: 3;
+border-radius: 5px;
+color: white;
+display: flex;
+flex-direction: column;
+overflow: auto;
+}
+
+.modal-img-text-wrapper{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+
+.skill-modal-paragraf{
+  width: 40%;
+  margin-top: 20px;
+}
+
+.skill-modal-img{
+  width: 40%;
+  object-fit: contain;
+}
 
 /* ---------------------------- LOADER ANIMATION ------------------------------ */
 
@@ -906,13 +974,43 @@ transition-duration: 0.4s;
 #offer-section{
   background-position-x: 920px;
  }
+ 
+ .skill-modal{
+  height: 90vh;
+  margin: 5vh 5vw;
+ }
+
+ .contact-box-title{
+  margin: 30px !important;
+ }
+
+ .skill-modal-img{
+  width: 70%;
+ }
+
+ .modal-img-text-wrapper{
+  flex-direction: column;
+  align-items: center;
+  
+ }
+
+ .skill-modal-paragraf{
+  width: 80%;
+ }
+
 
 }
+
+/* NÄR SKÄRMEN BLIR STOR */
 
 @media screen and (min-width: 1500px) {
 
   #offer-section{
     height: 93vh ;
+   }
+
+   .skill-modal-img{
+    width: 550px;
    }
   
   }
