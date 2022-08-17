@@ -2,10 +2,9 @@ import { useState, useRef, useEffect } from 'react';
 import './App.css';
 import Button from './components/Button';
 import Qvote from './components/Qvote';
+import { VscCheck } from 'react-icons/vsc'
 import { BsFacebook, BsCheck2Square } from 'react-icons/bs';
 import { GrInstagram } from 'react-icons/gr'
-import { VscCheck } from 'react-icons/vsc'
-import emailjs from '@emailjs/browser';
 import MessageSent from './components/message sent/MessageSent';
 import Burger from './components/burger/Burger';
 import Form from './components/Form/Form';
@@ -13,16 +12,14 @@ import Checkbox from './components/Form/Checkbox';
 import PROFILE_PIC from './media/PT.jpg'
 import ContactFirst from './components/contact/ContactFirst';
 import ContactSecond from './components/contact/ContactSecond';
+import ContactThird from './components/contact/ContactThird';
+import ContactForth from './components/contact/ContactForth';
+import ContactFift from './components/contact/ContactFift';
 
 
 function App() {
 
-  // ------------------- FORM TRACKING ------------------- // 
-
-  const [title, setTitle] = useState('');
-  const [subject, setSubject] = useState('');
-  const [email, setEmail] = useState('');
-  const [textArea, setTextArea] = useState('')
+ 
 
   // ------------- MORE HOWERS FUNCITON START ------------------- //
 
@@ -63,107 +60,6 @@ function App() {
     } else if(!isClosed){
       setArrowD(arrowDown)
     } 
-  }
-
-
-  // --------------------- EMAIL -------------------- //
-
-
-  const form = useRef();
-
-
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-    openLoader()
-
-    // SERVICE_ID = 'service_inf48rp';
-    // TEMPLATE_ID = 'template_19tzibd';
-    // PUBLIC_KEY = 'ZGdhs2ZT5cVWZRNGA';
-
-    emailjs.sendForm('service_inf48rp', 'template_19tzibd', form.current, 'ZGdhs2ZT5cVWZRNGA')
-      .then((result) => {
-          console.log(result.text);
-          handleMessage(result.text)
-          clearText()
-      }, (error) => {
-          console.log(error.text);
-          handleMessage(error.text)
-      });
-  };
-
-  function clearText() {
-      document.querySelector('#input-name').value=''
-      document.querySelector('#input-email').value=''
-      document.querySelector('#input-message').value=''
-  }
-
-  // Send animation
-
-  const [text, setText] = useState('')
-  const [success, setSucsess] = useState(true)
-
-  function openLoader() {
-    document.querySelector('.loader-modal').style.display = 'flex';
-  }
-
-  function closeLoader() {
-    document.querySelector('.loader-modal').style.opacity = '0';
-    setTimeout(close, 500)
-  }
-
-  function close () {
-    document.querySelector('.loader-modal').style.display = 'none';
-    document.querySelector('.loader-modal').style.opacity = '1';
-    document.querySelector('.done-text').style.opacity='0';
-    loader.classList.add("modal-loader-wrapper-animation");
-    loader.classList.remove("modal-loader-new-animation");
-    document.querySelector('.done-text').style.color='green';
-    loader.classList.remove("message-fail-animation");
-  }
-
-
-const loader = document.querySelector('.modal-loader-wrapper');
-
-function handleMessage(result) {
-  if (result === 'OK') {
-    setSucsess(true)
-    setText('message sent!')
-    animation()
-    console.log('message sent! : ', result);
-  } else {
-    setSucsess(false)
-    setText('Something went wrong, try again!')
-    console.log('Something went wrong: ', result);
-    messageNotSent()
-  }
-
-}
-
-  
-  function animation () {
-    loader.classList.remove("modal-loader-wrapper-animation")
-    loader.classList.add("modal-loader-new-animation")
-    setTimeout(() => addText(), 250)
-  }
-
-  function addText() {
-  document.querySelector('.done-text-div').style.opacity='1'
-  document.querySelector('.done-text').style.opacity='1'
-  setTimeout(closeLoader, 1900)
-  }
-
-  function addTextFail() {
-    document.querySelector('.done-text-div').style.opacity='1'
-    document.querySelector('.done-text').style.opacity='1'
-    setTimeout(closeLoader, 2300)
-    }
-
-  function messageNotSent() {
-    document.querySelector('.done-text').style.color='red'
-    loader.classList.remove("modal-loader-wrapper-animation")
-    loader.classList.add("message-fail-animation")
-    setTimeout(() => addTextFail(), 250)
   }
 
 
@@ -380,7 +276,6 @@ Det finns mycket spännande man kan lära sig, ta en titt på alternativen som f
 
 {/* CONTACT SECTION */}
 
-<MessageSent text={text} success={success} />
 
 
 <section id='meta-contact-wrapper'>
@@ -389,95 +284,13 @@ Det finns mycket spännande man kan lära sig, ta en titt på alternativen som f
 
     <ContactFirst />
     <ContactSecond />
+    <ContactThird />
+    <ContactForth />
+    <ContactFift />
 
 
   </article>
 
-
-
-  <section id='contact-section' className='contact-section section-center dark-theme section-padding'>
-
-    <h1 className='bold-title letter-spacing'>Kom igång med roligare träning</h1>
-
-    <article id='form-article'>
-
-      <h1 className='small-title'>Vad intresserar dig?</h1>
-
-      <form ref={form} onSubmit={sendEmail}>
-
-        
-      <Form />
-
-        {/* MEDDELANDE FORM  */}
-        
-
-        <div className='inputs'>
-          <input 
-        id='input-name'
-        type="text"   
-          required
-          placeholder='Name*'
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          name="user_name"
-          />
-          <input 
-        id='input-email'
-        type="email"   
-          required
-          placeholder='Email*'
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          name="user_email"
-          />
-        </div>
-      
-        <textarea
-        id='input-message'
-        required
-        cols="30" 
-        rows="10"
-        placeholder='Skriv meddelande'
-        value={textArea}
-        onChange={(e) => setTextArea(e.target.value)}
-        name="message"
-        >
-        </textarea>
-
-
-        <input 
-        className='button form-btn' 
-        value="Skicka"
-        type="submit"
-        />
-
-      </form>
-
-    </article>
-
-
-    <article id='contact-info-article'>
-
-
-
-      <div className='info-with-space'>
-      <p>Telefon:</p>
-      <a href="tel:0707898707">0707 89 87 07</a>
-      </div>
-
-      <div className='info-with-space'>
-      <p>Email:</p>
-      <a href="mailto:soderberg.skog@gmail.com">soderberg.skog@gmail.com</a>
-      </div>
-    
-      <div className='icons'>
-        <a href="" target={'_blank'}><BsFacebook className='icon'/></a>
-        <a href="" target={'_blank'}><GrInstagram className='icon'/></a> 
-      </div>
-
-    </article>
-
-  </section>
 
 </section>
 
@@ -627,7 +440,28 @@ Eller så lär dig jag parkourens tekniker.
 
 </section>
 
+{/* ---------------------- CONTAKTINFORMATION --------------------- */}
 
+<article id='contact-info-article'>
+
+
+
+  <div className='info-with-space'>
+  <p>Telefon:</p>
+  <a href="tel:0707898707">0707 89 87 07</a>
+  </div>
+
+  <div className='info-with-space'>
+  <p>Email:</p>
+  <a href="mailto:soderberg.skog@gmail.com">soderberg.skog@gmail.com</a>
+  </div>
+
+  <div className='icons'>
+    <a href="" target={'_blank'}><BsFacebook className='icon'/></a>
+    <a href="" target={'_blank'}><GrInstagram className='icon'/></a> 
+  </div>
+
+</article>
 
 
    </>

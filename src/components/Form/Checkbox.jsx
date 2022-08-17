@@ -21,13 +21,19 @@ function handleThis() {
 
 
   function handleIcon() {
-    console.log('Click');
-    document.getElementById(id).classList.remove('box-none')
-    document.getElementById(id).classList.add('block')
-    console.log(paragraf);
-
+    document.getElementById(id).style.opacity='0'
+    setTimeout(flex, 1)
   }
 
+  const flex = () => {
+    document.getElementById(id).classList.remove('box-none')
+    document.getElementById(id).classList.add('block')
+    setTimeout(fade, 1)
+  }
+
+  const fade = () => {
+    document.getElementById(id).style.opacity='1'
+  }
 
   return (
 
@@ -36,12 +42,13 @@ function handleThis() {
 
     <div className='checkbox'>
     <AiOutlineQuestionCircle className='checkbox-icon' onClick={handleIcon} />
-    <label className='checkbox'>{lable}
+    <label className='pointer'>{lable}
     <input className="form-checkbox" onClick={handleThis} type="checkbox" name='OCR' />
     
     </label>
 
     <SkillModal 
+    title={lable}
     paragraf={paragraf} 
     img={img}
     id={id}

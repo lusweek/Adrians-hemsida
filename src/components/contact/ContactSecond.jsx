@@ -6,8 +6,50 @@ import SMIDIGHET_IMG from '../../media/Smidighet.jpg'
 
 
 function ContactSecond() {
+
+// ------------------- BACK ---------------- //
+
+  const back = () => {
+
+    setTimeout(none, 300)
+    document.querySelector('#second-box').style.opacity= '0' 
+}
+
+const none = () => {
+  document.querySelector('#first-box').classList.remove('box-none')
+  document.querySelector('#first-box').classList.add('block')
+  document.querySelector('#second-box').classList.remove('block')
+  document.querySelector('#second-box').classList.add('box-none')
+  setTimeout(opacity, 1)
+}
+
+const opacity = () => {
+  document.querySelector('#first-box').style.opacity= '1'
+}
+
+
+// ------------------- NEXT ---------------- //
+
+const next = () => {
+  setTimeout(noneNext, 300)
+  document.querySelector('#second-box').style.opacity= '0' 
+}
+
+const noneNext = () => {
+  document.querySelector('#third-box').classList.remove('box-none')
+  document.querySelector('#third-box').classList.add('block')
+  document.querySelector('#second-box').classList.remove('block')
+  document.querySelector('#second-box').classList.add('box-none')
+  setTimeout(opacityNext, 1)
+}
+
+const opacityNext = () => {
+  document.querySelector('#third-box').style.opacity= '1'
+}
+
+
   return (
-    <article id='second-box' className='second-box all-boxes box-none'>
+    <article id='second-box' className='all-boxes box-none'>
 
     <h1 className='contact-box-title m30'>
       Vad intresserar dig?<br />
@@ -16,40 +58,62 @@ function ContactSecond() {
 
     <div className='checkbox-wrapper'>
         <Checkbox 
+        id={Math.random()}
+
         lable={'Calisthenics'} 
         Lname={'chalisthenics'} 
-        
-        paragraf={'Text Calisthenics'}
-
+        paragraf={'Att träna med kroppen som vikt. Vanliga övningar är armhävningar, pullups och squats. Fördelen med att träna kroppsvikt är att man kan göra det vart som hällst och det är snällt för kroppen.'}
         img={CALISTHENICS_IMG}
-        id={'modal-1'}
+        
         />
 
         <Checkbox 
+        id={Math.random()}
+
         lable={'Smidighet'} 
         Lname={'smidighet'} 
-        
         paragraf={'text för Smidighet'}
-
         img={SMIDIGHET_IMG}
-        id={'modal-2'}
+
+        />
+
+        <Checkbox 
+        id={Math.random()}
+
+        lable={'Parkour'} 
+        Lname={'parkour'} 
+        paragraf={'text för Parkour'}
+        img={SMIDIGHET_IMG}
+ 
+        />
+
+        <Checkbox 
+        id={Math.random()}
+
+        lable={'Akrobatik'} 
+        Lname={'aktobatik'} 
+        paragraf={'text för Akrobatik'}
+        img={SMIDIGHET_IMG}
+ 
         />
 
     </div>
 
 
 <div className='contact-btn-wrapper'>
+
 <FormButton 
         Text={'Förgående'} 
         width={"40%"} 
         margin={'15px'}
+        handleButton={back}
     />
 
 <FormButton 
         Text={'Nästa'} 
         width={"40%"} 
         margin={'15px'}
-
+        handleButton={next}
     />
 
 </div>

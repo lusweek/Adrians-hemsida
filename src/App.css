@@ -206,6 +206,10 @@ font-size: 18px;
   display: flex !important;
 }
 
+.m10{
+  margin: 10px !important;
+}
+
 .m30{
   margin: 30px !important;
 }
@@ -213,6 +217,15 @@ font-size: 18px;
 .m70{
   margin: 70px !important;
 }
+
+.pointer{
+  cursor: pointer;
+}
+
+.h140{
+  height: 140px;
+}
+
 
 /* ----------------------------------- GLOBAL END ------------------------------ */
 
@@ -500,14 +513,13 @@ flex-wrap: wrap;
 
 #contact-section{
   font-family: 'Noto Sans JP', sans-serif;
-  display: none;
 }
 
 .form-box{
   width: 760px ;
   height: 620px;
   max-width: 90vw;
-  background-color: rgba(0,0,0, .7);
+  background-color: rgba(0,0,0, .85);
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -535,6 +547,34 @@ flex-wrap: wrap;
   flex-direction: column;
 }
 
+#third-box{
+  opacity: 0;
+  transition-duration: .3s;
+  align-items: center;  
+  flex-direction: column;
+}
+
+#forth-box{
+  opacity: 0;
+  transition-duration: .3s;
+  align-items: center;  
+  flex-direction: column;
+}
+
+/*---------------- FIFT BOX --------------*/
+
+#fift-box{
+  opacity: 0;
+  transition-duration: .3s;
+  align-items: center;  
+  flex-direction: column;
+}
+
+.form-paragraf{
+margin: 10px;
+width: 84%;
+}
+
 .contact-box-title{
   color: white;
 font-size: 30px;
@@ -543,7 +583,6 @@ font-weight: 100;
 font-family: 'Mukta', sans-serif;
 margin: 100px 10px;
 z-index: 2;
-height: 80px;
 letter-spacing: 1px;
 }
 
@@ -563,13 +602,9 @@ letter-spacing: 1px;
 
 .checkbox-icon{
   margin-top: 1px;
-  margin-right: 3px;
+  margin-right: 10px;
   font-size: 24px;
-  cursor: pointer;
-}
-
-.checkbox-wrapper{
-  margin-top: 40px;
+  cursor: help;
 }
 
 .contact-btn-wrapper{
@@ -578,10 +613,17 @@ letter-spacing: 1px;
   position: absolute;
   bottom: 15px;
   justify-content: space-between;
+  left: 6%;
 }
 
 .box-form-first-button{
   position: absolute;
+}
+
+.input-btn{
+  width: 40%;
+  margin: 15px !important;
+  height: 51px !important;
 }
 
 
@@ -605,10 +647,15 @@ letter-spacing: 1px;
  height: 49px;
 }
 
+#form-article input{
+  height: 35px;
+}
+
 .inputs input,
 #form-article textarea{
   padding-left: 13px ;
   font-weight: 300;
+  height: 160px;
   background-color: #D9D9D9;
 
 }
@@ -651,6 +698,7 @@ letter-spacing: 1px;
   letter-spacing: 1px;
   color: white;
   cursor: pointer;
+  margin: 25px;
 }
 
 
@@ -730,6 +778,9 @@ color: white;
 display: flex;
 flex-direction: column;
 overflow: auto;
+transition-duration: .3s;
+opacity: 0;
+cursor: auto;
 }
 
 .modal-img-text-wrapper{

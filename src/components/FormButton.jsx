@@ -1,13 +1,13 @@
 import React from 'react'
 
-function Button({ Text, width, bottom, next, position, minWidth, margin }) {
+function Button({ Text, width, bottom, handleButton, position, minWidth, margin }) {
 
 
 
   return (
     <>
    <button
-   onClick={next}
+   onClick={handleButton}
    style={{width: width,
     minWidth: minWidth,
       bottom: bottom,
