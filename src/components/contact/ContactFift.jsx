@@ -184,7 +184,7 @@ function handleMessage(result) {
     id='input-name'
     type="text"   
       required
-      placeholder='Name*'
+      placeholder='Name*' 
       value={title}
       onChange={(e) => setTitle(e.target.value)}
       name="user_name"

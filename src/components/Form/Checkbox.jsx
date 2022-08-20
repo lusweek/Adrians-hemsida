@@ -47,12 +47,12 @@ function handleThis() {
     
     </label>
 
-    <SkillModal 
-    title={lable}
-    paragraf={paragraf} 
-    img={img}
-    id={id}
-    />
+      <SkillModal 
+      title={lable}
+      paragraf={paragraf} 
+      img={img}
+      id={id}
+      />
   </div>
 
   <input className='none' name={Lname} type="text" value={value} />

@@ -182,7 +182,7 @@ font-size: 18px;
 }
 
 .dark-text{
-  color: black;
+  color: black !important;
 }
 
 .a-center{
@@ -224,6 +224,10 @@ font-size: 18px;
 
 .h140{
   height: 140px;
+}
+
+.no-padding-top{
+  padding-top: 0 !important;
 }
 
 
@@ -415,6 +419,12 @@ margin: 70px;
   line-height: 35px;
 }
 
+.footer-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 /* BOXES SECTION */
 
@@ -440,6 +450,13 @@ border-radius: 4px;
 
 
 /* PRISER */
+
+#offer{
+  height: 0px;
+  padding: 0px;
+  overflow: hidden;
+  transition-duration: .5s ;
+}
 
 .offer-box{
   display: flex;
@@ -487,6 +504,15 @@ flex-wrap: wrap;
   cursor: pointer;
 }
 
+
+#footer-form-button{
+width: 97%;
+height: 51px !important;
+}
+
+.footer-info{
+  color: black;
+}
 
 /* MORE HOWERS */
 
@@ -759,6 +785,7 @@ margin: 15px 0;
 .icon{
   font-size: 32px;
   cursor: pointer;
+  color: black;
 }
 
 /* ---------------------------- SKILL MODAL ------------------------------ */
