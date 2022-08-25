@@ -142,6 +142,8 @@ function App() {
     
     const check = (e) => {
 
+      console.log(e.path);
+
       if (
           e.path[0] !== burgerRef.current &&
           e.path[0].id !== 'toggle' &&
@@ -336,15 +338,15 @@ function handleMessage(result) {
 
 
 <div id='offer-text-wrapper'>
-  <h1 className='title dark-text'>Första träningen gratis<br />Du har allt att vinna</h1>
+  <h1 className='title light-text'>Första träningen gratis<br />Du har allt att vinna</h1>
   
   <div className='offer-check-wrapper'>
-    <p className='p20 a-center title dark-text'> <VscCheck className='offer-check-icon' /> 20 min samtal</p>
-    <p className='p20 a-center title dark-text' ><VscCheck className='offer-check-icon' />30 min träning</p>
+    <p className='p20 a-center title light-text'> <VscCheck className='offer-check-icon' /> 20 min samtal</p>
+    <p className='p20 a-center title light-text' ><VscCheck className='offer-check-icon' />30 min träning</p>
   </div>
  
 
-  <p className='hero-paragraf dark-text bold300'>
+  <p className='hero-paragraf light-text bold300'>
 
   Vill du bemästra konsten att träna calisthenics / kroppsviktsträning ?  
 Vill du kunna träna vart som helst? 

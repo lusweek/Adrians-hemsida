@@ -326,7 +326,7 @@ background-position: center;
 /* OFFER SECTION */
 
 #offer-section{
-  background-image: url(../src/media/movnat.JPG);
+  background-image: url(../src/media/Erbjudande-m.png);
   background-size: cover;
   background-position: center;
 
@@ -345,7 +345,7 @@ background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(255,255,255, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 100px 0;
 
 }
