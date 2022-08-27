@@ -120,7 +120,7 @@ font-size: 18px;
   border-radius: 4px ;
   font-family: 'Noto Sans JP', sans-serif;
   border: none ;
-  margin: 50px;
+  margin: 50px 0px;
   cursor: pointer;
 }
 
@@ -538,6 +538,7 @@ height: 51px !important;
 
 #contact-section{
   font-family: 'Noto Sans JP', sans-serif;
+  width: 100%;
 }
 
 .form-box{
@@ -685,12 +686,12 @@ letter-spacing: 1px;
 }
 
 #form-article input{
-  height: 35px;
+  height: 30px;
 }
 
 .inputs input,
 #form-article textarea{
-  padding-left: 13px ;
+  padding-left: 5px ;
   font-weight: 300;
   height: 160px;
   background-color: #D9D9D9;
@@ -755,7 +756,7 @@ letter-spacing: 1px;
 
 
 #form-article textarea{
-  padding-top: 10px ;
+  padding-top: 5px ;
 }
 
 
@@ -1029,7 +1030,7 @@ font-size: 20px;
 
     .inputs input, 
     #form-article textarea{
-      font-size: 18px;
+      font-size: 16px;
     }
     
     .offer-text-p{
