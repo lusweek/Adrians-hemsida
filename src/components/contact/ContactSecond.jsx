@@ -53,7 +53,7 @@ const opacityNext = () => {
 
     <h1 className='contact-box-title m30'>
       Vad intresserar dig?<br />
-      Vad vill du utväcklas i?
+      Vad vill du utvecklas i?
     </h1>
 
     <div className='checkbox-wrapper'>
@@ -108,6 +108,8 @@ const opacityNext = () => {
         margin={'15px'}
         handleButton={back}
     />
+
+    <div className='contact-form-number'>1/4</div>
 
 <FormButton 
         Text={'Nästa'} 

@@ -222,6 +222,8 @@ function handleMessage(result) {
     handleButton={back}
   />
 
+<div className='contact-form-number'>4/4</div>
+
 <input 
     id='form-button'
     className='button input-btn form-button' 
@@ -237,12 +239,10 @@ function handleMessage(result) {
 
 </article>
 
-<p className='form-paragraf paragraf light'>
+<p className='form-paragraf paragraf light contact-form-low-text'>
 Detta är en intresseanmälan, du förbinder dig inte till några skyldigheter genom detta formulär. 
 <br/>
 Du kommer inte få några automatiska mail-utskick utöver ett bekreftelsemail
-
-
 </p>
 
 

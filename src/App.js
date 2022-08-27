@@ -17,6 +17,8 @@ import ContactForth from './components/contact/ContactForth';
 import ContactFift from './components/contact/ContactFift';
 import FormButton from './components/FormButton'
 import emailjs from '@emailjs/browser';
+import LOGO_1 from './media/logo-1-white.png'
+import LOGO_FOOTER from './media/logo-3.png'
 
 
 function App() {
@@ -123,7 +125,7 @@ function App() {
   function openMenu() {
     setMenuOpen(true)
     const menu = document.querySelector("#burger-menu")
-    menu.style.width="380px"
+    menu.style.width="300px"
   }
 
   function closeMenu() {
@@ -291,7 +293,7 @@ function handleMessage(result) {
 
 
     <nav >
-      <h1 id='company-name'>Adrians företag</h1>
+      <img id='company-name' src={LOGO_1} alt="Logga movement freedom" />
 
   {/* HAMBURGAREN  */}
 
@@ -301,11 +303,11 @@ function handleMessage(result) {
 
 
       <section ref={menu} id='burger-menu'>
-    <div id='menu-logo'></div>
-        <a onClick={handleMenu} href="#principer"> <h1 className='small-title light burger-title'>Principer</h1></a>
-        <a onClick={handleMenu} href="#box-section"><h1 className='small-title light burger-title'>Kroppsviktsträning</h1></a>
-        <a onClick={handleMenu} href="#offer"><h1 className='small-title light burger-title'>Erbjudanden</h1></a>
-        <a onClick={handleMenu} href="#contact-section"><h1 className='small-title light burger-title'>Kontakt</h1></a>
+        <a onClick={handleMenu} href="#offer-section"> <h1 className='small-title light burger-title'>Erbjudande</h1></a>
+        <a onClick={handleMenu} href="#about-section"><h1 className='small-title light burger-title'>Om Adrian</h1></a>
+        <a onClick={handleMenu} href="#meta-contact-wrapper"><h1 className='small-title light burger-title'>Alternativ</h1></a>
+        <a onClick={handleMenu} href="#priser-section"><h1 className='small-title light burger-title'>Priser</h1></a>
+        <a onClick={handleMenu} href="#contact-info-article"><h1 className='small-title light burger-title'>Kontakt</h1></a>
        
       </section>
 
@@ -315,13 +317,12 @@ function handleMessage(result) {
 
 {/* FÖRSTA SECTIONEN  */}
    <section id='first-section' className='dark'>
-    <div className='dark-bg'></div>
+    <div className='dark-bg dark-gb-first-section'></div>
 
     <h1 className='title more-margin'>Personlig träning med brett fokus på rörelsemöster<br />Adrian Skog</h1>
 
     <p className='hero-paragraf'>
       Har du alltid drömt om att göra akrobatiska rörelser som handstående eller pullups?<br />
-      Eller ännu mer avancerade rörelser?<br />
       Eller kanske bli smidig nog för att kunna leka med dina vänner, barn eller barnbarn?<br />
     </p>
     
@@ -490,7 +491,7 @@ Det finns mycket spännande man kan lära sig, ta en titt på alternativen som f
 
 
 {/* PRISER */}
-<div className='section-center light-background section-padding'>
+<div id='priser-section' className='section-center light-background section-padding'>
   <div onClick={handlePriser} className='more-h-div '>
     <p className='offer-text-p margin-sides'>Priser</p>
     <svg className='arrow-down' width="20" viewBox="0 0 82 44" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -613,7 +614,7 @@ Eller så lär dig jag parkourens tekniker.
 
   <article className='' id='form-article'>
 
-    <h1 className='title m30 dark-text'>Kontakt</h1>
+    <h1 className='title m30'>Kontakt</h1>
 
 <form ref={form} onSubmit={sendEmail}>
 
@@ -688,9 +689,11 @@ Eller så lär dig jag parkourens tekniker.
   </div>
 
   <div className='icons'>
-    <a href="" target={'_blank'}><BsFacebook className='icon'/></a>
-    <a href="" target={'_blank'}><GrInstagram className='icon'/></a> 
+    <a href="https://www.facebook.com/adrian.skog" target={'_blank'}><BsFacebook className='icon'/></a>
+    <a href="https://www.instagram.com/luffaregb/" target={'_blank'}><GrInstagram className='icon'/></a> 
   </div>
+
+  <img id='footer-logo' src={LOGO_FOOTER} alt="" />
 
 </article>
 

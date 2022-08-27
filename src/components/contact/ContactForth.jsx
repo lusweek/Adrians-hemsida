@@ -109,6 +109,9 @@ const opacityNext = () => {
         handleButton={back}
     />
 
+<div className='contact-form-number'>3/4</div>
+
+
 <FormButton 
         Text={'Nästa'} 
         width={"40%"} 

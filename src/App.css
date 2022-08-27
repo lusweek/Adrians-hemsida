@@ -248,11 +248,8 @@ nav{
 }
 
 #company-name{
-color: white ;
 margin-left: 35px ;
-font-family: 'Mukta', sans-serif;
-font-weight: 300;
-letter-spacing: 2px;
+height: 100%;
 }
 
 #burger-menu{
@@ -260,6 +257,7 @@ letter-spacing: 2px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   top: 0;
   right: 0;
   width: 0px;
@@ -268,28 +266,18 @@ letter-spacing: 2px;
   opacity: .9;
   height: 100vh;
   transition-duration: .7s;
-  padding-top: 60px ;
+  padding-top: 0px;
   overflow: hidden;
 }
 
 .burger-title{
-  font-size: 26px;
-  margin: 40px 0;
+  font-size: 21px;
 }
 
 #burger-div-wrapper{
   position: absolute;
   right: 38px;
   z-index: 10;
-}
-
-#menu-logo{
-  width: 200px;
-  height: 100px;
-  max-width: 70vw;
-  max-height: 30vh;
-  background-color: aliceblue;
-  
 }
 
 #burger-menu a{
@@ -307,6 +295,7 @@ display: flex;
 align-items: center;
 flex-direction: column;
 justify-content: center;
+position: relative;
 
 background-image: url(../src/media/Handstand.jpg);
 background-size: cover;
@@ -315,13 +304,13 @@ background-position: center;
 }
 
 .dark-bg{
+  top: 0px;
   width: 100%;
   height: 100%;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 2;
 }
-
 
 /* OFFER SECTION */
 
@@ -419,10 +408,20 @@ margin: 70px;
   line-height: 35px;
 }
 
-.footer-section{
+.footer-section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: rgb(226, 226, 226);
+  background-color: black;
+}
+
+.footer-section a{
+  color: rgb(226, 226, 226);
+}
+
+#footer-logo{
+  width: 75%;
 }
 
 
@@ -543,7 +542,7 @@ height: 51px !important;
 
 .form-box{
   width: 760px ;
-  height: 620px;
+  min-height: 600px;
   max-width: 90vw;
   background-color: rgba(0,0,0, .85);
   border-radius: 5px;
@@ -558,6 +557,12 @@ height: 51px !important;
   height: 100%;
   transition-duration: .3s;
 
+}
+
+.contact-form-number{
+  color: #b1b1b1;
+  font-size: 18px;
+  align-self: center;
 }
 
 .first-box{
@@ -594,11 +599,17 @@ height: 51px !important;
   transition-duration: .3s;
   align-items: center;  
   flex-direction: column;
+  padding-bottom: 100px;
 }
 
 .form-paragraf{
+font-size: 16px;
 margin: 10px;
 width: 84%;
+}
+.contact-form-low-text{
+color: #d9d9d9;
+font-size: 14px;
 }
 
 .contact-box-title{
@@ -705,8 +716,8 @@ letter-spacing: 1px;
 }
 
 #form-article{
-  width: 45vw;
-  min-width: 357px ;
+  max-width: 75%;
+  min-width: 300px ;
 }
 
 .checkbox-list-wrapper{
@@ -785,7 +796,7 @@ margin: 15px 0;
 .icon{
   font-size: 32px;
   cursor: pointer;
-  color: black;
+  color: white;
 }
 
 /* ---------------------------- SKILL MODAL ------------------------------ */
@@ -866,19 +877,20 @@ justify-content: space-around;
 }
 
 .done-text-div{
-  opacity: 0;
+opacity: 0;
 transition-duration: 0.4s;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 100%;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+height: 100%;
 }
 
 .done-text{
-  opacity: 0;
+opacity: 0; 
 margin: 0;
 color: green;
 transition-duration: 0.4s;
+font-size: 20px;
 }
 
 
@@ -1015,12 +1027,6 @@ transition-duration: 0.4s;
       width: 80%;
     }
 
-    .checkbox{
-      font-size: 13px;
-      margin: 3px;
-      
-    }
-
     .inputs input, 
     #form-article textarea{
       font-size: 18px;
@@ -1059,7 +1065,12 @@ transition-duration: 0.4s;
  }
 
  .contact-box-title{
-  margin: 30px !important;
+  margin: 30px 30px 0px 30px !important;
+  font-size: 22px;
+ }
+
+ .checkbox{
+  font-size: 18px;
  }
 
  .skill-modal-img{
