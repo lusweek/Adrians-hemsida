@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Adrians-hemsida/static/css/main.51a91260.css",
+    "main.css": "/Adrians-hemsida/static/css/main.3afbe565.css",
     "main.js": "/Adrians-hemsida/static/js/main.85dba588.js",
     "static/js/787.bac1152b.chunk.js": "/Adrians-hemsida/static/js/787.bac1152b.chunk.js",
     "static/media/Erbjudande-m.png": "/Adrians-hemsida/static/media/Erbjudande-m.de8b1bb1df30cb2cf2d2.png",
@@ -13,12 +13,12 @@
     "static/media/logo-1-white.png": "/Adrians-hemsida/static/media/logo-1-white.57ab39955ab5efc7e7fe.png",
     "static/media/logo-3.png": "/Adrians-hemsida/static/media/logo-3.7c0288b5550f5ca63c37.png",
     "index.html": "/Adrians-hemsida/index.html",
-    "main.51a91260.css.map": "/Adrians-hemsida/static/css/main.51a91260.css.map",
+    "main.3afbe565.css.map": "/Adrians-hemsida/static/css/main.3afbe565.css.map",
     "main.85dba588.js.map": "/Adrians-hemsida/static/js/main.85dba588.js.map",
     "787.bac1152b.chunk.js.map": "/Adrians-hemsida/static/js/787.bac1152b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.51a91260.css",
+    "static/css/main.3afbe565.css",
     "static/js/main.85dba588.js"
   ]
 }
