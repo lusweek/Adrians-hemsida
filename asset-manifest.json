@@ -1,15 +1,22 @@
 {
   "files": {
-    "main.css": "/Adrians-hemsida/static/css/main.8f02896f.css",
-    "main.js": "/Adrians-hemsida/static/js/main.dc425412.js",
+    "main.css": "/Adrians-hemsida/static/css/main.b244d603.css",
+    "main.js": "/Adrians-hemsida/static/js/main.82001499.js",
     "static/js/787.bac1152b.chunk.js": "/Adrians-hemsida/static/js/787.bac1152b.chunk.js",
+    "static/media/movnat.JPG": "/Adrians-hemsida/static/media/movnat.d29529f99ba20930fad9.JPG",
+    "static/media/woods.jpg": "/Adrians-hemsida/static/media/woods.75e0739debabbc35dc1c.jpg",
+    "static/media/outdoor-gym.jpg": "/Adrians-hemsida/static/media/outdoor-gym.176b800701e03ef2c393.jpg",
+    "static/media/Smidighet.jpg": "/Adrians-hemsida/static/media/Smidighet.5273096c4ab7bdad31d9.jpg",
+    "static/media/Handstand.jpg": "/Adrians-hemsida/static/media/Handstand.e27062ee1b1997f376e3.jpg",
+    "static/media/calisthenics.jpg": "/Adrians-hemsida/static/media/calisthenics.99bf7e1beb314ce2698b.jpg",
+    "static/media/PT.jpg": "/Adrians-hemsida/static/media/PT.bf3fc2958ebe2f04f844.jpg",
     "index.html": "/Adrians-hemsida/index.html",
-    "main.8f02896f.css.map": "/Adrians-hemsida/static/css/main.8f02896f.css.map",
-    "main.dc425412.js.map": "/Adrians-hemsida/static/js/main.dc425412.js.map",
+    "main.b244d603.css.map": "/Adrians-hemsida/static/css/main.b244d603.css.map",
+    "main.82001499.js.map": "/Adrians-hemsida/static/js/main.82001499.js.map",
     "787.bac1152b.chunk.js.map": "/Adrians-hemsida/static/js/787.bac1152b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8f02896f.css",
-    "static/js/main.dc425412.js"
+    "static/css/main.b244d603.css",
+    "static/js/main.82001499.js"
   ]
 }
