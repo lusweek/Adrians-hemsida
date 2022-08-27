@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Adrians-hemsida/static/css/main.d8c21e5b.css",
-    "main.js": "/Adrians-hemsida/static/js/main.56ab59e3.js",
+    "main.css": "/Adrians-hemsida/static/css/main.9035112c.css",
+    "main.js": "/Adrians-hemsida/static/js/main.85dba588.js",
     "static/js/787.bac1152b.chunk.js": "/Adrians-hemsida/static/js/787.bac1152b.chunk.js",
     "static/media/Erbjudande-m.png": "/Adrians-hemsida/static/media/Erbjudande-m.de8b1bb1df30cb2cf2d2.png",
     "static/media/woods.jpg": "/Adrians-hemsida/static/media/woods.75e0739debabbc35dc1c.jpg",
@@ -10,13 +10,15 @@
     "static/media/Handstand.jpg": "/Adrians-hemsida/static/media/Handstand.e27062ee1b1997f376e3.jpg",
     "static/media/calisthenics.jpg": "/Adrians-hemsida/static/media/calisthenics.99bf7e1beb314ce2698b.jpg",
     "static/media/PT.jpg": "/Adrians-hemsida/static/media/PT.bf3fc2958ebe2f04f844.jpg",
+    "static/media/logo-1-white.png": "/Adrians-hemsida/static/media/logo-1-white.57ab39955ab5efc7e7fe.png",
+    "static/media/logo-3.png": "/Adrians-hemsida/static/media/logo-3.7c0288b5550f5ca63c37.png",
     "index.html": "/Adrians-hemsida/index.html",
-    "main.d8c21e5b.css.map": "/Adrians-hemsida/static/css/main.d8c21e5b.css.map",
-    "main.56ab59e3.js.map": "/Adrians-hemsida/static/js/main.56ab59e3.js.map",
+    "main.9035112c.css.map": "/Adrians-hemsida/static/css/main.9035112c.css.map",
+    "main.85dba588.js.map": "/Adrians-hemsida/static/js/main.85dba588.js.map",
     "787.bac1152b.chunk.js.map": "/Adrians-hemsida/static/js/787.bac1152b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d8c21e5b.css",
-    "static/js/main.56ab59e3.js"
+    "static/css/main.9035112c.css",
+    "static/js/main.85dba588.js"
   ]
 }
