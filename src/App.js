@@ -2,7 +2,6 @@ import { useState, useRef, useEffect } from 'react';
 import './App.css';
 import Button from './components/Button';
 import Qvote from './components/Qvote';
-import { VscCheck } from 'react-icons/vsc'
 import { BsFacebook, BsCheck2Square } from 'react-icons/bs';
 import { GrInstagram } from 'react-icons/gr'
 import MessageSent from './components/message sent/MessageSent';
@@ -34,7 +33,6 @@ function App() {
     if (isClosed === true) {
 
       const wWidth = window.innerWidth
-      console.log(wWidth);
 
       if (wWidth >= 1400) {
         extraH.style.height='500px'
@@ -57,7 +55,6 @@ function App() {
   const [priserIsClosed, setPriserIsClosed] = useState(true)
   function handlePriser() {
 
-    console.log('handle priser körs');
   const priserSection = document.querySelector('#offer')
 
   const setAuto = () => priserSection.style.height='auto'
@@ -67,7 +64,6 @@ function App() {
   if (priserIsClosed === true) {
 
     const wWidth = window.innerWidth
-    console.log(wWidth);
 
       priserSection.style.padding='100px 0px'
       setTimeout(set1000, 400)
@@ -144,7 +140,6 @@ function App() {
     
     const check = (e) => {
 
-      console.log(e.path);
 
       if (
           e.path[0] !== burgerRef.current &&
@@ -193,11 +188,9 @@ function App() {
 
     emailjs.sendForm('service_inf48rp', 'template_19tzibd', form.current, 'ZGdhs2ZT5cVWZRNGA')
       .then((result) => {
-          console.log(result.text);
           handleMessage(result.text)
           clearText()
       }, (error) => {
-          console.log(error.text);
           handleMessage(error.text)
       });
   };
@@ -319,11 +312,11 @@ function handleMessage(result) {
    <section id='first-section' className='dark'>
     <div className='dark-bg dark-gb-first-section'></div>
 
-    <h1 className='title more-margin'>Personlig träning med brett fokus på rörelsemöster<br />Adrian Skog</h1>
+    <h1 className='title more-margin'>Adrian Skog<br />Personlig träning med brett fokus på rörelsemöster</h1>
 
     <p className='hero-paragraf'>
-      Har du alltid drömt om att göra akrobatiska rörelser som handstående eller pullups?<br />
-      Eller kanske bli smidig nog för att kunna leka med dina vänner, barn eller barnbarn?<br />
+    Har du drömt om att kuna göra akrobatiska rörelser som hjulning och handstående? <br />
+Eller vill du bli smidigare för att kunna leka med dina barn eller barnbarn?
     </p>
     
    
@@ -342,21 +335,17 @@ function handleMessage(result) {
   <h1 className='title light-text'>Första träningen gratis<br />Du har allt att vinna</h1>
   
   <div className='offer-check-wrapper'>
-    <p className='p20 a-center title light-text'> <VscCheck className='offer-check-icon' /> 20 min samtal</p>
-    <p className='p20 a-center title light-text' ><VscCheck className='offer-check-icon' />30 min träning</p>
+    <p className='p20 a-center title light-text'>50 min som inkluderar samtal om dig och dina mål samt träning </p>
   </div>
  
 
   <p className='hero-paragraf light-text bold300'>
 
-  Vill du bemästra konsten att träna calisthenics / kroppsviktsträning ?  
-Vill du kunna träna vart som helst? 
+  Det finns ingen one zise fits all när det kommer till pt, därför tycker 
+jag att det är viktigt att vi kan lära känna varandra lite innan du förbinder dig till någonting. 
 <br /><br />
-Först har vi ett samtal så jag kan förstå dina mål och behov, sedan kör vi ett träningspass där jag lär dig något som du vill lära dig. 
-<br /><br />
-Träningen kör vi vid utegymmet Plikta vid slottskogen
-<br /><br />
-Det finns mycket spännande man kan lära sig, ta en titt på alternativen som finns!  
+Syftet med passet är dels att jag skall veta mer om dig, din bakgrund och dina mål samt att du skall veta om jag är
+rätt Pt för dig.
     
   </p>
 

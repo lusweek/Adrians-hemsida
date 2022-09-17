@@ -13,7 +13,9 @@ function ContactFift() {
 
  
 
-  const back = () => {
+  const back = (event) => {
+
+    event.preventDefault();
 
     setTimeout(none, 300)
     document.querySelector('#fift-box').style.opacity= '0' 
@@ -216,10 +218,12 @@ function handleMessage(result) {
 
     <div className='contact-btn-wrapper'>
   <FormButton 
+    id={'back-btn-fift'}
     Text={'Förgående'} 
     width={"40%"} 
     margin={'15px'}
     handleButton={back}
+
   />
 
 <div className='contact-form-number'>4/4</div>

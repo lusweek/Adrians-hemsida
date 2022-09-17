@@ -632,9 +632,10 @@ letter-spacing: 1px;
 .close-icon{
   color: white;
   position: absolute;
-  top: 20px;
-  right: 27px;
+  top: 10px;
+  right: 17px;
   font-size: 35px;
+  padding: 10px;
   cursor: pointer;
 }
 
@@ -836,6 +837,7 @@ justify-content: space-around;
 .skill-modal-img{
   width: 40%;
   object-fit: contain;
+  align-self: flex-start;
 }
 
 /* ---------------------------- LOADER ANIMATION ------------------------------ */

@@ -25,13 +25,13 @@ function ContactFirst() {
     <article id='first-box' className='first-box all-boxes'>
 
         <h1 className='contact-box-title h140'>
-        Första träningen gratis<br />
-        Du har allt att vinna
+        Första passet är helt kostnadsfritt <br />
+        Inga förbindelser - du har allt att vinna
         </h1>
 
 
           <FormButton 
-              Text={'Se alternativ'} 
+              Text={'Ta första steget'} 
               width={"80%"} 
               bottom={'75px'}
               handleButton={next}
