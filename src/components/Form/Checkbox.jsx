@@ -41,18 +41,18 @@ function handleThis() {
 
 
     <div className='checkbox'>
-    <AiOutlineQuestionCircle className='checkbox-icon' onClick={handleIcon} />
-    <label className='pointer'>{lable}
+    {/* <AiOutlineQuestionCircle className='checkbox-icon' onClick={handleIcon} /> */}
     <input className="form-checkbox" onClick={handleThis} type="checkbox" name='OCR' />
+    <label className='pointer'>{lable}
     
     </label>
 
-      <SkillModal 
+      {/* <SkillModal 
       title={lable}
       paragraf={paragraf} 
       img={img}
       id={id}
-      />
+      /> */}
   </div>
 
   <input className='none' name={Lname} type="text" value={value} />

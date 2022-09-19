@@ -33,24 +33,23 @@ const next = () => {
 }
 
 const noneNext = () => {
-  document.querySelector('#forth-box').classList.remove('box-none')
-  document.querySelector('#forth-box').classList.add('block')
+  document.querySelector('#fift-box').classList.remove('box-none')
+  document.querySelector('#fift-box').classList.add('block')
   document.querySelector('#third-box').classList.remove('block')
   document.querySelector('#third-box').classList.add('box-none')
   setTimeout(opacityNext, 1)
 }
 
 const opacityNext = () => {
-  document.querySelector('#forth-box').style.opacity= '1'
+  document.querySelector('#fift-box').style.opacity= '1'
 }
 
 
   return (
     <article id='third-box' className='third-box all-boxes box-none'>
 
-    <h1 className='contact-box-title m30'>
-      Avancerade kroppsviktsövningar<br />
-      Vad intresserar dig?
+    <h1 className='contact-box-title'>
+      Vad mer vill du uppnå?
     </h1>
 
     <div className='checkbox-wrapper'>
@@ -58,7 +57,7 @@ const opacityNext = () => {
         <Checkbox 
         id={Math.random()}
 
-        lable={'Handstående'} 
+        lable={'Gå ner i vikt'} 
         Lname={'handstående'} 
         paragraf={'Text om handstående'}
         img={CALISTHENICS_IMG}
@@ -68,7 +67,7 @@ const opacityNext = () => {
 <Checkbox 
         id={Math.random()}
 
-        lable={'Muscle up'} 
+        lable={'Öka muskelmassa'} 
         Lname={'muscleup'} 
         paragraf={'Text om Muscle up'}
         img={CALISTHENICS_IMG}
@@ -78,7 +77,7 @@ const opacityNext = () => {
 <Checkbox 
         id={Math.random()}
 
-        lable={'Front-lever'} 
+        lable={'Öka prestation i annan idrott'} 
         Lname={'frontlever'} 
         paragraf={'Text om Front-lever'}
         img={CALISTHENICS_IMG}
@@ -88,7 +87,7 @@ const opacityNext = () => {
 <Checkbox 
         id={Math.random()}
 
-        lable={'Planche'} 
+        lable={'Klara vardagliga påfrästningar bättre'} 
         Lname={'planche'} 
         paragraf={'Text om planche'}
         img={CALISTHENICS_IMG}
@@ -109,7 +108,7 @@ const opacityNext = () => {
         handleButton={back}
     />
 
-<div className='contact-form-number'>2/4</div>
+<div className='contact-form-number'>2/3</div>
 
 
 <FormButton 

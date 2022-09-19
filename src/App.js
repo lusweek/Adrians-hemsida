@@ -18,6 +18,7 @@ import FormButton from './components/FormButton'
 import emailjs from '@emailjs/browser';
 import LOGO_1 from './media/logo-1-white.png'
 import LOGO_FOOTER from './media/logo-3.png'
+import { BiBold } from 'react-icons/bi';
 
 
 function App() {
@@ -359,16 +360,16 @@ rätt Pt för dig.
 
 <section id='about-section'>
 
-    <h1 className='title'>Jag är Adrian, kallas även “Bra att hadrian”</h1>
+    <h1 className='title'>Jag är Adrian</h1>
    
     <img id='profile-img' src={PROFILE_PIC} alt="Image of Adrian smiling, blurry trees in the background" />
 
     <p className='hero-paragraf bold300'>
-    Jag brinner för det här ______________________________ (patos) 
+    Jag brinner för rörele och coaching. 
     <br /><br />
     är utbildat till det här ________________________ (logos)
     <br /><br />
-    Jag har hållit på med dethär____ dehär____ och dehär_______ (etos?)
+    Jag började, för ca 14 år sedan, som parkourtränare och glädjen av att röra på sig och att lära ut fick mig att utforska många olika sätt att röra på sig. 
     <br /><br />
     min filisofi lyder såhör_______ och det påverkar din träning såhär_______
     hoppas vi hörs, ha de gött hej!!! 
@@ -431,7 +432,6 @@ rätt Pt för dig.
     <ContactFirst />
     <ContactSecond />
     <ContactThird />
-    <ContactForth />
     <ContactFift />
 
 
@@ -494,36 +494,92 @@ rätt Pt för dig.
 
 <h1 className='bold-title'>Erbjudanden</h1>
 
-<p className='paragraf'>Mina PT-kompetenser gäller främst kroppsviktsträning, movnat och parkour. 
-<br/><br/>
-Jag kan hjälpa dig bemästra allt från simpla kroppsviktsövningar som pullups och armhävningar till avancerade tekniker som handstående-pushups och one arm pullups. 
-<br/><br/>
-Eller så tar vi oss in i skogen där du får lära dig den naturrika träningsformen movnat.
-<br/><br/>
-Eller så lär dig jag parkourens tekniker. 
+<p className='paragraf'>
+  <b>Vid alla köp ingår ett individuellt anpassat träningsprogram.</b>
+  <br /> <br />
+  Detta träningsprogram skräddarsyr vi tillsammans kontinuerligt över tid, kvalitén på träningsprogrammet ökar desto mer tid vi har med varandra.  
 </p>
+
+<article className='table-article'>
+
+    <table className='priser-table'>
+      <tr>
+        <th>PT - coaching</th>
+        <th>Pris</th>
+      </tr>
+      <tr>
+        <td>1 timme</td>
+        <td>850 kr</td>
+      </tr>
+      <tr>
+        <td>3 timmar</td>
+        <td>2400 kr</td>
+      </tr>
+      <tr>
+        <td>5 timmar</td>
+        <td>3700 kr</td>
+      </tr>
+      <tr>
+        <td>8 timmar</td>
+        <td>5500 kr</td>
+      </tr>
+    </table>
+
+    <table className='priser-table'>
+      <tr>
+        <th>Online - coaching</th>
+        <th>Pris</th>
+      </tr>
+      <tr>
+        <td>1 månad</td>
+        <td>499 kr</td>
+      </tr>
+      <tr>
+        <td>2 månader</td>
+        <td>899 kr</td>
+      </tr>
+      <tr>
+        <td>3 månader</td>
+        <td>1200 kr</td>
+      </tr>
+      <tr>
+        <td>4 månader</td>
+        <td>1400 kr</td>
+      </tr>
+    </table>
+
+
+</article>
 
 <article className='box-wrapper'>
 
-    <div className='offer-box'>
+    <h1 className='title dark-text'>Paketerbjudanden</h1>
+
+    <div className='box-container'>
+       <div className='offer-box'>
       <h1 className='small-title'>Baspaket</h1>
-      <p className='tiny'>1 timme<br/>Individanpassat träningsprogram</p>
-      <h1 className='price'>850 kr</h1>
+      <p className='tiny'>1 timme träning <br /> 1 månads online coaching<br/>Individanpassat träningsprogram</p>
+      <h1 className='price'>1150 kr</h1>
     </div>
 
     <div className='offer-box'>
       <h1 className='small-title'>Mellan</h1>
-      <p className='tiny'>3 timmar<br/>3 veckors online-feedback<br/>Individanpassat träningsprogram</p>
-      <h1 className='price'>2495 kr</h1>
+      <p className='tiny'>3 timmar<br/>2 månaders online coaching<br/>Individanpassat träningsprogram</p>
+      <h1 className='price'>2999 kr</h1>
     </div>
 
     <div className='offer-box'>
       <h1 className='small-title'>Premium</h1>
-      <p className='tiny'>8 timmar<br/>8 veckors online-feedback<br/>Individanpassat träningsprogram</p>
-      <h1 className='price'>6400 kr</h1>
+      <p className='tiny'>8 timmar<br/>3 månaders online coaching<br/>Individanpassat träningsprogram</p>
+      <h1 className='price'>5999 kr</h1>
+    </div>
     </div>
 
+   
+
 </article>
+
+
 
 <article className='offer-text-article'>
 
@@ -531,68 +587,29 @@ Eller så lär dig jag parkourens tekniker.
       <h1 className='small-title'>Individuellt träningsprogram</h1>
       <p className='offer-text-p'>Det individuella träningsprogrammet innebär att vi bygger ett träningsprogram anpassat efter dina mål och behov. 
       <br/><br/>
-      Desto fler timmar vi har tillsammans, desto mer avancerat träningsprogram får du. Träningsprogrammet får du på papper eller som digitalt dokument. 
-      <br/><br/>
       Du får även en individanpassad strategi för att förbättra dina träningsvarnor.
       </p>
     </div>
 
     <div className='offer-text-div'>
-      <h1 className='small-title'>Online feedback</h1>
-      <p className='offer-text-p'> Kroppsviktsträning är generellt sett tacksamt för kroppen men vill man undvika slitskador och maximera styrka ska man ha rätt form.  - För varje timme du köper får du en veckoperiod där du kan skicka videos till mig där jag kan se om din form är bra eller om den kan förbättras. 
-      <br/><br/>
-      .Exempelvis så kan du skicka video på när du gör pullups för att få tips på förbättringar. 
-      <br/><br/>
-      Vi kan även ha dialog angående dina träningsvarnor
+      <h1 className='small-title'>Online coaching</h1>
+      <p className='offer-text-p'> 
+        <ul>
+          <li>Kontenuelig uppföljning</li>
+          <li>Videofeedback på övningar</li>
+          <li>Obegränsad coaching via chatt</li>
+          <li>Tillgång till instruktionsmaterial</li>
+          <li>Rådgiving av vanestrategier</li>
+          <li>Alltid svar inom 24 timmar</li>
+        </ul>
+        <br /><br />
+        
       </p>
     </div>
 
 </article>
 
 <Button />
-
-<div className='line'></div>
-
-<div onClick={handleExtraHours} className='more-h-div'>
-  <p className='offer-text-p margin-sides'>Enbart pt timmar</p>
-  <svg className='arrow-down' width="20" viewBox="0 0 82 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" clip-rule="evenodd" d={arrowD} fill="black"/>
-    </svg>
-</div>
-
-{/* EXTRA TIMMAR */}
-
-<article id='extra-h' className='section-center'>
-  
-  <article className='offer-text-article'>
-
-
-  <div className='offer-box'>
-      <h1 className='small-title'>1 timme</h1>
-      <p className='tiny'>1 timme<br/>Individanpassat träningsprogram</p>
-      <h1 className='price'>6400 kr</h1>
-    </div>
-
-    <div className='offer-box'>
-      <h1 className='small-title'>3 timmar</h1>
-      <p className='tiny'>3 timmar<br/>3 veckors online-feedback<br/>Individanpassat träningsprogram</p>
-      <h1 className='price'>2495 kr</h1>
-    </div>
-
-    <div className='offer-box'>
-      <h1 className='small-title'>5 timmar</h1>
-      <p className='tiny'>8 timmar<br/>8 veckors online-feedback<br/>Individanpassat träningsprogram</p>
-      <h1 className='price'>Vilket pris? </h1>
-    </div>
-
-  </article>
-
-
-  <p className='paragraf'>Kontakta mig vid köp av fler timmar</p>
-
-
-</article>
-
 </section>
 
 {/* ---------------------- CONTAKTINFORMATION --------------------- */}

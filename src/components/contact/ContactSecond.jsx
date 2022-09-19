@@ -51,16 +51,15 @@ const opacityNext = () => {
   return (
     <article id='second-box' className='all-boxes box-none'>
 
-    <h1 className='contact-box-title m30'>
-      Vad intresserar dig?<br />
-      Vad vill du utvecklas i?
+    <h1 className='contact-box-title'>
+      Hur vill du utvecklas?
     </h1>
 
     <div className='checkbox-wrapper'>
         <Checkbox 
         id={Math.random()}
 
-        lable={'Calisthenics'} 
+        lable={'Bli starkare'} 
         Lname={'chalisthenics'} 
         paragraf={'Att träna med kroppen som vikt. Vanliga övningar är armhävningar, pullups och squats. Fördelen med att träna kroppsvikt är att man kan göra det vart som hällst och det är snällt för kroppen.'}
         img={CALISTHENICS_IMG}
@@ -70,7 +69,7 @@ const opacityNext = () => {
         <Checkbox 
         id={Math.random()}
 
-        lable={'Smidighet'} 
+        lable={'Bli smidigare'} 
         Lname={'smidighet'} 
         paragraf={'text för Smidighet'}
         img={SMIDIGHET_IMG}
@@ -80,7 +79,7 @@ const opacityNext = () => {
         <Checkbox 
         id={Math.random()}
 
-        lable={'Parkour'} 
+        lable={'Bli uthålligare'} 
         Lname={'parkour'} 
         paragraf={'text för Parkour'}
         img={SMIDIGHET_IMG}
@@ -90,7 +89,7 @@ const opacityNext = () => {
         <Checkbox 
         id={Math.random()}
 
-        lable={'Akrobatik'} 
+        lable={'Bli friskare'} 
         Lname={'aktobatik'} 
         paragraf={'text för Akrobatik'}
         img={SMIDIGHET_IMG}
@@ -109,7 +108,7 @@ const opacityNext = () => {
         handleButton={back}
     />
 
-    <div className='contact-form-number'>1/4</div>
+    <div className='contact-form-number'>1/3</div>
 
 <FormButton 
         Text={'Nästa'} 

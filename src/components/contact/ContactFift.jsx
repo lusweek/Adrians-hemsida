@@ -22,15 +22,15 @@ function ContactFift() {
 }
 
 const none = () => {
-  document.querySelector('#forth-box').classList.remove('box-none')
-  document.querySelector('#forth-box').classList.add('block')
+  document.querySelector('#third-box').classList.remove('box-none')
+  document.querySelector('#third-box').classList.add('block')
   document.querySelector('#fift-box').classList.remove('block')
   document.querySelector('#fift-box').classList.add('box-none')
   setTimeout(opacity, 1)
 }
 
 const opacity = () => {
-  document.querySelector('#forth-box').style.opacity= '1'
+  document.querySelector('#third-box').style.opacity= '1'
 }
 
 
@@ -53,7 +53,7 @@ const opacity = () => {
    const [email, setEmail] = useState('');
    const [textArea, setTextArea] = useState('')
 
-  const form = useRef();
+  const form = useRef();  
 
 
 
@@ -226,7 +226,7 @@ function handleMessage(result) {
 
   />
 
-<div className='contact-form-number'>4/4</div>
+<div className='contact-form-number'>3/3</div>
 
 <input 
     id='form-button'
