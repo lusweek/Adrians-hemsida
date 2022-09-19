@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Adrians-hemsida/static/css/main.f3fc48a6.css",
-    "main.js": "/Adrians-hemsida/static/js/main.103b28cc.js",
+    "main.css": "/Adrians-hemsida/static/css/main.978e999c.css",
+    "main.js": "/Adrians-hemsida/static/js/main.7f2eb7a3.js",
     "static/js/787.bac1152b.chunk.js": "/Adrians-hemsida/static/js/787.bac1152b.chunk.js",
     "static/media/Erbjudande-m.png": "/Adrians-hemsida/static/media/Erbjudande-m.de8b1bb1df30cb2cf2d2.png",
     "static/media/woods.jpg": "/Adrians-hemsida/static/media/woods.75e0739debabbc35dc1c.jpg",
@@ -13,12 +13,12 @@
     "static/media/logo-1-white.png": "/Adrians-hemsida/static/media/logo-1-white.57ab39955ab5efc7e7fe.png",
     "static/media/logo-3.png": "/Adrians-hemsida/static/media/logo-3.7c0288b5550f5ca63c37.png",
     "index.html": "/Adrians-hemsida/index.html",
-    "main.f3fc48a6.css.map": "/Adrians-hemsida/static/css/main.f3fc48a6.css.map",
-    "main.103b28cc.js.map": "/Adrians-hemsida/static/js/main.103b28cc.js.map",
+    "main.978e999c.css.map": "/Adrians-hemsida/static/css/main.978e999c.css.map",
+    "main.7f2eb7a3.js.map": "/Adrians-hemsida/static/js/main.7f2eb7a3.js.map",
     "787.bac1152b.chunk.js.map": "/Adrians-hemsida/static/js/787.bac1152b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f3fc48a6.css",
-    "static/js/main.103b28cc.js"
+    "static/css/main.978e999c.css",
+    "static/js/main.7f2eb7a3.js"
   ]
 }
