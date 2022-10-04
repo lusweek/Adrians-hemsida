@@ -187,7 +187,7 @@ function App() {
     // TEMPLATE_ID = 'template_19tzibd';
     // PUBLIC_KEY = 'ZGdhs2ZT5cVWZRNGA';
 
-    emailjs.sendForm('service_inf48rp', 'template_19tzibd', form.current, 'ZGdhs2ZT5cVWZRNGA')
+    emailjs.sendForm('service_inf48rp', 'template_19tzibd', form.current, 'NHoAII_wNiMrUrvQX')
       .then((result) => {
           handleMessage(result.text)
           clearText()
@@ -274,11 +274,31 @@ function handleMessage(result) {
 
   // ---------------------- EMAIL END ---------------------- //
 
-    // MAIL END
- 
 
-  // ----------------------------------------------------------------------------------------------------------//
+  // ===!=== start
+  const formCheck = useRef();  
 
+
+
+  const sendEmailCheck = (e) => {
+    e.preventDefault();
+    openLoader()
+
+    console.log(form.current);
+
+    emailjs.sendForm('service_inf48rp', 'template_19tzibd', formCheck.current, 'NHoAII_wNiMrUrvQX')
+      .then((result) => {
+          console.log(result.text);
+          handleMessage(result.text)
+          clearText()
+      }, (error) => {
+          console.log(error.text);
+          handleMessage(error.text)
+      });
+  };
+  // ===!=== end
+  
+  
   return (
     <>
 
@@ -429,11 +449,16 @@ rätt Pt för dig.
 
   <article className='form-box'>
 
+{/* !  */}
+<form ref={formCheck} onSubmit={sendEmailCheck}>
+
     <ContactFirst />
     <ContactSecond />
     <ContactThird />
     <ContactFift />
 
+{/* !  */}
+</form>
 
   </article>
 

@@ -8,6 +8,13 @@ function Checkbox({ lable, Lname, paragraf, id, img }) {
 const [emailText, setemailText] = useState('')
 const [value, setValue] = useState('')
 
+useEffect(() => {
+  console.log('Value: ', value, 'Lname:', Lname);
+
+}, [emailText])
+
+console.log(Lname);
+
 function handleThis() {
     if(!emailText){
         setemailText(lable)
@@ -38,25 +45,22 @@ function handleThis() {
   return (
 
     <>
+      <div className='checkbox'>
+      {/* <AiOutlineQuestionCircle className='checkbox-icon' onClick={handleIcon} /> */}
+      <input className="form-checkbox" onClick={handleThis} type="checkbox" />
+      <label className='pointer'>{lable}
+      
+      </label>
 
+        {/* <SkillModal 
+        title={lable}
+        paragraf={paragraf} 
+        img={img}
+        id={id}
+        /> */}
+    </div>
 
-    <div className='checkbox'>
-    {/* <AiOutlineQuestionCircle className='checkbox-icon' onClick={handleIcon} /> */}
-    <input className="form-checkbox" onClick={handleThis} type="checkbox" name='OCR' />
-    <label className='pointer'>{lable}
-    
-    </label>
-
-      {/* <SkillModal 
-      title={lable}
-      paragraf={paragraf} 
-      img={img}
-      id={id}
-      /> */}
-  </div>
-
-  <input className='none' name={Lname} type="text" value={value} />
-
+    <input className='none' name={Lname} type="text" value={Lname} />
   </>
   )
 }

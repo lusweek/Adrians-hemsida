@@ -4,7 +4,25 @@ git add .
 git commit -m "update"
 git push
 
-npm run build
 npm run deploy
 
 --------------------------------------------
+
+Första gången annat projekt?
+
+npm install gh-pages --save-dev
+
+--
+
+ "name": "my-app",
+  "version": "0.1.0",
++ "homepage": "https://gitname.github.io/react-gh-pages",
+  "private": true,
+
+  --
+
+  "scripts": {
++   "predeploy": "npm run build",
++   "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",

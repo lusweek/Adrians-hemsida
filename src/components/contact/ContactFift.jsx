@@ -61,11 +61,9 @@ const opacity = () => {
     e.preventDefault();
     openLoader()
 
-    // SERVICE_ID = 'service_inf48rp';
-    // TEMPLATE_ID = 'template_19tzibd';
-    // PUBLIC_KEY = 'ZGdhs2ZT5cVWZRNGA';
+    console.log(form.current);
 
-    emailjs.sendForm('service_inf48rp', 'template_19tzibd', form.current, 'ZGdhs2ZT5cVWZRNGA')
+    emailjs.sendForm('service_inf48rp', 'template_19tzibd', form.current, 'NHoAII_wNiMrUrvQX')
       .then((result) => {
           console.log(result.text);
           handleMessage(result.text)
@@ -171,7 +169,7 @@ function handleMessage(result) {
 
 <article id='form-article'>
 
-  <form ref={form} onSubmit={sendEmail}>
+  {/* <form ref={form} onSubmit={sendEmail}> */}
 
     
 
@@ -215,7 +213,6 @@ function handleMessage(result) {
     </textarea>
 
 
-
     <div className='contact-btn-wrapper'>
   <FormButton 
     id={'back-btn-fift'}
@@ -239,7 +236,7 @@ function handleMessage(result) {
 
    
 
-  </form>
+  {/* </form> */}
 
 </article>
 

@@ -59,8 +59,8 @@ const opacityNext = () => {
         <Checkbox 
         id={Math.random()}
 
-        lable={'Bli starkare'} 
-        Lname={'chalisthenics'} 
+        lable={'Bli Starkare'} 
+        Lname={"blistarkare"} 
         paragraf={'Att träna med kroppen som vikt. Vanliga övningar är armhävningar, pullups och squats. Fördelen med att träna kroppsvikt är att man kan göra det vart som hällst och det är snällt för kroppen.'}
         img={CALISTHENICS_IMG}
         
@@ -70,7 +70,7 @@ const opacityNext = () => {
         id={Math.random()}
 
         lable={'Bli smidigare'} 
-        Lname={'smidighet'} 
+        Lname={"smidighet"} 
         paragraf={'text för Smidighet'}
         img={SMIDIGHET_IMG}
 
