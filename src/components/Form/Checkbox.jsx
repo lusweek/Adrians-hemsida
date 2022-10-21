@@ -24,13 +24,13 @@ function handleThis() {
   return (
 
     <>
-      <div className='checkbox'>
-      <input className="form-checkbox" onClick={handleThis} type="checkbox" />
-      <label className='pointer'>{lable}
+      <label for={id} className='checkbox'>
+      <input id={id} className="form-checkbox" onClick={handleThis} type="checkbox" />
+      <label for={id} className='pointer'>{lable}
       
       </label>
 
-    </div>
+    </label>
 
     <input className='none' name={emailText} type="text" value={Lname} />
   </>
