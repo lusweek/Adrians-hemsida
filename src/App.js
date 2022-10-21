@@ -233,10 +233,7 @@ let loader = document.querySelector('.modal-loader-wrapper');
 
 function handleMessage(result) {
 
-  console.log('handleMessage körs');
-
   if (result === 'OK') {
-    console.log('succsess sätts till true');
     sendMessageSuccess = true
     animation()
     console.log('message sent! : ', result);
@@ -250,8 +247,6 @@ function handleMessage(result) {
 
   
   function animation () {
-
-    console.log('animation körs');
 
     document.querySelector('.done-text').innerHTML = 'Meddelande skickat'
 

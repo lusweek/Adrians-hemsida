@@ -5,8 +5,6 @@ import Icon from './Icon'
 
 function MessageSent({sendMessageSuccess}) {
 
-  console.log('sendMessageSuccess: ', sendMessageSuccess);
-
   return (
     <div className='loader-modal'>
        <div className='modal-loader-wrapper modal-loader-wrapper-animation'>
