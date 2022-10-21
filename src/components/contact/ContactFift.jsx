@@ -164,7 +164,6 @@ function handleMessage(result) {
 
 
 
-
     <section id='contact-section' className='contact-section section-center'>
 
 <article id='form-article'>

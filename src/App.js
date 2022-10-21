@@ -19,7 +19,8 @@ import emailjs from '@emailjs/browser';
 import LOGO_1 from './media/logo-1-white.png'
 import LOGO_FOOTER from './media/logo-3.png'
 import { BiBold } from 'react-icons/bi';
-
+import {BsCheck2Circle} from 'react-icons/bs'
+import {BiErrorCircle} from 'react-icons/bi'
 
 function App() {
 
@@ -176,8 +177,8 @@ function App() {
 
  const form = useRef();
 
- const [text, setText] = useState('')
- const [success, setSucsess] = useState(true)
+//  Får ej att fungera
+ let sendMessageSuccess = false
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -228,17 +229,19 @@ function App() {
   }
 
 
-const loader = document.querySelector('.modal-loader-wrapper');
+let loader = document.querySelector('.modal-loader-wrapper');
 
 function handleMessage(result) {
+
+  console.log('handleMessage körs');
+
   if (result === 'OK') {
-    setSucsess(true)
-    setText('message sent!')
+    console.log('succsess sätts till true');
+    sendMessageSuccess = true
     animation()
     console.log('message sent! : ', result);
   } else {
-    setSucsess(false)
-    setText('Something went wrong, try again!')
+    sendMessageSuccess = false
     console.log('Something went wrong: ', result);
     messageNotSent()
   }
@@ -247,7 +250,16 @@ function handleMessage(result) {
 
   
   function animation () {
+
+    console.log('animation körs');
+
+    document.querySelector('.done-text').innerHTML = 'Meddelande skickat'
+
+    let loader = document.querySelector('.modal-loader-wrapper');
+
+    document.querySelector('.done-text').style.color='green'
     loader.classList.remove("modal-loader-wrapper-animation")
+    loader.classList.remove("message-fail-animation")
     loader.classList.add("modal-loader-new-animation")
     setTimeout(() => addText(), 250)
   }
@@ -265,6 +277,11 @@ function handleMessage(result) {
     }
 
   function messageNotSent() {
+
+    document.querySelector('.done-text').innerHTML = 'Något gick fel, prova igen'
+
+    let loader = document.querySelector('.modal-loader-wrapper');
+
     document.querySelector('.done-text').style.color='red'
     loader.classList.remove("modal-loader-wrapper-animation")
     loader.classList.add("message-fail-animation")
@@ -275,16 +292,13 @@ function handleMessage(result) {
   // ---------------------- EMAIL END ---------------------- //
 
 
-  // ===!=== start
   const formCheck = useRef();  
-
-
 
   const sendEmailCheck = (e) => {
     e.preventDefault();
     openLoader()
 
-    console.log(form.current);
+    console.log('form.current: ', form.current);
 
     emailjs.sendForm('service_inf48rp', 'template_19tzibd', formCheck.current, 'NHoAII_wNiMrUrvQX')
       .then((result) => {
@@ -296,9 +310,7 @@ function handleMessage(result) {
           handleMessage(error.text)
       });
   };
-  // ===!=== end
-  
-  
+    
   return (
     <>
 
@@ -449,7 +461,6 @@ rätt Pt för dig.
 
   <article className='form-box'>
 
-{/* !  */}
 <form ref={formCheck} onSubmit={sendEmailCheck}>
 
     <ContactFirst />
@@ -457,7 +468,6 @@ rätt Pt för dig.
     <ContactThird />
     <ContactFift />
 
-{/* !  */}
 </form>
 
   </article>
@@ -651,7 +661,7 @@ rätt Pt för dig.
 
   
 
-<MessageSent text={text} success={success} />
+<MessageSent sendMessageSuccess={sendMessageSuccess} />
 
 
   {/* MEDDELANDE FORM  */}

@@ -1,7 +1,5 @@
 import React from 'react'
 import { useState, useRef, useEffect } from 'react';
-import { AiOutlineQuestionCircle } from 'react-icons/ai'
-import SkillModal from '../contact/SkillModal';
 
 function Checkbox({ lable, Lname, paragraf, id, img }) {
 
@@ -9,58 +7,32 @@ const [emailText, setemailText] = useState('')
 const [value, setValue] = useState('')
 
 useEffect(() => {
-  console.log('Value: ', value, 'Lname:', Lname);
 
 }, [emailText])
 
-console.log(Lname);
-
 function handleThis() {
     if(!emailText){
-        setemailText(lable)
+        setemailText(Lname)
         setValue('- ' + lable)
-        console.log(lable);
+
     } else if (emailText === lable) {
         setemailText('')
         setValue('')
     }
   }
 
-
-  function handleIcon() {
-    document.getElementById(id).style.opacity='0'
-    setTimeout(flex, 1)
-  }
-
-  const flex = () => {
-    document.getElementById(id).classList.remove('box-none')
-    document.getElementById(id).classList.add('block')
-    setTimeout(fade, 1)
-  }
-
-  const fade = () => {
-    document.getElementById(id).style.opacity='1'
-  }
-
   return (
 
     <>
       <div className='checkbox'>
-      {/* <AiOutlineQuestionCircle className='checkbox-icon' onClick={handleIcon} /> */}
       <input className="form-checkbox" onClick={handleThis} type="checkbox" />
       <label className='pointer'>{lable}
       
       </label>
 
-        {/* <SkillModal 
-        title={lable}
-        paragraf={paragraf} 
-        img={img}
-        id={id}
-        /> */}
     </div>
 
-    <input className='none' name={Lname} type="text" value={Lname} />
+    <input className='none' name={emailText} type="text" value={Lname} />
   </>
   )
 }

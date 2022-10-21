@@ -8,6 +8,13 @@ npm run deploy
 
 --------------------------------------------
 
+Till templaten i EmailJs fungerar Stor boktstav och "_" 
+Mellanrum och åäö fungerar inte. 
+
+
+--------------------------------------------
+
+
 Första gången annat projekt?
 
 npm install gh-pages --save-dev

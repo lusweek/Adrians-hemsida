@@ -1,8 +1,6 @@
 import React from 'react'
 import Checkbox from '../Form/Checkbox'
 import FormButton from '../FormButton'
-import CALISTHENICS_IMG from '../../media/calisthenics.jpg'
-
 
 function ContactForth() {
 
@@ -27,7 +25,10 @@ const opacity = () => {
 
 // ------------------- NEXT ---------------- //
 
-const next = () => {
+const next = (event) => {
+
+  event.preventDefault();
+
   setTimeout(noneNext, 300)
   document.querySelector('#forth-box').style.opacity= '0' 
 }
@@ -60,9 +61,6 @@ const opacityNext = () => {
 
         lable={'Klättra'} 
         Lname={'klattra'} 
-        paragraf={'Text om klättra'}
-        img={CALISTHENICS_IMG}
-        
         />
 
 <Checkbox 
@@ -70,9 +68,6 @@ const opacityNext = () => {
 
         lable={'Balansera'} 
         Lname={'balansera'} 
-        paragraf={'Text om balalsera'}
-        img={CALISTHENICS_IMG}
-        
         />
 
 <Checkbox 
@@ -80,9 +75,6 @@ const opacityNext = () => {
 
         lable={'Springa i skog'} 
         Lname={'springaiskog'} 
-        paragraf={'Text om springa i skog'}
-        img={CALISTHENICS_IMG}
-        
         />
 
 <Checkbox 
@@ -90,9 +82,6 @@ const opacityNext = () => {
 
         lable={'Krypa'} 
         Lname={'krypa'} 
-        paragraf={'Text om krypa'}
-        img={CALISTHENICS_IMG}
-        
         />
 
       

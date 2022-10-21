@@ -58,40 +58,28 @@ const opacityNext = () => {
         id={Math.random()}
 
         lable={'Gå ner i vikt'} 
-        Lname={'handstående'} 
-        paragraf={'Text om handstående'}
-        img={CALISTHENICS_IMG}
-        
+        Lname={'Tappa_Vikt'}  
         />
 
 <Checkbox 
         id={Math.random()}
 
         lable={'Öka muskelmassa'} 
-        Lname={'muscleup'} 
-        paragraf={'Text om Muscle up'}
-        img={CALISTHENICS_IMG}
-        
+        Lname={'Mer_Muskelmassa'} 
         />
 
 <Checkbox 
         id={Math.random()}
 
         lable={'Öka prestation i annan idrott'} 
-        Lname={'frontlever'} 
-        paragraf={'Text om Front-lever'}
-        img={CALISTHENICS_IMG}
-        
+        Lname={'Prestation_I_Annan_Idrott'} 
         />
 
 <Checkbox 
         id={Math.random()}
 
         lable={'Klara vardagliga påfrästningar bättre'} 
-        Lname={'planche'} 
-        paragraf={'Text om planche'}
-        img={CALISTHENICS_IMG}
-        
+        Lname={'Klara_Vardagliga_Utmaningar'} 
         />
 
       
