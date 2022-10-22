@@ -326,7 +326,7 @@ function handleMessage(result) {
       <section ref={menu} id='burger-menu'>
         <a onClick={handleMenu} href="#offer-section"> <h1 className='small-title light burger-title'>Erbjudande</h1></a>
         <a onClick={handleMenu} href="#about-section"><h1 className='small-title light burger-title'>Om Adrian</h1></a>
-        <a onClick={handleMenu} href="#meta-contact-wrapper"><h1 className='small-title light burger-title'>Alternativ</h1></a>
+        <a onClick={handleMenu} href="#meta-contact-wrapper"><h1 className='small-title light burger-title'>Utbud</h1></a>
         <a onClick={handleMenu} href="#priser-section"><h1 className='small-title light burger-title'>Priser</h1></a>
         <a onClick={handleMenu} href="#contact-info-article"><h1 className='small-title light burger-title'>Kontakt</h1></a>
        
@@ -644,7 +644,7 @@ rätt Pt för dig.
 
 {/* ---------------------- CONTAKTINFORMATION --------------------- */}
 
-<article className='footer-section section-padding' id='contact-info-article dark-theme'>
+<article className='footer-section section-padding' id='contact-info-article'>
 
   {/* FORM START  */}
 

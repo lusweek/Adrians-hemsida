@@ -255,7 +255,8 @@ height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  padding-top: 30px;
+  row-gap: 4vh;
   top: 0;
   right: 0;
   width: 0px;
@@ -264,7 +265,6 @@ height: 100%;
   opacity: .9;
   height: 100vh;
   transition-duration: .7s;
-  padding-top: 0px;
   overflow: hidden;
 }
 
@@ -599,7 +599,8 @@ height: 51px !important;
 .form-box{
   width: 760px;
   min-height: 540px;
-  max-width: 90vw;
+  padding: 5vw;
+  max-width: 80vw;
   background-color: rgba(0,0,0, .85);
   border-radius: 5px;
   display: flex;
@@ -826,7 +827,6 @@ letter-spacing: 1px;
 
 
 #contact-info-article{
-  margin-top: 140px;
   font-weight: 100;
   letter-spacing: 1px;
 }
@@ -1077,7 +1077,7 @@ font-size: 20px;
     }
 
     .more-margin{
-      margin: 30px 0;
+      margin: 30px 10px;
     }
 
     .p-next-each-other-div{
