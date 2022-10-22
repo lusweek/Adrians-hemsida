@@ -295,7 +295,7 @@ flex-direction: column;
 justify-content: center;
 position: relative;
 
-background-image: url(../src/media/Handstand.jpg);
+background-image: url(../src/media/Handstand-150kb.jpg);
 background-size: cover;
 background-position: center;
 
@@ -313,7 +313,7 @@ background-position: center;
 /* OFFER SECTION */
 
 #offer-section{
-  background-image: url(../src/media/Erbjudande-m.png);
+  background-image: url(../src/media/Erbjudande-950kb.jpg);
   background-size: cover;
   background-position: center;
 
@@ -367,7 +367,7 @@ align-items: center;
 /* PRINCIPLES SECTION */
 
 #principer{
-  background-image: url(./media/outdoor-gym.jpg);
+  background-image: url(./media/outdoor-gym-200kb.jpg);
   color: white;
   position: relative;
   background-position-x: center;
@@ -582,7 +582,7 @@ height: 51px !important;
 
 #meta-contact-wrapper{
   height: 800px;
-  background-image: url(./media/woods.jpg);
+  background-image: url(./media/woods-1000kb.jpg);
   background-position: center;
   background-size: cover;
   display: flex;
