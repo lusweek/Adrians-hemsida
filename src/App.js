@@ -24,7 +24,7 @@ import {BiErrorCircle} from 'react-icons/bi'
 
 function App() {
 
- 
+ // En ny kommentar som jag la till nu. för test. hej hej
 
   // ------------- MORE HOWERS FUNCITON START ------------------- //
 
