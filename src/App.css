@@ -160,6 +160,7 @@ font-size: 18px;
   text-align: center;
   margin: 40px;
   width: 90%;
+  max-width: 950px;
   color: rgb(253, 253, 253);
   z-index: 2;
 }
@@ -226,6 +227,15 @@ font-size: 18px;
 
 .no-padding-top{
   padding-top: 0 !important;
+}
+
+.t-align-s {
+  text-align: start;
+}
+
+.t-align-c {
+  text-align: center;
+  display: block;
 }
 
 
@@ -348,12 +358,13 @@ background-position: center;
 
 #about-section{
 padding: 100px 0px;
-background-color: #282828;
+/* background-color: #282828; */
+background: rgb(33,38,19);
+background: linear-gradient(180deg, rgba(33,38,19,1) 0%, rgba(8,42,36,1) 65%);
 display: flex;
 flex-direction: column;
 align-items: center;
 }
-
 
 #profile-img{
   width: 180px;
