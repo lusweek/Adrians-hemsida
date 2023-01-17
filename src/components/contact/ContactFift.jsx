@@ -165,9 +165,7 @@ function handleMessage(result) {
 
 <MessageSent text={text} success={success} />
 
-
-    {/* MEDDELANDE FORM  */}
-    
+    {/* MEDDELANDE FORM  */}    
 
     <div className='inputs'>
       <input 
