@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/Adrians-hemsida/static/css/main.2349bf87.css",
-    "main.js": "/Adrians-hemsida/static/js/main.45ba1fd6.js",
+    "main.css": "/Adrians-hemsida/static/css/main.98713c23.css",
+    "main.js": "/Adrians-hemsida/static/js/main.80dc7fb7.js",
     "static/js/787.bac1152b.chunk.js": "/Adrians-hemsida/static/js/787.bac1152b.chunk.js",
-    "static/media/Erbjudande-m.png": "/Adrians-hemsida/static/media/Erbjudande-m.de8b1bb1df30cb2cf2d2.png",
-    "static/media/woods.jpg": "/Adrians-hemsida/static/media/woods.75e0739debabbc35dc1c.jpg",
-    "static/media/outdoor-gym.jpg": "/Adrians-hemsida/static/media/outdoor-gym.176b800701e03ef2c393.jpg",
     "static/media/Smidighet.jpg": "/Adrians-hemsida/static/media/Smidighet.5273096c4ab7bdad31d9.jpg",
-    "static/media/Handstand.jpg": "/Adrians-hemsida/static/media/Handstand.e27062ee1b1997f376e3.jpg",
     "static/media/calisthenics.jpg": "/Adrians-hemsida/static/media/calisthenics.99bf7e1beb314ce2698b.jpg",
+    "static/media/woods-1000kb.jpg": "/Adrians-hemsida/static/media/woods-1000kb.037861781b442bdc8f6a.jpg",
+    "static/media/Erbjudande-950kb.jpg": "/Adrians-hemsida/static/media/Erbjudande-950kb.88113291608c9fba2eca.jpg",
     "static/media/PT.jpg": "/Adrians-hemsida/static/media/PT.bf3fc2958ebe2f04f844.jpg",
+    "static/media/outdoor-gym-200kb.jpg": "/Adrians-hemsida/static/media/outdoor-gym-200kb.c817ea06fbc9b5b07860.jpg",
+    "static/media/Handstand-150kb.jpg": "/Adrians-hemsida/static/media/Handstand-150kb.46b138333636782aca11.jpg",
     "static/media/logo-1-white.png": "/Adrians-hemsida/static/media/logo-1-white.57ab39955ab5efc7e7fe.png",
     "static/media/logo-3.png": "/Adrians-hemsida/static/media/logo-3.7c0288b5550f5ca63c37.png",
     "index.html": "/Adrians-hemsida/index.html",
-    "main.2349bf87.css.map": "/Adrians-hemsida/static/css/main.2349bf87.css.map",
-    "main.45ba1fd6.js.map": "/Adrians-hemsida/static/js/main.45ba1fd6.js.map",
+    "main.98713c23.css.map": "/Adrians-hemsida/static/css/main.98713c23.css.map",
+    "main.80dc7fb7.js.map": "/Adrians-hemsida/static/js/main.80dc7fb7.js.map",
     "787.bac1152b.chunk.js.map": "/Adrians-hemsida/static/js/787.bac1152b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2349bf87.css",
-    "static/js/main.45ba1fd6.js"
+    "static/css/main.98713c23.css",
+    "static/js/main.80dc7fb7.js"
   ]
 }
