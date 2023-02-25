@@ -19,68 +19,68 @@ import emailjs from '@emailjs/browser';
 import LOGO_1 from './media/logo-1-white.png'
 import LOGO_FOOTER from './media/logo-3.png'
 import { BiBold } from 'react-icons/bi';
-import {BsCheck2Circle} from 'react-icons/bs'
-import {BiErrorCircle} from 'react-icons/bi'
+import { BsCheck2Circle } from 'react-icons/bs'
+import { BiErrorCircle } from 'react-icons/bi'
 
 function App() {
 
- 
+  // En ny kommentar som jag la till nu. för test. hej hej
 
   // ------------- MORE HOWERS FUNCITON START ------------------- //
 
   const [isClosed, setIsClosed] = useState(true)
   function handleExtraHours() {
-  const extraH = document.querySelector('#extra-h')
+    const extraH = document.querySelector('#extra-h')
 
     if (isClosed === true) {
 
       const wWidth = window.innerWidth
 
       if (wWidth >= 1400) {
-        extraH.style.height='500px'
+        extraH.style.height = '500px'
       } else if (wWidth < 1400 && wWidth > 894) {
-        extraH.style.height='852px'
-      } else if ( wWidth < 894 ) {
-        extraH.style.height='1362px'
+        extraH.style.height = '852px'
+      } else if (wWidth < 894) {
+        extraH.style.height = '1362px'
       }
 
-      
+
       handleHrrow()
       setIsClosed(false)
-    } else if(!isClosed) {
-      extraH.style.height='0px'
+    } else if (!isClosed) {
+      extraH.style.height = '0px'
       handleHrrow()
       setIsClosed(true)
-    }  
+    }
   }
 
   const [priserIsClosed, setPriserIsClosed] = useState(true)
   function handlePriser() {
 
-  const priserSection = document.querySelector('#offer')
+    const priserSection = document.querySelector('#offer')
 
-  const setAuto = () => priserSection.style.height='auto'
-  const set1000 = () => priserSection.style.height='1000px'
-  const set0 = () => priserSection.style.height='0px'
+    const setAuto = () => priserSection.style.height = 'auto'
+    const set1000 = () => priserSection.style.height = '1000px'
+    const set0 = () => priserSection.style.height = '0px'
 
-  if (priserIsClosed === true) {
+    if (priserIsClosed === true) {
 
-    const wWidth = window.innerWidth
+      const wWidth = window.innerWidth
 
-      priserSection.style.padding='100px 0px'
+      priserSection.style.padding = '100px 0px'
       setTimeout(set1000, 400)
       setTimeout(setAuto, 600)
 
-    handlePriserArrow()
-    setPriserIsClosed(false)
+      handlePriserArrow()
+      setPriserIsClosed(false)
 
-  } else if(!priserIsClosed) {
-    priserSection.style.height='1000px'
-    setTimeout(set0, 200)
-    priserSection.style.padding='0px'
-    handlePriserArrow()
-    setPriserIsClosed(true)
-  }  
+    } else if (!priserIsClosed) {
+      priserSection.style.height = '1000px'
+      setTimeout(set0, 200)
+      priserSection.style.padding = '0px'
+      handlePriserArrow()
+      setPriserIsClosed(true)
+    }
 
   }
 
@@ -91,28 +91,28 @@ function App() {
   function handleHrrow() {
     if (isClosed === true) {
       setArrowD(arrowUp)
-    } else if(!isClosed){
+    } else if (!isClosed) {
       setArrowD(arrowDown)
-    } 
+    }
   }
 
   const [priserArrowD, setPriserArrowD] = useState(arrowDown)
   function handlePriserArrow() {
     if (priserIsClosed === true) {
       setPriserArrowD(arrowUp)
-    } else if(!priserIsClosed){
+    } else if (!priserIsClosed) {
       setPriserArrowD(arrowDown)
-    } 
+    }
   }
 
 
   // ---------------------- HAMBURGAREN ---------------------- //
-  
-  
+
+
 
   const [menuOpen, setMenuOpen] = useState(false)
 
-  const handleMenu = () =>{
+  const handleMenu = () => {
     if (menuOpen === false) {
       openMenu()
     } else if (menuOpen === true) {
@@ -123,13 +123,13 @@ function App() {
   function openMenu() {
     setMenuOpen(true)
     const menu = document.querySelector("#burger-menu")
-    menu.style.width="300px"
+    menu.style.width = "300px"
   }
 
   function closeMenu() {
     setMenuOpen(false)
     const menu = document.querySelector("#burger-menu")
-    menu.style.width="0px"
+    menu.style.width = "0px"
   }
 
   const burgerRef = useRef();
@@ -138,25 +138,25 @@ function App() {
 
 
 
-   useEffect(() => {
-    
+  useEffect(() => {
+
     const check = (e) => {
 
 
       if (
-          e.path[0] !== burgerRef.current &&
-          e.path[0].id !== 'toggle' &&
-          e.path[0] !== menu.current &&
-          e.path[1] !== menu.current &&
-          e.path[2] !== menu.current &&
-          e.path[3] !== menu.current &&
-          e.path[4] !== menu.current &&
-          e.path[5] !== menu.current &&
-          e.path[6] !== menu.current &&
-          e.path[7] !== menu.current &&
-          e.path[8] !== menu.current 
-          ){
-            closeMenu()
+        e.path[0] !== burgerRef.current &&
+        e.path[0].id !== 'toggle' &&
+        e.path[0] !== menu.current &&
+        e.path[1] !== menu.current &&
+        e.path[2] !== menu.current &&
+        e.path[3] !== menu.current &&
+        e.path[4] !== menu.current &&
+        e.path[5] !== menu.current &&
+        e.path[6] !== menu.current &&
+        e.path[7] !== menu.current &&
+        e.path[8] !== menu.current
+      ) {
+        closeMenu()
       }
     }
     document.body.addEventListener('click', check)
@@ -164,21 +164,21 @@ function App() {
   }, [])
 
 
-// MAIL START
+  // MAIL START
 
-     // --------------------- EMAIL -------------------- //
+  // --------------------- EMAIL -------------------- //
 
-   // ------------------- FORM TRACKING ------------------- // 
+  // ------------------- FORM TRACKING ------------------- // 
 
-   const [title, setTitle] = useState('');
+  const [title, setTitle] = useState('');
   const [subject, setSubject] = useState('');
   const [email, setEmail] = useState('');
   const [textArea, setTextArea] = useState('')
 
- const form = useRef();
+  const form = useRef();
 
-//  Får ej att fungera
- let sendMessageSuccess = false
+  //  Får ej att fungera
+  let sendMessageSuccess = false
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -190,24 +190,24 @@ function App() {
 
     emailjs.sendForm('service_inf48rp', 'template_19tzibd', form.current, 'NHoAII_wNiMrUrvQX')
       .then((result) => {
-          handleMessage(result.text)
-          clearText()
+        handleMessage(result.text)
+        clearText()
       }, (error) => {
-          handleMessage(error.text)
+        handleMessage(error.text)
       });
   };
 
-  
+
 
   function clearText() {
-      document.querySelector('#input-name').value=''
-      document.querySelector('#input-email').value=''
-      document.querySelector('#input-message').value=''
+    document.querySelector('#input-name').value = ''
+    document.querySelector('#input-email').value = ''
+    document.querySelector('#input-message').value = ''
   }
 
   // Send animation
 
-  
+
 
   function openLoader() {
     document.querySelector('.loader-modal').style.display = 'flex';
@@ -218,41 +218,41 @@ function App() {
     setTimeout(close, 500)
   }
 
-  function close () {
+  function close() {
     document.querySelector('.loader-modal').style.display = 'none';
     document.querySelector('.loader-modal').style.opacity = '1';
-    document.querySelector('.done-text').style.opacity='0';
+    document.querySelector('.done-text').style.opacity = '0';
     loader.classList.add("modal-loader-wrapper-animation");
     loader.classList.remove("modal-loader-new-animation");
-    document.querySelector('.done-text').style.color='green';
+    document.querySelector('.done-text').style.color = 'green';
     loader.classList.remove("message-fail-animation");
   }
 
 
-let loader = document.querySelector('.modal-loader-wrapper');
+  let loader = document.querySelector('.modal-loader-wrapper');
 
-function handleMessage(result) {
+  function handleMessage(result) {
 
-  if (result === 'OK') {
-    sendMessageSuccess = true
-    animation()
-    console.log('message sent! : ', result);
-  } else {
-    sendMessageSuccess = false
-    console.log('Something went wrong: ', result);
-    messageNotSent()
+    if (result === 'OK') {
+      sendMessageSuccess = true
+      animation()
+      console.log('message sent! : ', result);
+    } else {
+      sendMessageSuccess = false
+      console.log('Something went wrong: ', result);
+      messageNotSent()
+    }
+
   }
 
-}
 
-  
-  function animation () {
+  function animation() {
 
     document.querySelector('.done-text').innerHTML = 'Meddelande skickat'
 
     let loader = document.querySelector('.modal-loader-wrapper');
 
-    document.querySelector('.done-text').style.color='green'
+    document.querySelector('.done-text').style.color = 'green'
     loader.classList.remove("modal-loader-wrapper-animation")
     loader.classList.remove("message-fail-animation")
     loader.classList.add("modal-loader-new-animation")
@@ -260,16 +260,16 @@ function handleMessage(result) {
   }
 
   function addText() {
-  document.querySelector('.done-text-div').style.opacity='1'
-  document.querySelector('.done-text').style.opacity='1'
-  setTimeout(closeLoader, 1900)
+    document.querySelector('.done-text-div').style.opacity = '1'
+    document.querySelector('.done-text').style.opacity = '1'
+    setTimeout(closeLoader, 1900)
   }
 
   function addTextFail() {
-    document.querySelector('.done-text-div').style.opacity='1'
-    document.querySelector('.done-text').style.opacity='1'
+    document.querySelector('.done-text-div').style.opacity = '1'
+    document.querySelector('.done-text').style.opacity = '1'
     setTimeout(closeLoader, 2300)
-    }
+  }
 
   function messageNotSent() {
 
@@ -277,7 +277,7 @@ function handleMessage(result) {
 
     let loader = document.querySelector('.modal-loader-wrapper');
 
-    document.querySelector('.done-text').style.color='red'
+    document.querySelector('.done-text').style.color = 'red'
     loader.classList.remove("modal-loader-wrapper-animation")
     loader.classList.add("message-fail-animation")
     setTimeout(() => addTextFail(), 250)
@@ -287,7 +287,7 @@ function handleMessage(result) {
   // ---------------------- EMAIL END ---------------------- //
 
 
-  const formCheck = useRef();  
+  const formCheck = useRef();
 
   const sendEmailCheck = (e) => {
     e.preventDefault();
@@ -297,450 +297,454 @@ function handleMessage(result) {
 
     emailjs.sendForm('service_inf48rp', 'template_19tzibd', formCheck.current, 'NHoAII_wNiMrUrvQX')
       .then((result) => {
-          console.log(result.text);
-          handleMessage(result.text)
-          clearText()
+        console.log(result.text);
+        handleMessage(result.text)
+        clearText()
       }, (error) => {
-          console.log(error.text);
-          handleMessage(error.text)
+        console.log(error.text);
+        handleMessage(error.text)
       });
   };
-    
+
   return (
     <>
 
-{/* NAVBAREN */}
+      {/* NAVBAREN */}
 
 
 
-    <nav >
-      <img id='company-name' src={LOGO_1} alt="Logga movement freedom" />
+      <nav >
+        <img id='company-name' src={LOGO_1} alt="Logga movement freedom" />
 
-  {/* HAMBURGAREN  */}
+        {/* HAMBURGAREN  */}
 
-      <div id='burger-div-wrapper' ref={burgerRef} onClick={handleMenu}>
-      <Burger menuOpen={menuOpen} />
+        <div id='burger-div-wrapper' ref={burgerRef} onClick={handleMenu}>
+          <Burger menuOpen={menuOpen} />
+        </div>
+
+
+        <section ref={menu} id='burger-menu'>
+          <a onClick={handleMenu} href="#offer-section"> <h1 className='small-title light burger-title'>Erbjudande</h1></a>
+          <a onClick={handleMenu} href="#about-section"><h1 className='small-title light burger-title'>Om Adrian</h1></a>
+          <a onClick={handleMenu} href="#meta-contact-wrapper"><h1 className='small-title light burger-title'>Utbud</h1></a>
+          <a onClick={handleMenu} href="#priser-section"><h1 className='small-title light burger-title'>Priser</h1></a>
+          <a onClick={handleMenu} href="#contact-info-article"><h1 className='small-title light burger-title'>Kontakt</h1></a>
+
+        </section>
+
+      </nav>
+
+
+
+      {/* FÖRSTA SECTIONEN  */}
+      <section id='first-section' className='dark'>
+        <div className='dark-bg dark-gb-first-section'></div>
+
+        <h1 className='title more-margin'>Adrian Skog<br />Personlig träning med brett fokus på rörelsemöster</h1>
+
+        <p className='hero-paragraf'>
+          Har du drömt om att kuna göra akrobatiska rörelser som hjulning och handstående? <br />
+          Eller vill du bli smidigare för att kunna leka med dina barn eller barnbarn?
+        </p>
+
+
+        <Button />
+
+
+        <div id='offer-text-wrapper'>
+          <h1 className='title light-text'>Första träningen gratis<br />Du har allt att vinna</h1>
+
+          <div className='offer-check-wrapper'>
+            <p className='p20 a-center title light-text'>50 min som inkluderar samtal om dig och dina mål samt träning </p>
+          </div>
+
+
+          <p className='hero-paragraf light-text bold300'>
+
+            Det finns ingen one zise fits all när det kommer till pt, därför tycker
+            jag att det är viktigt att vi kan lära känna varandra lite innan du förbinder dig till någonting.
+            <br /><br />
+            Syftet med passet är dels att jag skall veta mer om dig, din bakgrund och dina mål samt att du skall veta om jag är
+            rätt Pt för dig.
+
+          </p>
+
+          <Button />
+        </div>
+
+      </section>
+
+
+      {/* ABOUT SECTION */}
+
+      <section id='about-section'>
+
+        <h1 className='title'>Jag är Adrian</h1>
+
+        <img id='profile-img' src={PROFILE_PIC} alt="Image of Adrian smiling, blurry trees in the background" />
+
+        <p className='hero-paragraf bold300'>
+
+          Jag brinner för rörelse och i 12 år har jag hjälpt folk att bli smidigare och starkare. Det började 2010 med att jag lärde ut parkour i en förening. Sen blev det flera föreningar, workshops, event och kurser. Detta lede sedan till att jag utforskade fler och fler träningsformer och andra sätt att uttrycka sig genom rörelse och idag har jag hjälpt hundratals människor förbättra sina fysiska förmågor. Under de senaste 10 åren har jag utforskat olika träningsformer, kampsporter, dansstilar mm.
+          <br /><br />
+          Min främsta expertis är inom naturlig rörelse och calisthenics
+          som jag ser som en grund för att sedan kunna lära sig och utvecklas inom andra idrotter, dans, fysiskt krävande jobb etc.
+          Förutom många år av erfarenhet innom träning och coachning så är jag certifierad tränare genom Movnat, frisks & Svettis och gymnastikförbundet. Jag har ett silver och ett brons i SM i Power Calisthenics och en 6e placering i Nordiska mästerskapet.
+          <br />
+          <br />
+          Min filosophi och mina methoder  har till stor del influerats av Steven Low och hans arbete inom kroppsviktsträning, Katy Bowman och hennes arbete innom biomekanik och James Clear och hans arbete om vanor.
+          <br />
+          <br />
+          Naturlig rörelse, eller funktionell träning som vissa skulle kalla det, handlar om ett se helheten och bygga från grunden. Det innebär att utgå ifrån kroppens naturliga rörelsemönster som att  krypa, balansera, springa, klättra, lyfta, bära, kasta, fånga, hoppa, landa mm och först bygga kvalite. När vi har kvalité i en rörelse så kan vi öka kvantiteten och  intensiteten för att bygga uthållighet och styrka.
+          <br />
+          <br />
+          Bemästra din kroppsvikt och rör dig fritt!
+
+        </p>
+
+      </section>
+
+      {/* OFFER SECTION */}
+
+      <section id='offer-section'>
+
+
+        <div id='offer-text-wrapper'>
+          <h1 className='title light-text'>Första träningen gratis<br />Du har allt att vinna</h1>
+
+          <div className='offer-check-wrapper'>
+            <p className='p20 a-center title light-text'>50 min som inkluderar samtal om dig och dina mål samt träning </p>
+          </div>
+
+
+          <p className='hero-paragraf light-text bold300'>
+
+            <div className='p-next-each-other-div'>
+              <h1 className='small-title cusive'>VARIERAD RÖRELSE</h1>
+              <p className='thin-paragraf principle-p'>Förbättrar man rörelsen på ett område förbättras det på andra områden också; tränar man pullups blir man även bättre på att göra armhävningar. Därför tror jag på att en bred variation av rörelse är den bästa träningsformen.</p>
+            </div>
+            Det finns ingen one zise fits all när det kommer till pt, därför tycker
+            jag att det är viktigt att vi kan lära känna varandra lite innan du förbinder dig till någonting.
+            <br /><br />
+            Syftet med passet är dels att jag skall veta mer om dig, din bakgrund och dina mål samt att du skall veta om jag är
+            rätt Pt för dig.
+
+          </p>
+
+
+          <div className='p-next-each-other-div'>
+            <h1 className='small-title cusive'>VANOR AVGÖR RESULTATET </h1>
+            <p className='thin-paragraf principle-p'>Dina vanor är det som avgör om du uppnår dina träningsmål eller ej. Mitt mål är att hjälpa dig få in den form av rörelse du vill ha i vardagen på ett naturligt vis, träning ska inte kännas påtvingat.</p>
+          </div>
+
+        </div>
+        <Button />
+
+    </section>
+
+
+      {/* ABOUT SECTION */ }
+
+      <section id='about-section'>
+
+        <h1 className='title'>Jag är Adrian</h1>
+
+        {/* <img id='profile-img' src={PROFILE_PIC} alt="Image of Adrian smiling, blurry trees in the background" /> */}
+
+        <p className='hero-paragraf bold300 t-align-s'>
+          Jag brinner för rörelse och i 12 år har jag hjälpt folk att bli smidigare och starkare. Det började 2010 med att jag lärde ut parkour i en förening. Sen blev det flera föreningar, workshops, event och kurser. Detta lede sedan till att jag utforskade fler och fler träningsformer och andra sätt att uttrycka sig genom rörelse och idag har jag hjälpt hundratals människor förbättra sina fysiska förmågor. Under de senaste 10 åren har jag utforskat olika träningsformer, kampsporter, dansstilar mm. Min främsta expertis är inom naturlig rörelse och calisthenics
+          som jag ser som en grund för att sedan kunna lära sig och utvecklas inom andra idrotter, dans, fysiskt krävande jobb etc.
+          Förutom många år av erfarenhet innom träning och coachning så är jag certifierad tränare genom Movnat, frisks & Svettis och gymnastikförbundet. Jag har ett silver och ett brons i SM i Power Calisthenics och en 6e placering i Nordiska mästerskapet.
+          <br /><br />
+          Min filosophi och mina methoder  har till stor del influerats av Steven Low och hans arbete inom kroppsviktsträning, Katy Bowman och hennes arbete innom biomekanik och James Clear och hans arbete om vanor.
+          <br /><br />
+          Naturlig rörelse, eller funktionell träning som vissa skulle kalla det, handlar om ett se helheten och bygga från grunden. Det innebär att utgå ifrån kroppens naturliga rörelsemönster som att  krypa, balansera, springa, klättra, lyfta, bära, kasta, fånga, hoppa, landa mm och först bygga kvalite. När vi har kvalité i en rörelse så kan vi öka kvantiteten och  intensiteten för att bygga uthållighet och styrka.
+          <br /><br />
+          <span className='t-align-c'>Bemästra din kroppsvikt och rör dig fritt!</span>
+        </p>
+
+      </section>
+
+
+
+      <Qvote text={`"Don't limit the motion, move the limit"`} />
+
+
+  {/* TRE VIKTIGA PRINCIPER */ }
+
+      <section id='principer' className='section-center'>
+
+        <div className='dark-bg'></div>
+
+        <h1 className='title more-margin i2'>Tre viktiga principer</h1>
+
+        <div id='principles-text-wrapper'>
+
+          <div className='p-next-each-other-div'>
+            <h1 className='small-title cusive'>VANOR AVGÖR RESULTATET </h1>
+            <p className='thin-paragraf principle-p'>Dina vanor är det som avgör om du uppnår dina träningsmål eller ej. Mitt mål är att hjälpa dig få in den form av rörelse du vill ha i vardagen på ett naturligt vis, träning ska inte kännas påtvingat.</p>
+          </div>
+
+          <div className='p-next-each-other-div'>
+            <h1 className='small-title cusive'>LEK = EFFEKTIV TRÄNING</h1>
+            <p className='thin-paragraf principle-p'>Har man kul när man tränar kommer man vilja fortsätta träna, vill man fortsätta träna blir träningen effektiv.</p>
+          </div>
+
+          <div className='p-next-each-other-div'>
+            <h1 className='small-title cusive'>VARIERAD RÖRELSE</h1>
+            <p className='thin-paragraf principle-p'>Förbättrar man rörelsen på ett område förbättras det på andra områden också; tränar man pullups blir man även bättre på att göra armhävningar. Därför tror jag på att en bred variation av rörelse är den bästa träningsformen.</p>
+          </div>
+
+        </div>
+
+
+
+        <Button />
+
+      </section>
+
+
+      <Qvote text={`“Change happens through movement”`} toText={`//Joseph Pilates`} />
+
+
+  {/* CONTACT SECTION */ }
+  <section id='meta-contact-wrapper'>
+    <article className='form-box'>
+      <form ref={formCheck} onSubmit={sendEmailCheck}>
+        <ContactFirst />
+        <ContactSecond />
+        <ContactThird />
+        <ContactFift />
+      </form>
+    </article>
+  </section>
+
+  {/* PRISER */ }
+      <div id='priser-section' className='section-center light-background section-padding'>
+        <div onClick={handlePriser} className='more-h-div '>
+          <p className='offer-text-p margin-sides'>Priser</p>
+          <svg className='arrow-down' width="20" viewBox="0 0 82 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d={priserArrowD} fill="black" />
+          </svg>
+        </div>
       </div>
 
 
-      <section ref={menu} id='burger-menu'>
-        <a onClick={handleMenu} href="#offer-section"> <h1 className='small-title light burger-title'>Erbjudande</h1></a>
-        <a onClick={handleMenu} href="#about-section"><h1 className='small-title light burger-title'>Om Adrian</h1></a>
-        <a onClick={handleMenu} href="#meta-contact-wrapper"><h1 className='small-title light burger-title'>Utbud</h1></a>
-        <a onClick={handleMenu} href="#priser-section"><h1 className='small-title light burger-title'>Priser</h1></a>
-        <a onClick={handleMenu} href="#contact-info-article"><h1 className='small-title light burger-title'>Kontakt</h1></a>
-       
+      <section id='offer' className='section-center section-padding no-padding-top light-background'>
+
+        <h1 className='bold-title'>Erbjudanden</h1>
+
+        <p className='paragraf'>
+          <b>Vid alla köp ingår ett individuellt anpassat träningsprogram.</b>
+          <br /> <br />
+          Detta träningsprogram skräddarsyr vi tillsammans kontinuerligt över tid, kvalitén på träningsprogrammet ökar desto mer tid vi har med varandra.
+        </p>
+
+        <article className='table-article'>
+
+          <table className='priser-table'>
+            <tr>
+              <th>PT - coaching</th>
+              <th>Pris</th>
+            </tr>
+            <tr>
+              <td>1 timme</td>
+              <td>850 kr</td>
+            </tr>
+            <tr>
+              <td>3 timmar</td>
+              <td>2400 kr</td>
+            </tr>
+            <tr>
+              <td>5 timmar</td>
+              <td>3700 kr</td>
+            </tr>
+            <tr>
+              <td>8 timmar</td>
+              <td>5500 kr</td>
+            </tr>
+          </table>
+
+          <table className='priser-table'>
+            <tr>
+              <th>Online - coaching</th>
+              <th>Pris</th>
+            </tr>
+            <tr>
+              <td>1 månad</td>
+              <td>499 kr</td>
+            </tr>
+            <tr>
+              <td>2 månader</td>
+              <td>899 kr</td>
+            </tr>
+            <tr>
+              <td>3 månader</td>
+              <td>1200 kr</td>
+            </tr>
+            <tr>
+              <td>4 månader</td>
+              <td>1400 kr</td>
+            </tr>
+          </table>
+
+
+        </article>
+
+        <article className='box-wrapper'>
+
+          <h1 className='title dark-text'>Paketerbjudanden</h1>
+
+          <div className='box-container'>
+            <div className='offer-box'>
+              <h1 className='small-title'>Baspaket</h1>
+              <p className='tiny'>1 timme träning <br /> 1 månads online coaching<br />Individanpassat träningsprogram</p>
+              <h1 className='price'>1150 kr</h1>
+            </div>
+
+            <div className='offer-box'>
+              <h1 className='small-title'>Mellan</h1>
+              <p className='tiny'>3 timmar<br />2 månaders online coaching<br />Individanpassat träningsprogram</p>
+              <h1 className='price'>2999 kr</h1>
+            </div>
+
+            <div className='offer-box'>
+              <h1 className='small-title'>Premium</h1>
+              <p className='tiny'>8 timmar<br />3 månaders online coaching<br />Individanpassat träningsprogram</p>
+              <h1 className='price'>5999 kr</h1>
+            </div>
+          </div>
+
+
+
+        </article>
+
+
+
+        <article className='offer-text-article'>
+
+          <div className='offer-text-div'>
+            <h1 className='small-title'>Individuellt träningsprogram</h1>
+            <p className='offer-text-p'>Det individuella träningsprogrammet innebär att vi bygger ett träningsprogram anpassat efter dina mål och behov.
+              <br /><br />
+              Du får även en individanpassad strategi för att förbättra dina träningsvarnor.
+            </p>
+          </div>
+
+          <div className='offer-text-div'>
+            <h1 className='small-title'>Online coaching</h1>
+            <p className='offer-text-p'>
+              <ul>
+                <li>Kontenuelig uppföljning</li>
+                <li>Videofeedback på övningar</li>
+                <li>Obegränsad coaching via chatt</li>
+                <li>Tillgång till instruktionsmaterial</li>
+                <li>Rådgiving av vanestrategier</li>
+                <li>Alltid svar inom 24 timmar</li>
+              </ul>
+              <br /><br />
+
+            </p>
+          </div>
+
+        </article>
+
+        <Button />
       </section>
 
-    </nav>
+  {/* ---------------------- CONTAKTINFORMATION --------------------- */ }
 
+  <article className='footer-section section-padding' id='contact-info-article'>
 
+    {/* FORM START  */}
 
-{/* FÖRSTA SECTIONEN  */}
-   <section id='first-section' className='dark'>
-    <div className='dark-bg dark-gb-first-section'></div>
+    <article className='' id='form-article'>
 
-    <h1 className='title more-margin'>Adrian Skog<br />Personlig träning med brett fokus på rörelsemöster</h1>
+      <h1 className='title m30'>Kontakt</h1>
 
-    <p className='hero-paragraf'>
-    Har du drömt om att kuna göra akrobatiska rörelser som hjulning och handstående? <br />
-Eller vill du bli smidigare för att kunna leka med dina barn eller barnbarn?
-    </p>
-    
-   
-   <Button />
-   
+      <form ref={form} onSubmit={sendEmail}>
 
 
-   </section>
 
-{/* OFFER SECTION */}
+        <MessageSent sendMessageSuccess={sendMessageSuccess} />
 
-<section id='offer-section'>
 
+        {/* MEDDELANDE FORM  */}
 
-<div id='offer-text-wrapper'>
-  <h1 className='title light-text'>Första träningen gratis<br />Du har allt att vinna</h1>
-  
-  <div className='offer-check-wrapper'>
-    <p className='p20 a-center title light-text'>50 min som inkluderar samtal om dig och dina mål samt träning </p>
-  </div>
- 
 
-  <p className='hero-paragraf light-text bold300'>
+        <div className='inputs'>
+          <input
+            id='input-name'
+            type="text"
+            required
+            placeholder='Name*'
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            name="user_name"
+          />
+          <input
+            id='input-email'
+            type="email"
+            required
+            placeholder='Email*'
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            name="user_email"
+          />
+        </div>
 
-  Det finns ingen one zise fits all när det kommer till pt, därför tycker 
-jag att det är viktigt att vi kan lära känna varandra lite innan du förbinder dig till någonting. 
-<br /><br />
-Syftet med passet är dels att jag skall veta mer om dig, din bakgrund och dina mål samt att du skall veta om jag är
-rätt Pt för dig.
-    
-  </p>
+        <textarea
+          id='input-message'
+          required
+          cols="30"
+          rows="10"
+          placeholder='Skriv meddelande'
+          value={textArea}
+          onChange={(e) => setTextArea(e.target.value)}
+          name="message"
+        >
+        </textarea>
 
-  <Button />
-</div>
+            <input
+              id='footer-form-button'
+              className='button form-button'
+              value="Skicka"
+              type="submit"
+            />
 
-</section>
 
 
-{/* ABOUT SECTION */}
 
-<section id='about-section'>
+          </form >
 
-    <h1 className='title'>Jag är Adrian</h1>
-   
-    <img id='profile-img' src={PROFILE_PIC} alt="Image of Adrian smiling, blurry trees in the background" />
+        </article >
 
-    <p className='hero-paragraf bold300'>
-    
-    Jag brinner för rörelse och i 12 år har jag hjälpt folk att bli smidigare och starkare. Det började 2010 med att jag lärde ut parkour i en förening. Sen blev det flera föreningar, workshops, event och kurser. Detta lede sedan till att jag utforskade fler och fler träningsformer och andra sätt att uttrycka sig genom rörelse och idag har jag hjälpt hundratals människor förbättra sina fysiska förmågor. Under de senaste 10 åren har jag utforskat olika träningsformer, kampsporter, dansstilar mm. 
-    <br /><br />
-    Min främsta expertis är inom naturlig rörelse och calisthenics
-som jag ser som en grund för att sedan kunna lära sig och utvecklas inom andra idrotter, dans, fysiskt krävande jobb etc.
-Förutom många år av erfarenhet innom träning och coachning så är jag certifierad tränare genom Movnat, frisks & Svettis och gymnastikförbundet. Jag har ett silver och ett brons i SM i Power Calisthenics och en 6e placering i Nordiska mästerskapet.   
-<br />
-<br />
-Min filosophi och mina methoder  har till stor del influerats av Steven Low och hans arbete inom kroppsviktsträning, Katy Bowman och hennes arbete innom biomekanik och James Clear och hans arbete om vanor. 
-<br />
-<br />
-Naturlig rörelse, eller funktionell träning som vissa skulle kalla det, handlar om ett se helheten och bygga från grunden. Det innebär att utgå ifrån kroppens naturliga rörelsemönster som att  krypa, balansera, springa, klättra, lyfta, bära, kasta, fånga, hoppa, landa mm och först bygga kvalite. När vi har kvalité i en rörelse så kan vi öka kvantiteten och  intensiteten för att bygga uthållighet och styrka.      
-<br />
-<br />
-Bemästra din kroppsvikt och rör dig fritt!
 
-    </p>
+    {/* FORM END  */ }
 
-</section>
 
 
+    < div className = 'info-with-space' >
+          <p>Telefon:</p>
+          <a className='footer-info' href="tel:0707898707">0707 89 87 07</a>
+        </div >
 
-<Qvote text={`"Don't limit the motion, move the limit"`} />
+        <div className='info-with-space'>
+          <p>Email:</p>
+          <a className='footer-info' href="mailto:soderberg.skog@gmail.com">soderberg.skog@gmail.com</a>
+        </div>
 
+        <div className='icons'>
+          <a href="https://www.facebook.com/adrian.skog" target={'_blank'}><BsFacebook className='icon' /></a>
+          <a href="https://www.instagram.com/luffaregb/" target={'_blank'}><GrInstagram className='icon' /></a>
+        </div>
 
-{/* TRE VIKTIGA PRINCIPER */}
+        <img id='footer-logo' src={LOGO_FOOTER} alt="" />
 
-<section id='principer' className='section-center'>
+      </article >
 
-<div className='dark-bg'></div>
 
-  <h1 className='title more-margin i2'>Tre viktiga principer</h1>
-
-<div id='principles-text-wrapper'>
-
-    <div className='p-next-each-other-div'>
-      <h1 className='small-title cusive'>VARIERAD RÖRELSE</h1>
-      <p className='thin-paragraf principle-p'>Förbättrar man rörelsen på ett område förbättras det på andra områden också; tränar man pullups blir man även bättre på att göra armhävningar. Därför tror jag på att en bred variation av rörelse är den bästa träningsformen.</p>
-    </div>
-
-    <div className='p-next-each-other-div'>
-      <h1 className='small-title cusive'>LEK = EFFEKTIV TRÄNING</h1>
-      <p className='thin-paragraf principle-p'>Har man kul när man tränar kommer man vilja fortsätta träna, vill man fortsätta träna blir träningen effektiv.</p>
-    </div>
-
-
-    <div className='p-next-each-other-div'>
-      <h1 className='small-title cusive'>VANOR AVGÖR RESULTATET </h1>
-      <p className='thin-paragraf principle-p'>Dina vanor är det som avgör om du uppnår dina träningsmål eller ej. Mitt mål är att hjälpa dig få in den form av rörelse du vill ha i vardagen på ett naturligt vis, träning ska inte kännas påtvingat.</p>
-    </div>
-    
-</div>
-
-
-
-<Button />
-
-</section>
-
-
-<Qvote text={`“Change happens through movement”`} toText={`//Joseph Pilates`} />
-
-
-{/* CONTACT SECTION */}
-
-
-
-<section id='meta-contact-wrapper'>
-
-  <article className='form-box'>
-
-<form ref={formCheck} onSubmit={sendEmailCheck}>
-
-    <ContactFirst />
-    <ContactSecond />
-    <ContactThird />
-    <ContactFift />
-
-</form>
-
-  </article>
-
-
-</section>
-
-{/* BOXES SECTION */}
-{/* 
-<section id='box-section' className='dark-theme section-center'>
-
-<h1 className='bold-title more-margin'>Bemästra konsten att träna kroppsvikt</h1>
-
-<article className='box-wrapper'>
-
-<div className='box'>
-  <h1 className='small-title'>Kroppsviktsträning</h1>
-  <p className='thin-paragraf'>De senaste 6 åren har jag haft ett brett fokus på träning inom calisthenics. <br /><br />Jag kan hjälpa dig bygga simpla eller avancerade träningspass med fokus på kroppsviktsträning samt lära dig både simpla och avancerade kroppsvikts-träningsformer.</p>
-</div>
-
-<div className='box'>
-  <h1 className='small-title'>Movnat</h1>
-  <p className='thin-paragraf'>Movnat är en träningsmetod som går ut på att använda kroppens naturliga rörelsemönster, springa, hoppa, klättra, krypa, balansera, lyfta, bära och fånga. Movnat utövas oftast i naturen men kan även utövas inomhus. Denna träningsform kan även appliceras i ditt träningsprogram.</p>
-</div>
-
-<div className='box'>
-  <h1 className='small-title'>Min erfarenhet</h1>
-  <p className='thin-paragraf'>Med sammanlagt 10 års coaching-erfarenhet inom parkour, calisthenics, movnat och individuell träning kan jag hjälpa dig bemästra konsten att träna kroppsviktsträning. </p>
-</div>
-
-<div className='box'>
-  <h1 className='small-title'>Annat om mig</h1>
-  <p className='thin-paragraf'>I övrigt har jag 13 års erfarenhet inom parkour, SM silver i calisthenics samt en sjätte placering i nordiska mästerskapen i calisthenics.</p>
-</div>
-
-</article>
-
-<Button />
-
-
-</section> */}
-
-
-
-
-
-{/* PRISER */}
-<div id='priser-section' className='section-center light-background section-padding'>
-  <div onClick={handlePriser} className='more-h-div '>
-    <p className='offer-text-p margin-sides'>Priser</p>
-    <svg className='arrow-down' width="20" viewBox="0 0 82 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" clip-rule="evenodd" d={priserArrowD} fill="black"/>
-      </svg>
-  </div>
-</div>
-
-
-<section id='offer' className='section-center section-padding no-padding-top light-background'>
-
-<h1 className='bold-title'>Erbjudanden</h1>
-
-<p className='paragraf'>
-  <b>Vid alla köp ingår ett individuellt anpassat träningsprogram.</b>
-  <br /> <br />
-  Detta träningsprogram skräddarsyr vi tillsammans kontinuerligt över tid, kvalitén på träningsprogrammet ökar desto mer tid vi har med varandra.  
-</p>
-
-<article className='table-article'>
-
-    <table className='priser-table'>
-      <tr>
-        <th>PT - coaching</th>
-        <th>Pris</th>
-      </tr>
-      <tr>
-        <td>1 timme</td>
-        <td>850 kr</td>
-      </tr>
-      <tr>
-        <td>3 timmar</td>
-        <td>2400 kr</td>
-      </tr>
-      <tr>
-        <td>5 timmar</td>
-        <td>3700 kr</td>
-      </tr>
-      <tr>
-        <td>8 timmar</td>
-        <td>5500 kr</td>
-      </tr>
-    </table>
-
-    <table className='priser-table'>
-      <tr>
-        <th>Online - coaching</th>
-        <th>Pris</th>
-      </tr>
-      <tr>
-        <td>1 månad</td>
-        <td>499 kr</td>
-      </tr>
-      <tr>
-        <td>2 månader</td>
-        <td>899 kr</td>
-      </tr>
-      <tr>
-        <td>3 månader</td>
-        <td>1200 kr</td>
-      </tr>
-      <tr>
-        <td>4 månader</td>
-        <td>1400 kr</td>
-      </tr>
-    </table>
-
-
-</article>
-
-<article className='box-wrapper'>
-
-    <h1 className='title dark-text'>Paketerbjudanden</h1>
-
-    <div className='box-container'>
-       <div className='offer-box'>
-      <h1 className='small-title'>Baspaket</h1>
-      <p className='tiny'>1 timme träning <br /> 1 månads online coaching<br/>Individanpassat träningsprogram</p>
-      <h1 className='price'>1150 kr</h1>
-    </div>
-
-    <div className='offer-box'>
-      <h1 className='small-title'>Mellan</h1>
-      <p className='tiny'>3 timmar<br/>2 månaders online coaching<br/>Individanpassat träningsprogram</p>
-      <h1 className='price'>2999 kr</h1>
-    </div>
-
-    <div className='offer-box'>
-      <h1 className='small-title'>Premium</h1>
-      <p className='tiny'>8 timmar<br/>3 månaders online coaching<br/>Individanpassat träningsprogram</p>
-      <h1 className='price'>5999 kr</h1>
-    </div>
-    </div>
-
-   
-
-</article>
-
-
-
-<article className='offer-text-article'>
-
-    <div className='offer-text-div'>
-      <h1 className='small-title'>Individuellt träningsprogram</h1>
-      <p className='offer-text-p'>Det individuella träningsprogrammet innebär att vi bygger ett träningsprogram anpassat efter dina mål och behov. 
-      <br/><br/>
-      Du får även en individanpassad strategi för att förbättra dina träningsvarnor.
-      </p>
-    </div>
-
-    <div className='offer-text-div'>
-      <h1 className='small-title'>Online coaching</h1>
-      <p className='offer-text-p'> 
-        <ul>
-          <li>Kontenuelig uppföljning</li>
-          <li>Videofeedback på övningar</li>
-          <li>Obegränsad coaching via chatt</li>
-          <li>Tillgång till instruktionsmaterial</li>
-          <li>Rådgiving av vanestrategier</li>
-          <li>Alltid svar inom 24 timmar</li>
-        </ul>
-        <br /><br />
-        
-      </p>
-    </div>
-
-</article>
-
-<Button />
-</section>
-
-{/* ---------------------- CONTAKTINFORMATION --------------------- */}
-
-<article className='footer-section section-padding' id='contact-info-article'>
-
-  {/* FORM START  */}
-
-  <article className='' id='form-article'>
-
-    <h1 className='title m30'>Kontakt</h1>
-
-<form ref={form} onSubmit={sendEmail}>
-
-  
-
-<MessageSent sendMessageSuccess={sendMessageSuccess} />
-
-
-  {/* MEDDELANDE FORM  */}
-  
-
-  <div className='inputs'>
-    <input 
-  id='input-name'
-  type="text"   
-    required
-    placeholder='Name*' 
-    value={title}
-    onChange={(e) => setTitle(e.target.value)}
-    name="user_name"
-    />
-    <input 
-  id='input-email'
-  type="email"   
-    required
-    placeholder='Email*'
-    value={email}
-    onChange={(e) => setEmail(e.target.value)}
-    name="user_email"
-    />
-  </div>
-
-  <textarea
-  id='input-message'
-  cols="30" 
-  rows="10"
-  placeholder='Skriv meddelande'
-  value={textArea}
-  onChange={(e) => setTextArea(e.target.value)}
-  name="message"
-  >
-  </textarea>
-
-<input 
-  id='footer-form-button'
-  className='button form-button' 
-  value="Skicka"
-  type="submit"
-  />
-
-
- 
-
-</form>
-
-</article>
-
-
-  {/* FORM END  */}
-
-
-
-  <div className='info-with-space'>
-  <p>Telefon:</p>
-  <a className='footer-info' href="tel:0707898707">0707 89 87 07</a>
-  </div>
-
-  <div className='info-with-space'>
-  <p>Email:</p>
-  <a className='footer-info' href="mailto:soderberg.skog@gmail.com">soderberg.skog@gmail.com</a>
-  </div>
-
-  <div className='icons'>
-    <a href="https://www.facebook.com/adrian.skog" target={'_blank'}><BsFacebook className='icon'/></a>
-    <a href="https://www.instagram.com/luffaregb/" target={'_blank'}><GrInstagram className='icon'/></a> 
-  </div>
-
-  <img id='footer-logo' src={LOGO_FOOTER} alt="" />
-
-</article>
-
-
-   </>
+    </>
   );
 }
 

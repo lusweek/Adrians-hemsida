@@ -40,9 +40,6 @@ const opacity = () => {
 
   }
 
-
-
-
   
   // --------------------- EMAIL -------------------- //
 
@@ -152,10 +149,6 @@ function handleMessage(result) {
   // ---------------------- EMAIL END ---------------------- //
 
 
-
-
-
-
   return (
     <article id='fift-box' className='all-boxes box-none'>
 
@@ -170,13 +163,9 @@ function handleMessage(result) {
 
   {/* <form ref={form} onSubmit={sendEmail}> */}
 
-    
-
 <MessageSent text={text} success={success} />
 
-
-    {/* MEDDELANDE FORM  */}
-    
+    {/* MEDDELANDE FORM  */}    
 
     <div className='inputs'>
       <input 
