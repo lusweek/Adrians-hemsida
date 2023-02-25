@@ -350,58 +350,6 @@ function App() {
 
         <Button />
 
-
-        <div id='offer-text-wrapper'>
-          <h1 className='title light-text'>Första träningen gratis<br />Du har allt att vinna</h1>
-
-          <div className='offer-check-wrapper'>
-            <p className='p20 a-center title light-text'>50 min som inkluderar samtal om dig och dina mål samt träning </p>
-          </div>
-
-
-          <p className='hero-paragraf light-text bold300'>
-
-            Det finns ingen one zise fits all när det kommer till pt, därför tycker
-            jag att det är viktigt att vi kan lära känna varandra lite innan du förbinder dig till någonting.
-            <br /><br />
-            Syftet med passet är dels att jag skall veta mer om dig, din bakgrund och dina mål samt att du skall veta om jag är
-            rätt Pt för dig.
-
-          </p>
-
-          <Button />
-        </div>
-
-      </section>
-
-
-      {/* ABOUT SECTION */}
-
-      <section id='about-section'>
-
-        <h1 className='title'>Jag är Adrian</h1>
-
-        <img id='profile-img' src={PROFILE_PIC} alt="Image of Adrian smiling, blurry trees in the background" />
-
-        <p className='hero-paragraf bold300'>
-
-          Jag brinner för rörelse och i 12 år har jag hjälpt folk att bli smidigare och starkare. Det började 2010 med att jag lärde ut parkour i en förening. Sen blev det flera föreningar, workshops, event och kurser. Detta lede sedan till att jag utforskade fler och fler träningsformer och andra sätt att uttrycka sig genom rörelse och idag har jag hjälpt hundratals människor förbättra sina fysiska förmågor. Under de senaste 10 åren har jag utforskat olika träningsformer, kampsporter, dansstilar mm.
-          <br /><br />
-          Min främsta expertis är inom naturlig rörelse och calisthenics
-          som jag ser som en grund för att sedan kunna lära sig och utvecklas inom andra idrotter, dans, fysiskt krävande jobb etc.
-          Förutom många år av erfarenhet innom träning och coachning så är jag certifierad tränare genom Movnat, frisks & Svettis och gymnastikförbundet. Jag har ett silver och ett brons i SM i Power Calisthenics och en 6e placering i Nordiska mästerskapet.
-          <br />
-          <br />
-          Min filosophi och mina methoder  har till stor del influerats av Steven Low och hans arbete inom kroppsviktsträning, Katy Bowman och hennes arbete innom biomekanik och James Clear och hans arbete om vanor.
-          <br />
-          <br />
-          Naturlig rörelse, eller funktionell träning som vissa skulle kalla det, handlar om ett se helheten och bygga från grunden. Det innebär att utgå ifrån kroppens naturliga rörelsemönster som att  krypa, balansera, springa, klättra, lyfta, bära, kasta, fånga, hoppa, landa mm och först bygga kvalite. När vi har kvalité i en rörelse så kan vi öka kvantiteten och  intensiteten för att bygga uthållighet och styrka.
-          <br />
-          <br />
-          Bemästra din kroppsvikt och rör dig fritt!
-
-        </p>
-
       </section>
 
       {/* OFFER SECTION */}
@@ -437,8 +385,8 @@ function App() {
             <p className='thin-paragraf principle-p'>Dina vanor är det som avgör om du uppnår dina träningsmål eller ej. Mitt mål är att hjälpa dig få in den form av rörelse du vill ha i vardagen på ett naturligt vis, träning ska inte kännas påtvingat.</p>
           </div>
 
-        </div>
         <Button />
+        </div>
 
     </section>
 
