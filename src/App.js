@@ -392,15 +392,21 @@ rätt Pt för dig.
     <img id='profile-img' src={PROFILE_PIC} alt="Image of Adrian smiling, blurry trees in the background" />
 
     <p className='hero-paragraf bold300'>
-    Jag brinner för rörele och coaching. 
+    
+    Jag brinner för rörelse och i 12 år har jag hjälpt folk att bli smidigare och starkare. Det började 2010 med att jag lärde ut parkour i en förening. Sen blev det flera föreningar, workshops, event och kurser. Detta lede sedan till att jag utforskade fler och fler träningsformer och andra sätt att uttrycka sig genom rörelse och idag har jag hjälpt hundratals människor förbättra sina fysiska förmågor. Under de senaste 10 åren har jag utforskat olika träningsformer, kampsporter, dansstilar mm. 
     <br /><br />
-    är utbildat till det här ________________________ (logos)
-    <br /><br />
-    Jag började, för ca 14 år sedan, som parkourtränare och glädjen av att röra på sig och att lära ut fick mig att utforska många olika sätt att röra på sig. 
-    <br /><br />
-    min filisofi lyder såhör_______ och det påverkar din träning såhär_______
-    hoppas vi hörs, ha de gött hej!!! 
-
+    Min främsta expertis är inom naturlig rörelse och calisthenics
+som jag ser som en grund för att sedan kunna lära sig och utvecklas inom andra idrotter, dans, fysiskt krävande jobb etc.
+Förutom många år av erfarenhet innom träning och coachning så är jag certifierad tränare genom Movnat, frisks & Svettis och gymnastikförbundet. Jag har ett silver och ett brons i SM i Power Calisthenics och en 6e placering i Nordiska mästerskapet.   
+<br />
+<br />
+Min filosophi och mina methoder  har till stor del influerats av Steven Low och hans arbete inom kroppsviktsträning, Katy Bowman och hennes arbete innom biomekanik och James Clear och hans arbete om vanor. 
+<br />
+<br />
+Naturlig rörelse, eller funktionell träning som vissa skulle kalla det, handlar om ett se helheten och bygga från grunden. Det innebär att utgå ifrån kroppens naturliga rörelsemönster som att  krypa, balansera, springa, klättra, lyfta, bära, kasta, fånga, hoppa, landa mm och först bygga kvalite. När vi har kvalité i en rörelse så kan vi öka kvantiteten och  intensiteten för att bygga uthållighet och styrka.      
+<br />
+<br />
+Bemästra din kroppsvikt och rör dig fritt!
 
     </p>
 
@@ -422,8 +428,8 @@ rätt Pt för dig.
 <div id='principles-text-wrapper'>
 
     <div className='p-next-each-other-div'>
-      <h1 className='small-title cusive'>VANOR AVGÖR RESULTATET </h1>
-      <p className='thin-paragraf principle-p'>Dina vanor är det som avgör om du uppnår dina träningsmål eller ej. Mitt mål är att hjälpa dig få in den form av rörelse du vill ha i vardagen på ett naturligt vis, träning ska inte kännas påtvingat.</p>
+      <h1 className='small-title cusive'>VARIERAD RÖRELSE</h1>
+      <p className='thin-paragraf principle-p'>Förbättrar man rörelsen på ett område förbättras det på andra områden också; tränar man pullups blir man även bättre på att göra armhävningar. Därför tror jag på att en bred variation av rörelse är den bästa träningsformen.</p>
     </div>
 
     <div className='p-next-each-other-div'>
@@ -431,11 +437,12 @@ rätt Pt för dig.
       <p className='thin-paragraf principle-p'>Har man kul när man tränar kommer man vilja fortsätta träna, vill man fortsätta träna blir träningen effektiv.</p>
     </div>
 
-    <div className='p-next-each-other-div'>
-      <h1 className='small-title cusive'>VARIERAD RÖRELSE</h1>
-      <p className='thin-paragraf principle-p'>Förbättrar man rörelsen på ett område förbättras det på andra områden också; tränar man pullups blir man även bättre på att göra armhävningar. Därför tror jag på att en bred variation av rörelse är den bästa träningsformen.</p>
-    </div>
 
+    <div className='p-next-each-other-div'>
+      <h1 className='small-title cusive'>VANOR AVGÖR RESULTATET </h1>
+      <p className='thin-paragraf principle-p'>Dina vanor är det som avgör om du uppnår dina träningsmål eller ej. Mitt mål är att hjälpa dig få in den form av rörelse du vill ha i vardagen på ett naturligt vis, träning ska inte kännas påtvingat.</p>
+    </div>
+    
 </div>
 
 
@@ -685,7 +692,6 @@ rätt Pt för dig.
 
   <textarea
   id='input-message'
-  required
   cols="30" 
   rows="10"
   placeholder='Skriv meddelande'

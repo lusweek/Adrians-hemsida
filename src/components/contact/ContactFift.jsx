@@ -204,7 +204,7 @@ function handleMessage(result) {
     required
     cols="30" 
     rows="10"
-    placeholder='Skriv meddelande'
+    placeholder='Valftit meddelande.. (Behövs ej)'
     value={textArea}
     onChange={(e) => setTextArea(e.target.value)}
     name="message"
@@ -242,7 +242,7 @@ function handleMessage(result) {
 <p className='form-paragraf paragraf light contact-form-low-text'>
 Detta är en intresseanmälan, du förbinder dig inte till några skyldigheter genom detta formulär. 
 <br/>
-Du kommer inte få några automatiska mail-utskick utöver ett bekreftelsemail
+Du kommer inte få några automatiska mail-utskick utöver ett bekräftelsemail
 </p>
 
 
