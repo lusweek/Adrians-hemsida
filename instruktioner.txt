@@ -35,3 +35,11 @@ npm install gh-pages --save-dev
 +   "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
+
+    
+  
+  till css:
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mukta:wght@200;300&family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
