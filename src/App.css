@@ -110,13 +110,13 @@ font-size: 18px;
   color: white;
   font-weight: 500;
   letter-spacing: 1px;
-  font-size: 16px;
-  background-color: #F11508 ;
-  width: 230px;
-  height: 51px;
-  border-radius: 4px ;
-  font-family: 'Noto Sans JP', sans-serif;
-  border: none ;
+  font-size: 1rem;
+  background-color: #F11508;
+  width: 189px;
+  height: 41px;
+  border-radius: 4px;
+  font-family: sans-serif;
+  border: none;
   margin: 50px 0px;
   cursor: pointer;
 }
@@ -151,7 +151,7 @@ font-size: 18px;
 }
 
 .hero-paragraf{
-  font-size: 17px;
+  font-size: 1rem;
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 100;
   line-height: 38px;
@@ -341,7 +341,7 @@ background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 100px 0;
 
 }
@@ -469,7 +469,7 @@ border-radius: 4px;
 .table-article{
   display: flex;
   flex-wrap: wrap;
-  width: 90vw;
+  width: 90%;
   justify-content: center;
 }
 
@@ -493,6 +493,7 @@ border-radius: 4px;
 
 
 #offer{
+  width: 100vw;
   height: 0px;
   padding: 0px;
   overflow: hidden;
@@ -738,6 +739,11 @@ letter-spacing: 1px;
   font-size: 20px;
   font-family: 'Noto Sans JP', sans-serif;
   letter-spacing: 1px;
+}
+
+input::placeholder, 
+textarea::placeholder {
+  color: #6d6d6d;
 }
 
 #form-article input, 

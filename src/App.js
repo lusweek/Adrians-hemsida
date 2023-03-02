@@ -346,8 +346,6 @@ function App() {
 
         <Button />
 
-
-
       </section>
 
       {/* OFFER SECTION */}
@@ -365,6 +363,10 @@ function App() {
 
           <p className='hero-paragraf light-text bold300'>
 
+            <div className='p-next-each-other-div'>
+              <h1 className='small-title cusive'>VARIERAD RÖRELSE</h1>
+              <p className='thin-paragraf principle-p'>Förbättrar man rörelsen på ett område förbättras det på andra områden också; tränar man pullups blir man även bättre på att göra armhävningar. Därför tror jag på att en bred variation av rörelse är den bästa träningsformen.</p>
+            </div>
             Det finns ingen one zise fits all när det kommer till pt, därför tycker
             jag att det är viktigt att vi kan lära känna varandra lite innan du förbinder dig till någonting.
             <br /><br />
@@ -373,13 +375,19 @@ function App() {
 
           </p>
 
-          <Button />
+
+          <div className='p-next-each-other-div'>
+            <h1 className='small-title cusive'>VANOR AVGÖR RESULTATET </h1>
+            <p className='thin-paragraf principle-p'>Dina vanor är det som avgör om du uppnår dina träningsmål eller ej. Mitt mål är att hjälpa dig få in den form av rörelse du vill ha i vardagen på ett naturligt vis, träning ska inte kännas påtvingat.</p>
+          </div>
+
+        <Button />
         </div>
 
-      </section>
+    </section>
 
 
-      {/* ABOUT SECTION */}
+      {/* ABOUT SECTION */ }
 
       <section id='about-section'>
 
@@ -406,7 +414,7 @@ function App() {
       <Qvote text={`"Don't limit the motion, move the limit"`} />
 
 
-      {/* TRE VIKTIGA PRINCIPER */}
+  {/* TRE VIKTIGA PRINCIPER */ }
 
       <section id='principer' className='section-center'>
 
@@ -443,19 +451,19 @@ function App() {
       <Qvote text={`“Change happens through movement”`} toText={`//Joseph Pilates`} />
 
 
-      {/* CONTACT SECTION */}
-      <section id='meta-contact-wrapper'>
-        <article className='form-box'>
-          <form ref={formCheck} onSubmit={sendEmailCheck}>
-            <ContactFirst />
-            <ContactSecond />
-            <ContactThird />
-            <ContactFift />
-          </form>
-        </article>
-      </section>
+  {/* CONTACT SECTION */ }
+  <section id='meta-contact-wrapper'>
+    <article className='form-box'>
+      <form ref={formCheck} onSubmit={sendEmailCheck}>
+        <ContactFirst />
+        <ContactSecond />
+        <ContactThird />
+        <ContactFift />
+      </form>
+    </article>
+  </section>
 
-      {/* PRISER */}
+  {/* PRISER */ }
       <div id='priser-section' className='section-center light-background section-padding'>
         <div onClick={handlePriser} className='more-h-div '>
           <p className='offer-text-p margin-sides'>Priser</p>
@@ -588,58 +596,58 @@ function App() {
         <Button />
       </section>
 
-      {/* ---------------------- CONTAKTINFORMATION --------------------- */}
+  {/* ---------------------- CONTAKTINFORMATION --------------------- */ }
 
-      <article className='footer-section section-padding' id='contact-info-article'>
+  <article className='footer-section section-padding' id='contact-info-article'>
 
-        {/* FORM START  */}
+    {/* FORM START  */}
 
-        <article className='' id='form-article'>
+    <article className='' id='form-article'>
 
-          <h1 className='title m30'>Kontakt</h1>
+      <h1 className='title m30'>Kontakt</h1>
 
-          <form ref={form} onSubmit={sendEmail}>
-
-
-
-            <MessageSent sendMessageSuccess={sendMessageSuccess} />
+      <form ref={form} onSubmit={sendEmail}>
 
 
-            {/* MEDDELANDE FORM  */}
+
+        <MessageSent sendMessageSuccess={sendMessageSuccess} />
 
 
-            <div className='inputs'>
-              <input
-                id='input-name'
-                type="text"
-                required
-                placeholder='Name*'
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
-                name="user_name"
-              />
-              <input
-                id='input-email'
-                type="email"
-                required
-                placeholder='Email*'
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                name="user_email"
-              />
-            </div>
+        {/* MEDDELANDE FORM  */}
 
-            <textarea
-              id='input-message'
-              required
-              cols="30"
-              rows="10"
-              placeholder='Skriv meddelande'
-              value={textArea}
-              onChange={(e) => setTextArea(e.target.value)}
-              name="message"
-            >
-            </textarea>
+
+        <div className='inputs'>
+          <input
+            id='input-name'
+            type="text"
+            required
+            placeholder='Name*'
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            name="user_name"
+          />
+          <input
+            id='input-email'
+            type="email"
+            required
+            placeholder='Email*'
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            name="user_email"
+          />
+        </div>
+
+        <textarea
+          id='input-message'
+          required
+          cols="30"
+          rows="10"
+          placeholder='Skriv meddelande'
+          value={textArea}
+          onChange={(e) => setTextArea(e.target.value)}
+          name="message"
+        >
+        </textarea>
 
             <input
               id='footer-form-button'
@@ -651,19 +659,19 @@ function App() {
 
 
 
-          </form>
+          </form >
 
-        </article>
-
-
-        {/* FORM END  */}
+        </article >
 
 
+    {/* FORM END  */ }
 
-        <div className='info-with-space'>
+
+
+    < div className = 'info-with-space' >
           <p>Telefon:</p>
           <a className='footer-info' href="tel:0707898707">0707 89 87 07</a>
-        </div>
+        </div >
 
         <div className='info-with-space'>
           <p>Email:</p>
@@ -677,7 +685,7 @@ function App() {
 
         <img id='footer-logo' src={LOGO_FOOTER} alt="" />
 
-      </article>
+      </article >
 
 
     </>
