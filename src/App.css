@@ -24,8 +24,6 @@ font-style: italic;
 color: white;
 text-align: center;
 font-weight: 300;
-/* PROVA DENNA FONTEN, DEN ÄR GRYM 
-font-family: 'Bebas Neue', cursive; */
 font-family: 'Mukta', sans-serif;
 margin: 25px 10px;
 z-index: 2;
@@ -237,11 +235,6 @@ font-size: 18px;
   display: block;
 }
 
-
-/* ----------------------------------- GLOBAL END ------------------------------ */
-
-/* ----------------------------------- NAV ------------------------------ */
-
 nav{
   background-color: black;
   margin: 0;
@@ -319,8 +312,6 @@ background-position: center;
   z-index: 2;
 }
 
-/* OFFER SECTION */
-
 #offer-section{
   background-image: url(../src/media/Erbjudande-950kb.jpg);
   background-size: cover;
@@ -352,12 +343,8 @@ background-position: center;
 }
 
 
-
-/* ABOUT SECTION */
-
 #about-section{
 padding: 100px 0px;
-/* background-color: #282828; */
 background: rgb(33,38,19);
 background: linear-gradient(180deg, rgba(33,38,19,1) 0%, rgba(8,42,36,1) 65%);
 display: flex;
@@ -371,10 +358,6 @@ align-items: center;
   border-radius: 50%;
   margin: 20px;
 }
-
-
-
-/* PRINCIPLES SECTION */
 
 #principer{
   background-image: url(./media/outdoor-gym-200kb.jpg);
@@ -432,9 +415,6 @@ margin: 70px;
   width: 75%;
 }
 
-
-/* BOXES SECTION */
-
 .box-wrapper{
 display: flex;
 flex-direction: column;
@@ -462,10 +442,6 @@ margin: 50px;
 border-radius: 4px;
 }
 
-
-/* PRISER */
-
-
 .table-article{
   display: flex;
   flex-wrap: wrap;
@@ -489,8 +465,6 @@ border-radius: 4px;
   padding: 0px 15px;
   line-height: 50px;
 }
-
-
 
 #offer{
   width: 100vw;
@@ -579,7 +553,6 @@ height: 51px !important;
   color: black;
 }
 
-/* MORE HOWERS */
 
 #extra-h{
   height: 0px;
@@ -588,8 +561,6 @@ height: 51px !important;
   transition-duration: .6s;
 }
 
-
-/* Contact section */
 
 #meta-contact-wrapper{
   height: 800px;
@@ -659,8 +630,6 @@ height: 51px !important;
   align-items: center;  
   flex-direction: column;
 }
-
-/*---------------- FIFT BOX --------------*/
 
 #fift-box{
   opacity: 0;
@@ -875,7 +844,6 @@ margin: 15px 0;
   color: white;
 }
 
-/* ---------------------------- SKILL MODAL ------------------------------ */
 
 
 .skill-modal{
@@ -914,10 +882,6 @@ justify-content: space-around;
   align-self: flex-start;
 }
 
-/* ---------------------------- LOADER ANIMATION ------------------------------ */
-
-
-/* Till message sent */
 
 .loader-modal{
   position: fixed;
@@ -1062,15 +1026,11 @@ font-size: 20px;
 }
 
 
-/* -------------------------- FORM ----------------------------------- */
 
 
 
 
 
-
-
-/* -------------------------- @MEDIA SCREEN ----------------------------------- */
 
 @media screen and (max-width: 1200px) {
   .large{
@@ -1173,7 +1133,6 @@ font-size: 20px;
 
 }
 
-/* NÄR SKÄRMEN BLIR STOR */
 
 @media screen and (min-width: 1500px) {
 
