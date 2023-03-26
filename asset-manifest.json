@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/Adrians-hemsida/static/css/main.2dff216a.css",
-    "main.js": "/Adrians-hemsida/static/js/main.97028837.js",
-    "static/js/787.bac1152b.chunk.js": "/Adrians-hemsida/static/js/787.bac1152b.chunk.js",
-    "static/media/Smidighet.jpg": "/Adrians-hemsida/static/media/Smidighet.5273096c4ab7bdad31d9.jpg",
-    "static/media/calisthenics.jpg": "/Adrians-hemsida/static/media/calisthenics.99bf7e1beb314ce2698b.jpg",
-    "static/media/woods-1000kb.jpg": "/Adrians-hemsida/static/media/woods-1000kb.037861781b442bdc8f6a.jpg",
-    "static/media/Erbjudande-950kb.jpg": "/Adrians-hemsida/static/media/Erbjudande-950kb.88113291608c9fba2eca.jpg",
-    "static/media/PT.jpg": "/Adrians-hemsida/static/media/PT.bf3fc2958ebe2f04f844.jpg",
-    "static/media/outdoor-gym-200kb.jpg": "/Adrians-hemsida/static/media/outdoor-gym-200kb.c817ea06fbc9b5b07860.jpg",
-    "static/media/Handstand-150kb.jpg": "/Adrians-hemsida/static/media/Handstand-150kb.46b138333636782aca11.jpg",
-    "static/media/logo-1-white.png": "/Adrians-hemsida/static/media/logo-1-white.57ab39955ab5efc7e7fe.png",
-    "static/media/logo-3.png": "/Adrians-hemsida/static/media/logo-3.7c0288b5550f5ca63c37.png",
-    "index.html": "/Adrians-hemsida/index.html",
-    "main.2dff216a.css.map": "/Adrians-hemsida/static/css/main.2dff216a.css.map",
-    "main.97028837.js.map": "/Adrians-hemsida/static/js/main.97028837.js.map",
-    "787.bac1152b.chunk.js.map": "/Adrians-hemsida/static/js/787.bac1152b.chunk.js.map"
+    "main.css": "/movementfreedom.se/static/css/main.7c3dcb58.css",
+    "main.js": "/movementfreedom.se/static/js/main.3daa16ca.js",
+    "static/js/787.bac1152b.chunk.js": "/movementfreedom.se/static/js/787.bac1152b.chunk.js",
+    "static/media/Smidighet.jpg": "/movementfreedom.se/static/media/Smidighet.5273096c4ab7bdad31d9.jpg",
+    "static/media/calisthenics.jpg": "/movementfreedom.se/static/media/calisthenics.99bf7e1beb314ce2698b.jpg",
+    "static/media/woods-1000kb.jpg": "/movementfreedom.se/static/media/woods-1000kb.037861781b442bdc8f6a.jpg",
+    "static/media/Erbjudande-950kb.jpg": "/movementfreedom.se/static/media/Erbjudande-950kb.88113291608c9fba2eca.jpg",
+    "static/media/PT.jpg": "/movementfreedom.se/static/media/PT.bf3fc2958ebe2f04f844.jpg",
+    "static/media/outdoor-gym-200kb.jpg": "/movementfreedom.se/static/media/outdoor-gym-200kb.c817ea06fbc9b5b07860.jpg",
+    "static/media/Handstand-150kb.jpg": "/movementfreedom.se/static/media/Handstand-150kb.46b138333636782aca11.jpg",
+    "static/media/logo-1-white.png": "/movementfreedom.se/static/media/logo-1-white.57ab39955ab5efc7e7fe.png",
+    "static/media/logo-3.png": "/movementfreedom.se/static/media/logo-3.7c0288b5550f5ca63c37.png",
+    "index.html": "/movementfreedom.se/index.html",
+    "main.7c3dcb58.css.map": "/movementfreedom.se/static/css/main.7c3dcb58.css.map",
+    "main.3daa16ca.js.map": "/movementfreedom.se/static/js/main.3daa16ca.js.map",
+    "787.bac1152b.chunk.js.map": "/movementfreedom.se/static/js/787.bac1152b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2dff216a.css",
-    "static/js/main.97028837.js"
+    "static/css/main.7c3dcb58.css",
+    "static/js/main.3daa16ca.js"
   ]
 }
