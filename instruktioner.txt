@@ -8,6 +8,10 @@ npm run build
 
 npm run deploy
 
+Denna låg i index.html: 
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+
+
 --------------------------------------------
 
 Till templaten i EmailJs fungerar Stor boktstav och "_" 
