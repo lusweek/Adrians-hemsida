@@ -363,10 +363,7 @@ function App() {
 
           <p className='hero-paragraf light-text bold300'>
 
-            <div className='p-next-each-other-div'>
-              <h1 className='small-title cusive'>VARIERAD RÖRELSE</h1>
-              <p className='thin-paragraf principle-p'>Förbättrar man rörelsen på ett område förbättras det på andra områden också; tränar man pullups blir man även bättre på att göra armhävningar. Därför tror jag på att en bred variation av rörelse är den bästa träningsformen.</p>
-            </div>
+            
             Det finns ingen one zise fits all när det kommer till pt, därför tycker
             jag att det är viktigt att vi kan lära känna varandra lite innan du förbinder dig till någonting.
             <br /><br />
@@ -374,12 +371,6 @@ function App() {
             rätt Pt för dig.
 
           </p>
-
-
-          <div className='p-next-each-other-div'>
-            <h1 className='small-title cusive'>VANOR AVGÖR RESULTATET </h1>
-            <p className='thin-paragraf principle-p'>Dina vanor är det som avgör om du uppnår dina träningsmål eller ej. Mitt mål är att hjälpa dig få in den form av rörelse du vill ha i vardagen på ett naturligt vis, träning ska inte kännas påtvingat.</p>
-          </div>
 
         <Button />
         </div>
