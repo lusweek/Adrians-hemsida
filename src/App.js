@@ -349,6 +349,8 @@ function App() {
 
       </section>
 
+      <Qvote text={`"Don't limit the motion, move the limit"`} />
+
       {/* OFFER SECTION */}
 
       <section id='offer-section'>
@@ -364,49 +366,23 @@ function App() {
 
           <p className='hero-paragraf light-text bold300'>
 
-            
+
             Det finns ingen one zise fits all när det kommer till pt, därför tycker
-            jag att det är viktigt att vi kan lära känna varandra lite innan du förbinder dig till någonting.
+            jag att det är viktigt att vi lär känna varandra lite innan du förbinder dig till någonting.
             <br /><br />
             Syftet med passet är dels att jag skall veta mer om dig, din bakgrund och dina mål samt att du skall veta om jag är
             rätt Pt för dig.
 
           </p>
 
-        <Button />
+          <Button />
         </div>
-
-    </section>
-
-
-      {/* ABOUT SECTION */ }
-
-      <section id='about-section'>
-
-        <h1 className='title'>Jag är Adrian</h1>
-
-        {/* <img id='profile-img' src={PROFILE_PIC} alt="Image of Adrian smiling, blurry trees in the background" /> */}
-
-        <p className='hero-paragraf bold300 t-align-s'>
-          Jag brinner för rörelse och i 12 år har jag hjälpt folk att bli smidigare och starkare. Det började 2010 med att jag lärde ut parkour i en förening. Sen blev det flera föreningar, workshops, event och kurser. Detta lede sedan till att jag utforskade fler och fler träningsformer och andra sätt att uttrycka sig genom rörelse och idag har jag hjälpt hundratals människor förbättra sina fysiska förmågor. Under de senaste 10 åren har jag utforskat olika träningsformer, kampsporter, dansstilar mm. Min främsta expertis är inom naturlig rörelse och calisthenics
-          som jag ser som en grund för att sedan kunna lära sig och utvecklas inom andra idrotter, dans, fysiskt krävande jobb etc.
-          Förutom många år av erfarenhet innom träning och coachning så är jag certifierad tränare genom Movnat, frisks & Svettis och gymnastikförbundet. Jag har ett silver och ett brons i SM i Power Calisthenics och en 6e placering i Nordiska mästerskapet.
-          <br /><br />
-          Min filosophi och mina methoder  har till stor del influerats av Steven Low och hans arbete inom kroppsviktsträning, Katy Bowman och hennes arbete innom biomekanik och James Clear och hans arbete om vanor.
-          <br /><br />
-          Naturlig rörelse, eller funktionell träning som vissa skulle kalla det, handlar om ett se helheten och bygga från grunden. Det innebär att utgå ifrån kroppens naturliga rörelsemönster som att  krypa, balansera, springa, klättra, lyfta, bära, kasta, fånga, hoppa, landa mm och först bygga kvalite. När vi har kvalité i en rörelse så kan vi öka kvantiteten och  intensiteten för att bygga uthållighet och styrka.
-          <br /><br />
-          <span className='t-align-c'>Bemästra din kroppsvikt och rör dig fritt!</span>
-        </p>
 
       </section>
 
+      <Qvote text={`“Change happens through movement”`} toText={`~ Joseph Pilates`} />
 
-
-      <Qvote text={`"Don't limit the motion, move the limit"`} />
-
-
-  {/* TRE VIKTIGA PRINCIPER */ }
+      {/* TRE VIKTIGA PRINCIPER */}
 
       <section id='principer' className='section-center'>
 
@@ -439,23 +415,46 @@ function App() {
 
       </section>
 
+      <Qvote text={`"Movement is a medicine for creating change in a person's physical, emotional, and mental states"`} toText={`~ Carol Welch`} />
 
-      <Qvote text={`“Change happens through movement”`} toText={`//Joseph Pilates`} />
+      {/* CONTACT SECTION */}
+      <section id='meta-contact-wrapper'>
+        <article className='form-box'>
+          <form ref={formCheck} onSubmit={sendEmailCheck}>
+            <ContactFirst />
+            <ContactSecond />
+            <ContactThird />
+            <ContactFift />
+          </form>
+        </article>
+      </section>
 
 
-  {/* CONTACT SECTION */ }
-  <section id='meta-contact-wrapper'>
-    <article className='form-box'>
-      <form ref={formCheck} onSubmit={sendEmailCheck}>
-        <ContactFirst />
-        <ContactSecond />
-        <ContactThird />
-        <ContactFift />
-      </form>
-    </article>
-  </section>
+      {/* ABOUT SECTION */}
 
-  {/* PRISER */ }
+      <section id='about-section'>
+
+        <h1 className='title'>Jag är Adrian</h1>
+
+        {/* <img id='profile-img' src={PROFILE_PIC} alt="Image of Adrian smiling, blurry trees in the background" /> */}
+
+        <p className='hero-paragraf bold300 t-align-s'>
+          Jag brinner för rörelse och i 12 år har jag hjälpt folk att bli smidigare och starkare. Det började 2010 med att jag lärde ut parkour i en förening. Sen blev det flera föreningar, workshops, event och kurser. Detta lede sedan till att jag utforskade fler och fler träningsformer och andra sätt att uttrycka sig genom rörelse och idag har jag hjälpt hundratals människor förbättra sina fysiska förmågor. Under de senaste 10 åren har jag utforskat olika träningsformer, kampsporter, dansstilar mm. Min främsta expertis är inom naturlig rörelse och calisthenics
+          som jag ser som en grund för att sedan kunna lära sig och utvecklas inom andra idrotter, dans, fysiskt krävande jobb etc.
+          Förutom många år av erfarenhet innom träning och coachning så är jag certifierad tränare genom Movnat, frisks & Svettis och gymnastikförbundet. Jag har ett silver och ett brons i SM i Power Calisthenics och en 6e placering i Nordiska mästerskapet.
+          <br /><br />
+          Min filosophi och mina methoder  har till stor del influerats av Steven Low och hans arbete inom kroppsviktsträning, Katy Bowman och hennes arbete innom biomekanik och James Clear och hans arbete om vanor.
+          <br /><br />
+          Naturlig rörelse, eller funktionell träning som vissa skulle kalla det, handlar om ett se helheten och bygga från grunden. Det innebär att utgå ifrån kroppens naturliga rörelsemönster som att  krypa, balansera, springa, klättra, lyfta, bära, kasta, fånga, hoppa, landa mm och först bygga kvalite. När vi har kvalité i en rörelse så kan vi öka kvantiteten och  intensiteten för att bygga uthållighet och styrka.
+          <br /><br />
+          <span className='t-align-c'>Bemästra din kroppsvikt och rör dig fritt!</span>
+        </p>
+
+      </section>
+
+
+
+      {/* PRISER */}
       <div id='priser-section' className='section-center light-background section-padding'>
         <div onClick={handlePriser} className='more-h-div '>
           <p className='offer-text-p margin-sides'>Priser</p>
@@ -588,58 +587,58 @@ function App() {
         <Button />
       </section>
 
-  {/* ---------------------- CONTAKTINFORMATION --------------------- */ }
+      {/* ---------------------- CONTAKTINFORMATION --------------------- */}
 
-  <article className='footer-section section-padding' id='contact-info-article'>
+      <article className='footer-section section-padding' id='contact-info-article'>
 
-    {/* FORM START  */}
+        {/* FORM START  */}
 
-    <article className='' id='form-article'>
+        <article className='' id='form-article'>
 
-      <h1 className='title m30'>Kontakt</h1>
+          <h1 className='title m30'>Kontakt</h1>
 
-      <form ref={form} onSubmit={sendEmail}>
-
-
-
-        <MessageSent sendMessageSuccess={sendMessageSuccess} />
+          <form ref={form} onSubmit={sendEmail}>
 
 
-        {/* MEDDELANDE FORM  */}
+
+            <MessageSent sendMessageSuccess={sendMessageSuccess} />
 
 
-        <div className='inputs'>
-          <input
-            id='input-name'
-            type="text"
-            required
-            placeholder='Name*'
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            name="user_name"
-          />
-          <input
-            id='input-email'
-            type="email"
-            required
-            placeholder='Email*'
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            name="user_email"
-          />
-        </div>
+            {/* MEDDELANDE FORM  */}
 
-        <textarea
-          id='input-message'
-          required
-          cols="30"
-          rows="10"
-          placeholder='Skriv meddelande'
-          value={textArea}
-          onChange={(e) => setTextArea(e.target.value)}
-          name="message"
-        >
-        </textarea>
+
+            <div className='inputs'>
+              <input
+                id='input-name'
+                type="text"
+                required
+                placeholder='Name*'
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                name="user_name"
+              />
+              <input
+                id='input-email'
+                type="email"
+                required
+                placeholder='Email*'
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                name="user_email"
+              />
+            </div>
+
+            <textarea
+              id='input-message'
+              required
+              cols="30"
+              rows="10"
+              placeholder='Skriv meddelande'
+              value={textArea}
+              onChange={(e) => setTextArea(e.target.value)}
+              name="message"
+            >
+            </textarea>
 
             <input
               id='footer-form-button'
@@ -656,11 +655,11 @@ function App() {
         </article >
 
 
-    {/* FORM END  */ }
+        {/* FORM END  */}
 
 
 
-    < div className = 'info-with-space' >
+        < div className='info-with-space' >
           <p>Telefon:</p>
           <a className='footer-info' href="tel:0707898707">0707 89 87 07</a>
         </div >
