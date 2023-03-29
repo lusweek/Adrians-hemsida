@@ -30,7 +30,7 @@ function handleThis() {
       
       </label>
 
-    </label>y
+    </label>
 
     <input className='none' name={emailText} type="text" value={Lname} />
   </>

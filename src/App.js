@@ -336,7 +336,8 @@ function App() {
       <section id='first-section' className='dark'>
         <div className='dark-bg dark-gb-first-section'></div>
 
-        <h1 className='title more-margin'>Adrian Skog<br />Personlig träning med brett fokus på rörelsemöster</h1>
+        <h1 className='title more-margin'>Adrian Skog </h1>
+        <h1 className='title'>Personlig träning med brett fokus på rörelsemöster</h1>
 
         <p className='hero-paragraf'>
           Har du drömt om att kuna göra akrobatiska rörelser som hjulning och handstående? <br />
