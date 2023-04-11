@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.6454918c.css",
-    "main.js": "/static/js/main.818c0833.js",
+    "main.css": "/static/css/main.c095e3ca.css",
+    "main.js": "/static/js/main.a8c3ff15.js",
     "static/js/787.bac1152b.chunk.js": "/static/js/787.bac1152b.chunk.js",
     "static/media/Smidighet.jpg": "/static/media/Smidighet.5273096c4ab7bdad31d9.jpg",
     "static/media/calisthenics.jpg": "/static/media/calisthenics.99bf7e1beb314ce2698b.jpg",
@@ -13,12 +13,12 @@
     "static/media/logo-1-white.png": "/static/media/logo-1-white.57ab39955ab5efc7e7fe.png",
     "static/media/logo-3.png": "/static/media/logo-3.7c0288b5550f5ca63c37.png",
     "index.html": "/index.html",
-    "main.6454918c.css.map": "/static/css/main.6454918c.css.map",
-    "main.818c0833.js.map": "/static/js/main.818c0833.js.map",
+    "main.c095e3ca.css.map": "/static/css/main.c095e3ca.css.map",
+    "main.a8c3ff15.js.map": "/static/js/main.a8c3ff15.js.map",
     "787.bac1152b.chunk.js.map": "/static/js/787.bac1152b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6454918c.css",
-    "static/js/main.818c0833.js"
+    "static/css/main.c095e3ca.css",
+    "static/js/main.a8c3ff15.js"
   ]
 }
