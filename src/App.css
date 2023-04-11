@@ -57,10 +57,11 @@ font-weight: 300;
 color: white;
 font-size: 30px;
 text-align: center;
-font-weight: 300;
+font-weight: bold;
 font-family: 'Mukta', sans-serif;
 margin: 25px 10px;
 z-index: 2;
+line-height: 50px;
 }
 
 
@@ -137,7 +138,7 @@ font-size: 18px;
   font-size: 17px;
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 300;
-  line-height: 30px;
+  line-height: 25px;
   letter-spacing: .5px;
   text-align: center;
   margin: 40px;
@@ -148,7 +149,7 @@ font-size: 18px;
   font-size: 1rem;
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 100;
-  line-height: 38px;
+  line-height: 25px;
   letter-spacing: 1.4px;
   text-align: center;
   margin: 40px;
@@ -389,7 +390,7 @@ margin: 70px;
   max-width: 60%;
   text-align: center;
   letter-spacing: 1.5px;
-  line-height: 35px;
+  line-height: 25px;
 }
 
 .footer-section {
@@ -628,8 +629,9 @@ height: 51px !important;
   flex-direction: column;
 }
 
+/* LÄgg till de andra boxarna: Ta bort denna kommentar. */
 #fift-box{
-  opacity: 0;
+  /* opacity: 0; */
   transition-duration: .3s;
   align-items: center;  
   flex-direction: column;

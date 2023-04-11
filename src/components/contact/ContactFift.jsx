@@ -18,7 +18,7 @@ function ContactFift() {
     event.preventDefault();
 
     setTimeout(none, 300)
-    document.querySelector('#fift-box').style.opacity= '0' 
+    document.querySelector('#fift-box').style.opacity= '1' 
 }
 
 const none = () => {
@@ -148,9 +148,10 @@ function handleMessage(result) {
 
   // ---------------------- EMAIL END ---------------------- //
 
-
+// För att lägga tillbaks 'nästa funktionen: lägg till 'box-none' klassen till artickeln. 
+// Lägg även till opacity 0 till fift-box id't.
   return (
-    <article id='fift-box' className='all-boxes box-none'>
+    <article id='fift-box' className='all-boxes'>
 
     <h1 className='contact-box-title m10'>Första träningen gratis</h1>
     <p className='form-paragraf paragraf light'>Jag kommer svara inom kort så vi kan starta en dialog och boka in ditt första pass.</p>

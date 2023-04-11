@@ -336,8 +336,7 @@ function App() {
       <section id='first-section' className='dark'>
         <div className='dark-bg dark-gb-first-section'></div>
 
-        <h1 className='title more-margin'>Adrian Skog </h1>
-        <h1 className='title'>Personlig träning med brett fokus på rörelsemöster</h1>
+        <h1 className='title'>Personlig träning med brett fokus på rörelsemönster<br />Adrian Skog</h1>
 
         <p className='hero-paragraf'>
           Har du drömt om att kuna göra akrobatiska rörelser som hjulning och handstående? <br />
@@ -421,11 +420,11 @@ function App() {
       <section id='meta-contact-wrapper'>
         <article className='form-box'>
           <form ref={formCheck} onSubmit={sendEmailCheck}>
-            <ContactFirst />
+            {/* <ContactFirst />
             <ContactSecond />
-            <ContactThird />
+            <ContactThird /> */}
             <ContactFift />
-          </form>
+          </form> 
         </article>
       </section>
 
