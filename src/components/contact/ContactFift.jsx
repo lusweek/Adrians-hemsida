@@ -212,7 +212,7 @@ function handleMessage(result) {
 
   />
 
-<div className='contact-form-number'>3/3</div>
+{/* <div className='contact-form-number'>3/3</div> */}
 
 <input 
     id='form-button'

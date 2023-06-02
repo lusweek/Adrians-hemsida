@@ -4,9 +4,7 @@ git add .
 git commit -m "update"
 git push
 
-npm run build
-
-npm run deploy
+Uppdateras automatiskt på Cloudflare
 
 Denna låg i index.html: 
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
