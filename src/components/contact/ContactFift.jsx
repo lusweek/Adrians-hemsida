@@ -11,8 +11,6 @@ import emailjs from '@emailjs/browser';
 
 function ContactFift() {
 
- 
-
   const back = (event) => {
 
     event.preventDefault();
@@ -162,7 +160,7 @@ function handleMessage(result) {
 
 <article id='form-article'>
 
-  {/* <form ref={form} onSubmit={sendEmail}> */}
+  <form ref={form} onSubmit={sendEmail}>
 
 <MessageSent text={text} success={success} />
 
@@ -203,14 +201,14 @@ function handleMessage(result) {
 
 
     <div className='contact-btn-wrapper'>
-  <FormButton 
+  {/* <FormButton 
     id={'back-btn-fift'}
     Text={'Förgående'} 
     width={"40%"} 
     margin={'15px'}
     handleButton={back}
 
-  />
+  /> */}
 
 {/* <div className='contact-form-number'>3/3</div> */}
 
@@ -225,7 +223,7 @@ function handleMessage(result) {
 
    
 
-  {/* </form> */}
+  </form>
 
 </article>
 

@@ -290,7 +290,7 @@ flex-direction: column;
 justify-content: center;
 position: relative;
 
-background-image: url(../src/media/Handstand-150kb.jpg);
+background-image: url(../src/media/Handstand-hd.jpg);
 background-size: cover;
 background-position: center;
 
@@ -306,7 +306,7 @@ background-position: center;
 }
 
 #offer-section{
-  background-image: url(../src/media/Erbjudande-950kb.jpg);
+  background-image: url(../src/media/Erbjudande-hd.png);
   background-size: cover;
   background-position: center;
 
@@ -353,7 +353,7 @@ align-items: center;
 }
 
 #principer{
-  background-image: url(./media/outdoor-gym-200kb.jpg);
+  background-image: url(./media/outdoor-gym-hd.jpg);
   color: white;
   position: relative;
   background-position-x: center;
@@ -685,7 +685,7 @@ letter-spacing: 1px;
   display: flex;
   position: absolute;
   bottom: 30px;
-  justify-content: space-between;
+  justify-content: center;
   left: 6%;
 }
 

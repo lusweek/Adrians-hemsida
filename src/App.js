@@ -51,7 +51,7 @@ function App() {
   }
 
   const [priserIsClosed, setPriserIsClosed] = useState(true)
-  function handlePriser() {
+  function handlePriser(forceOpen) {
 
     const priserSection = document.querySelector('#offer')
 
@@ -59,7 +59,7 @@ function App() {
     const set1000 = () => priserSection.style.height = '1000px'
     const set0 = () => priserSection.style.height = '0px'
 
-    if (priserIsClosed === true) {
+    if (priserIsClosed === true || forceOpen === 'true' ) {
 
       const wWidth = window.innerWidth
 
@@ -131,6 +131,11 @@ function App() {
   const burgerRef = useRef();
   const menu = useRef()
   const anotherBurgerRef = useRef();
+
+  function handlePriceClick() {
+    handleMenu()
+    handlePriser('true')
+  }
 
 
 
@@ -322,8 +327,7 @@ function App() {
         <section ref={menu} id='burger-menu'>
           <a onClick={handleMenu} href="#offer-section"> <h1 className='small-title light burger-title'>Erbjudande</h1></a>
           <a onClick={handleMenu} href="#about-section"><h1 className='small-title light burger-title'>Om Adrian</h1></a>
-          <a onClick={handleMenu} href="#meta-contact-wrapper"><h1 className='small-title light burger-title'>Utbud</h1></a>
-          <a onClick={handleMenu} href="#priser-section"><h1 className='small-title light burger-title'>Priser</h1></a>
+          <a onClick={handlePriceClick} href="#priser-section"><h1 className='small-title light burger-title'>Utbud / Priser</h1></a>
           <a onClick={handleMenu} href="#contact-info-article"><h1 className='small-title light burger-title'>Kontakt</h1></a>
 
         </section>
