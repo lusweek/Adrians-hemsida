@@ -290,7 +290,7 @@ flex-direction: column;
 justify-content: center;
 position: relative;
 
-background-image: url(../src/media/Handstand-hd.jpg);
+background-image: url(../src/media/Handstand-hd.webp);
 background-size: cover;
 background-position: center;
 
@@ -306,7 +306,7 @@ background-position: center;
 }
 
 #offer-section{
-  background-image: url(../src/media/Erbjudande-hd.png);
+  background-image: url(../src/media/Erbjudande-hd.webp);
   background-size: cover;
   background-position: center;
 
@@ -353,7 +353,7 @@ align-items: center;
 }
 
 #principer{
-  background-image: url(./media/outdoor-gym-hd.jpg);
+  background-image: url(./media/outdoor-gym-hd.webp);
   color: white;
   position: relative;
   background-position-x: center;
@@ -561,7 +561,7 @@ height: 51px !important;
 
 #meta-contact-wrapper{
   height: 800px;
-  background-image: url(./media/woods-1000kb.jpg);
+  background-image: url(./media/woods-1000kb.webp);
   background-position: center;
   background-size: cover;
   display: flex;
