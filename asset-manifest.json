@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.eac97faf.css",
+    "main.css": "/static/css/main.7e445688.css",
     "main.js": "/static/js/main.c04cd966.js",
     "static/js/787.bac1152b.chunk.js": "/static/js/787.bac1152b.chunk.js",
-    "static/media/Erbjudande-hd.png": "/static/media/Erbjudande-hd.de8b1bb1df30cb2cf2d2.png",
-    "static/media/outdoor-gym-hd.jpg": "/static/media/outdoor-gym-hd.67e7b4e3c3e32cb53894.jpg",
+    "static/media/outdoor-gym-hd.webp": "/static/media/outdoor-gym-hd.ed62597b9d2bd29b62a5.webp",
+    "static/media/Erbjudande-hd.webp": "/static/media/Erbjudande-hd.c6b7f33360f7a9b3ebc1.webp",
     "static/media/Smidighet.jpg": "/static/media/Smidighet.5273096c4ab7bdad31d9.jpg",
-    "static/media/Handstand-hd.jpg": "/static/media/Handstand-hd.cfd6a75863856697c19c.jpg",
     "static/media/calisthenics.jpg": "/static/media/calisthenics.99bf7e1beb314ce2698b.jpg",
-    "static/media/woods-1000kb.jpg": "/static/media/woods-1000kb.037861781b442bdc8f6a.jpg",
+    "static/media/woods-1000kb.webp": "/static/media/woods-1000kb.ec49ff450829078cb3c9.webp",
     "static/media/PT.jpg": "/static/media/PT.bf3fc2958ebe2f04f844.jpg",
+    "static/media/Handstand-hd.webp": "/static/media/Handstand-hd.9a1e1b202ae6e464b44c.webp",
     "static/media/logo-1-white.png": "/static/media/logo-1-white.57ab39955ab5efc7e7fe.png",
     "static/media/logo-3.png": "/static/media/logo-3.7c0288b5550f5ca63c37.png",
     "index.html": "/index.html",
-    "main.eac97faf.css.map": "/static/css/main.eac97faf.css.map",
+    "main.7e445688.css.map": "/static/css/main.7e445688.css.map",
     "main.c04cd966.js.map": "/static/js/main.c04cd966.js.map",
     "787.bac1152b.chunk.js.map": "/static/js/787.bac1152b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eac97faf.css",
+    "static/css/main.7e445688.css",
     "static/js/main.c04cd966.js"
   ]
 }
