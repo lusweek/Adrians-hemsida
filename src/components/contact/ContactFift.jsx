@@ -221,7 +221,8 @@ function handleMessage(result) {
 </article>
 
 <p className='form-paragraf paragraf light contact-form-low-text'>
-Du kommer inte få några automatiska mail-utskick utöver ett bekräftelsemail
+Din email sparas inte i någon mail-lista. <br /> 
+Du kommer inte få några automatiska mail-utskick.
 </p>
 
 
