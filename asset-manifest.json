@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7e445688.css",
-    "main.js": "/static/js/main.c04cd966.js",
+    "main.css": "/static/css/main.be5b81ee.css",
+    "main.js": "/static/js/main.2f605652.js",
     "static/js/787.bac1152b.chunk.js": "/static/js/787.bac1152b.chunk.js",
     "static/media/outdoor-gym-hd.webp": "/static/media/outdoor-gym-hd.ed62597b9d2bd29b62a5.webp",
     "static/media/Erbjudande-hd.webp": "/static/media/Erbjudande-hd.c6b7f33360f7a9b3ebc1.webp",
@@ -13,12 +13,12 @@
     "static/media/logo-1-white.png": "/static/media/logo-1-white.57ab39955ab5efc7e7fe.png",
     "static/media/logo-3.png": "/static/media/logo-3.7c0288b5550f5ca63c37.png",
     "index.html": "/index.html",
-    "main.7e445688.css.map": "/static/css/main.7e445688.css.map",
-    "main.c04cd966.js.map": "/static/js/main.c04cd966.js.map",
+    "main.be5b81ee.css.map": "/static/css/main.be5b81ee.css.map",
+    "main.2f605652.js.map": "/static/js/main.2f605652.js.map",
     "787.bac1152b.chunk.js.map": "/static/js/787.bac1152b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7e445688.css",
-    "static/js/main.c04cd966.js"
+    "static/css/main.be5b81ee.css",
+    "static/js/main.2f605652.js"
   ]
 }
