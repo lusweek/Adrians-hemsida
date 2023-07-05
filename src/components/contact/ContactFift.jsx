@@ -44,40 +44,32 @@ const opacity = () => {
    // ------------------- FORM TRACKING ------------------- // 
 
    const [title, setTitle] = useState('');
-   const [subject, setSubject] = useState('');
    const [email, setEmail] = useState('');
    const [textArea, setTextArea] = useState('')
 
   const form = useRef();  
 
-
-
   const sendEmail = (e) => {
     e.preventDefault();
     openLoader()
 
-    console.log(form.current);
-
     emailjs.sendForm('service_inf48rp', 'template_19tzibd', form.current, 'NHoAII_wNiMrUrvQX')
       .then((result) => {
-          console.log(result.text);
           handleMessage(result.text)
           clearText()
       }, (error) => {
-          console.log(error.text);
           handleMessage(error.text)
       });
   };
 
   function clearText() {
-      document.querySelector('#input-name').value=''
-      document.querySelector('#input-email').value=''
-      document.querySelector('#input-message').value=''
+      setTitle('')
+      setEmail('')
+      setTextArea('')
   }
 
   // Send animation
 
-  const [text, setText] = useState('')
   const [success, setSucsess] = useState(true)
 
   function openLoader() {
@@ -105,12 +97,12 @@ const loader = document.querySelector('.modal-loader-wrapper');
 function handleMessage(result) {
   if (result === 'OK') {
     setSucsess(true)
-    setText('message sent!')
+    document.querySelector('.done-text').innerHTML = 'Meddelande skickat!'
     animation()
     console.log('message sent! : ', result);
   } else {
     setSucsess(false)
-    setText('Something went wrong, try again!')
+    document.querySelector('.done-text').innerHTML = 'Något gick fel, prova igen'
     console.log('Something went wrong: ', result);
     messageNotSent()
   }
@@ -160,9 +152,9 @@ function handleMessage(result) {
 
 <article id='form-article'>
 
-  <form ref={form} onSubmit={sendEmail}>
+  <form ref={form}>
 
-<MessageSent text={text} success={success} />
+<MessageSent sendMessageSuccess={success} />
 
     {/* MEDDELANDE FORM  */}    
 
@@ -192,7 +184,7 @@ function handleMessage(result) {
     required
     cols="30" 
     rows="10"
-    placeholder='Valftit meddelande.. (Behövs ej)'
+    placeholder='Skriv meddelande'
     value={textArea}
     onChange={(e) => setTextArea(e.target.value)}
     name="message"
@@ -216,7 +208,8 @@ function handleMessage(result) {
     id='form-button'
     className='button input-btn form-button' 
     value="Skicka"
-    type="submit"
+    type='submit'
+    onClick={sendEmail}
     />
   
 </div>
@@ -228,8 +221,6 @@ function handleMessage(result) {
 </article>
 
 <p className='form-paragraf paragraf light contact-form-low-text'>
-Detta är en intresseanmälan, du förbinder dig inte till några skyldigheter genom detta formulär. 
-<br/>
 Du kommer inte få några automatiska mail-utskick utöver ett bekräftelsemail
 </p>
 

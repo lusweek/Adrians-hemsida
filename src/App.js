@@ -201,9 +201,9 @@ function App() {
 
 
   function clearText() {
-    document.querySelector('#input-name').value = ''
-    document.querySelector('#input-email').value = ''
-    document.querySelector('#input-message').value = ''
+    setTitle('')
+    setEmail('')
+    setTextArea('')
   }
 
   // Send animation

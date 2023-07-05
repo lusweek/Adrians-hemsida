@@ -632,6 +632,7 @@ height: 51px !important;
 #fift-box{
   /* opacity: 0; */
   transition-duration: .3s;
+  display: flex;
   align-items: center;  
   flex-direction: column;
   padding-bottom: 90px;
